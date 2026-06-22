@@ -1725,6 +1725,7 @@ GameObject:
   - component: {fileID: 282533295}
   - component: {fileID: 282533297}
   - component: {fileID: 282533296}
+  - component: {fileID: 282533298}
   m_Layer: 5
   m_Name: LinkToolSection
   m_TagString: Untagged
@@ -1792,6 +1793,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 282533294}
   m_CullTransparentMesh: 1
+--- !u!114 &282533298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282533294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f297678e4874a29a4c8eee5d4c4cd39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &291850578
 GameObject:
   m_ObjectHideFlags: 0
@@ -3925,6 +3938,7 @@ GameObject:
   - component: {fileID: 602340021}
   - component: {fileID: 602340024}
   - component: {fileID: 602340025}
+  - component: {fileID: 602340026}
   m_Layer: 5
   m_Name: TabsSection
   m_TagString: Untagged
@@ -3988,6 +4002,24 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &602340026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 602340020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff050e2c02344c3a8128e1697c6909e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _linkButton: {fileID: 770766256}
+  _linkSelectedBackground: {fileID: 536199689}
+  _contactButton: {fileID: 1510222619}
+  _contactSelectedBackground: {fileID: 661723672}
+  _dbButton: {fileID: 1529350132}
+  _dbSelectedBackground: {fileID: 1387859819}
 --- !u!1 &613362374
 GameObject:
   m_ObjectHideFlags: 0
@@ -5073,6 +5105,7 @@ GameObject:
   - component: {fileID: 746818453}
   - component: {fileID: 746818455}
   - component: {fileID: 746818454}
+  - component: {fileID: 746818456}
   m_Layer: 5
   m_Name: DbToolSection
   m_TagString: Untagged
@@ -5143,6 +5176,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746818452}
   m_CullTransparentMesh: 1
+--- !u!114 &746818456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 746818452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b888891fefce491fb0319d72d81b514d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &751595135
 GameObject:
   m_ObjectHideFlags: 0
@@ -6886,7 +6931,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10.4
+  m_fontSize: 10.35
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8068,6 +8113,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1180031666}
   - component: {fileID: 1180031667}
+  - component: {fileID: 1180031668}
   m_Layer: 5
   m_Name: ToolsBar
   m_TagString: Untagged
@@ -8106,6 +8152,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180031665}
   m_CullTransparentMesh: 1
+--- !u!114 &1180031668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180031665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f311bf2819d4b54bc7ee719d98d4fe7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _toolTabsWidget: {fileID: 602340026}
+  _linkToolSection: {fileID: 282533298}
+  _contactToolSection: {fileID: 1799775807}
+  _dbToolSection: {fileID: 746818456}
 --- !u!1 &1198483864
 GameObject:
   m_ObjectHideFlags: 0
@@ -9909,7 +9971,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26.05
+  m_fontSize: 26
   m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12232,7 +12294,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.7
+  m_fontSize: 18.65
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12860,6 +12922,7 @@ GameObject:
   - component: {fileID: 1799775804}
   - component: {fileID: 1799775806}
   - component: {fileID: 1799775805}
+  - component: {fileID: 1799775807}
   m_Layer: 5
   m_Name: ContactToolSection
   m_TagString: Untagged
@@ -12930,6 +12993,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799775803}
   m_CullTransparentMesh: 1
+--- !u!114 &1799775807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799775803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc7e62875aa64370acfaae0af897bb31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1811963605
 GameObject:
   m_ObjectHideFlags: 0
@@ -13904,7 +13979,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10.4
+  m_fontSize: 10.35
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
