@@ -2817,6 +2817,7 @@ GameObject:
   - component: {fileID: 439261050}
   - component: {fileID: 439261052}
   - component: {fileID: 439261051}
+  - component: {fileID: 439261053}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2865,7 +2866,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0412\u0430\u0448 \u0435\u0436\u0435\u043C\u0435\u0441\u044F\u0447\u043D\u044B\u0439
     \u043E\u0442\u0447\u0435\u0442 \u0434\u043E\u0441\u0442\u0443\u043F\u0435\u043D
-    \u043F\u043E \u0430\u0434\u0440\u0435\u0441\u0443: http://somelink.ru/"
+    \u043F\u043E \u0430\u0434\u0440\u0435\u0441\u0443: <link=link>http://somelink.ru/</link>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2942,6 +2943,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439261049}
   m_CullTransparentMesh: 1
+--- !u!114 &439261053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439261049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa676e3af9ae4034bed05df6dfbecb21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCamera: {fileID: 0}
 --- !u!1 &515183295
 GameObject:
   m_ObjectHideFlags: 0
@@ -15470,6 +15484,7 @@ GameObject:
   - component: {fileID: 2143571525}
   - component: {fileID: 2143571527}
   - component: {fileID: 2143571526}
+  - component: {fileID: 2143571528}
   m_Layer: 5
   m_Name: MessageBar
   m_TagString: Untagged
@@ -15535,6 +15550,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143571524}
   m_CullTransparentMesh: 1
+--- !u!114 &2143571528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2143571524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 738006046d8e48e5a5da1fa9bbf489b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tmpLinkHandler: {fileID: 439261053}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
