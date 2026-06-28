@@ -1,6 +1,8 @@
 using System;
+using Localization;
 using UnityEngine;
 using UnityEngine.UI;
+using VContainer;
 
 namespace Widgets
 {
@@ -18,14 +20,9 @@ namespace Widgets
         [SerializeField] private ContactToolWidget _contactToolSection;
         [SerializeField] private DbToolWidget _dbToolSection;
 
-        public void Init()
-        {
-            _linkToolSection.Init();
-            _contactToolSection.Init();
-            _dbToolSection.Init();
+        [Inject] private LocalizationService _localizationService;
 
-            _toolTabsWidget.Init(OpenTab);
-        }
+        public LocalizationService LocalizationService => _localizationService;
 
         public void OpenTab(ToolType toolType)
         {
@@ -48,9 +45,22 @@ namespace Widgets
             }
         }
 
-        private void Awake()
+        public void Initialize()
         {
-            Init();
+            _linkToolSection.Init();
+            _contactToolSection.Init();
+            _dbToolSection.Init();
+
+            _toolTabsWidget.Init(OpenTab);
+
+            Debug.Log(_localizationService.Get("hello.world"));
+            _localizationService.ChangeLanguage("en");
+            Debug.Log(_localizationService.Get("hello.world"));
+        }
+
+        private void Start()
+        {
+            Initialize();
         }
     }
 }

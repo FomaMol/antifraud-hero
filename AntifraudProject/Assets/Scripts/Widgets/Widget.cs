@@ -1,3 +1,4 @@
+using DI;
 using UnityEngine;
 
 namespace Widgets
