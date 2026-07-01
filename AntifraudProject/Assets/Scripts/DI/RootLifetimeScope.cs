@@ -11,8 +11,9 @@ namespace DI
 
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.Register<PersistingService>(Lifetime.Singleton);
+            builder.RegisterEntryPoint<PersistingService>().AsSelf();
             builder.RegisterEntryPoint<LocalizationService>().AsSelf();
+            builder.RegisterEntryPoint<GameplayService>().AsSelf();
         }
 
         protected override void Awake()

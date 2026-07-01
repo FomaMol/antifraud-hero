@@ -1,0 +1,22 @@
+{
+  "sender_tool_open_shift": 2,
+  "db_tool_open_shift": 3,
+  "shifts": [
+    {
+      "min_winrate": 70,
+      "cases": [
+        {
+          "type_text": "SMS",
+          "message_text": "Пишет <sender>Надя</sender>. Ваша карта заблокирована ... нажмите на ссылка <link>https://vk.com</link>",
+          "link_validation_text": "Этой ссылки нет",
+          "link_validation_result": 1,
+          "sender_validation_text": "Этого человека нет",
+          "sender_validation_result": 0,
+          "db_validation_text": "Отправитель ок",
+          "db_validation_result": 1,
+          "result_text": "Это был скам. Будь внимательнее"
+        }
+      ]
+    }
+  ]
+}
