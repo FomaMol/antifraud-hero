@@ -1,17 +1,24 @@
 using System;
 using System.Text.RegularExpressions;
+using Services;
+using UniRx;
 using UnityEngine;
+using VContainer;
 
 namespace Widgets
 {
     public class MessageBarWidget : Widget
     {
+        [Inject] private readonly GameplayService _gameplayService;
+        
         [SerializeField] private TMPLinkHandler _tmpLinkHandler;
 
         public void Initialize()
         {
             _tmpLinkHandler.OnLinkClicked += TmpLinkHandlerOnOnLinkClicked;
-            _tmpLinkHandler.Text.SetText(ReplaceCustomTags("Sended [contact]Nadya[/contact]. Ваша карта заблокирована ... нажмите на ссылка [link]https://vk.com[/link]"));
+            _gameplayService.OnChangeCase.Subscribe(OnChangeCase);
+            
+            UpdateView();
         }
 
         private static readonly string[] CustomTagTypes = { "link", "contact", "db" };
@@ -28,6 +35,16 @@ namespace Widgets
         private void TmpLinkHandlerOnOnLinkClicked(string id, string linkText)
         {
             Debug.Log($"Click on link: id={id}, text={linkText}");
+        }
+
+        private void OnChangeCase(Unit unit)
+        {
+            UpdateView();
+        }
+
+        private void UpdateView()
+        {
+            _tmpLinkHandler.Text.SetText(ReplaceCustomTags(_gameplayService.CurrentCaseConfig.MessageText));
         }
 
         private void Start()
