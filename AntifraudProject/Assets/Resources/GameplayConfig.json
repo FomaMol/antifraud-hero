@@ -7,7 +7,7 @@
       "cases": [
         {
           "type_text": "SMS",
-          "message_text": "Пишет [contact]Надя[/contact]. Ваша карта заблокирована ... нажмите на ссылка [link]https://vk.com[/link]",
+          "message_text": "Пишет [contact]Надя[/contact]. Ваша карта заблокирована. Код операции: [db]BLK-4492-XX[/db]. Нажмите на ссылку [link]https://vk.com[/link]",
           "link_validation_text": "Этой ссылки нет",
           "link_validation_result": 1,
           "sender_validation_text": "Этого человека нет",
@@ -40,7 +40,7 @@
         },
         {
           "type_text": "SMS",
-          "message_text": "[contact]Почта России[/contact]: Ваша посылка №RU123456789 ожидает получения. Оплатите доставку: [link]https://pochta-ru.delivery[/link]",
+          "message_text": "[contact]Почта России[/contact]: Ваша посылка №[db]RU123456789[/db] ожидает получения. Оплатите доставку: [link]https://pochta-ru.delivery[/link]",
           "link_validation_text": "Домен не является официальным",
           "link_validation_result": 1,
           "sender_validation_text": "Имя отправителя совпадает",
@@ -51,7 +51,7 @@
         },
         {
           "type_text": "SMS",
-          "message_text": "[contact]Сбербанк[/contact]: Операция на 3 200 руб. в магазине Пятёрочка. Если вы не совершали эту операцию, позвоните по номеру на карте.",
+          "message_text": "[contact]Сбербанк[/contact]: Операция [db]TXN-20260409-83921[/db] на 3 200 руб. в магазине Пятёрочка. Если вы не совершали эту операцию, позвоните по номеру на карте.",
           "link_validation_text": "Ссылок нет",
           "link_validation_result": 0,
           "sender_validation_text": "Отправитель подтверждён",
@@ -73,7 +73,7 @@
         },
         {
           "type_text": "SMS",
-          "message_text": "[contact]Госуслуги[/contact]: Ваше заявление №456789 одобрено. Выплата будет произведена в течение 3 рабочих дней. Детали в личном кабинете.",
+          "message_text": "[contact]Госуслуги[/contact]: Ваше заявление №[db]456789[/db] одобрено. Выплата будет произведена в течение 3 рабочих дней. Детали в личном кабинете.",
           "link_validation_text": "Ссылок нет",
           "link_validation_result": 0,
           "sender_validation_text": "Отправитель в базе",
@@ -89,7 +89,7 @@
       "cases": [
         {
           "type_text": "SMS",
-          "message_text": "[contact]Тинькофф[/contact]: Ваш кредитный лимит увеличен до 200 000 руб. Подтвердите согласие: [link]https://tinkoff-credit-ok.ru[/link]",
+          "message_text": "[contact]Тинькофф[/contact]: Ваш кредитный лимит увеличен до 200 000 руб. ID запроса: [db]CLT-2026-00847[/db]. Подтвердите согласие: [link]https://tinkoff-credit-ok.ru[/link]",
           "link_validation_text": "Домен не принадлежит банку",
           "link_validation_result": 1,
           "sender_validation_text": "Имя совпадает с известным банком",
@@ -133,7 +133,7 @@
         },
         {
           "type_text": "Email",
-          "message_text": "Письмо от [contact]invoice@ozon-seller.biz[/contact]. Счёт на оплату заказа №78234. Скачайте документ: [link]https://ozon-seller.biz/invoice78234.exe[/link]",
+          "message_text": "Письмо от [contact]invoice@ozon-seller.biz[/contact]. Счёт на оплату заказа №[db]78234[/db]. Скачайте документ: [link]https://ozon-seller.biz/invoice78234.exe[/link]",
           "link_validation_text": "Ссылка ведёт на исполняемый файл",
           "link_validation_result": 1,
           "sender_validation_text": "Домен отличается от официального",
@@ -171,7 +171,7 @@
       "cases": [
         {
           "type_text": "SMS",
-          "message_text": "[contact]ФНС России[/contact]: По вашему ИНН выявлена задолженность 4 800 руб. Оплатите до 15 апреля: [link]https://fns-oplata.ru[/link]",
+          "message_text": "[contact]ФНС России[/contact]: По ИНН [db]772901834521[/db] выявлена задолженность 4 800 руб. Оплатите до 15 апреля: [link]https://fns-oplata.ru[/link]",
           "link_validation_text": "Домен не является официальным сайтом ФНС",
           "link_validation_result": 1,
           "sender_validation_text": "Имя совпадает с ведомством",
@@ -204,7 +204,7 @@
         },
         {
           "type_text": "Email",
-          "message_text": "Письмо от [contact]noreply@sberbank.ru[/contact]. Чек по операции от 09.04.2026 на сумму 1 250 руб. Детали в приложении.",
+          "message_text": "Письмо от [contact]noreply@sberbank.ru[/contact]. Чек по операции [db]SBR-0409-559271[/db] от 09.04.2026 на сумму 1 250 руб. Детали в приложении.",
           "link_validation_text": "Ссылок нет",
           "link_validation_result": 0,
           "sender_validation_text": "Официальный домен банка",
@@ -226,7 +226,7 @@
         },
         {
           "type_text": "Email",
-          "message_text": "Письмо от [contact]do-not-reply@wildberries.ru[/contact]. Ваш заказ №9183746 отправлен. Ожидаемая дата доставки: 11 апреля.",
+          "message_text": "Письмо от [contact]do-not-reply@wildberries.ru[/contact]. Ваш заказ №[db]9183746[/db] отправлен. Ожидаемая дата доставки: 11 апреля.",
           "link_validation_text": "Ссылок нет",
           "link_validation_result": 0,
           "sender_validation_text": "Домен совпадает с официальным",
