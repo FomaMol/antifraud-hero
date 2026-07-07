@@ -14,7 +14,7 @@ namespace Localization
         private LocalizationConfig _config;
         [Inject] private PersistingService _persistingService;
 
-        public string Language => _persistingService.SavedLanguage == string.Empty ? DEFAULT_LANGUAGE : _persistingService.SavedLanguage;
+        public string Language => _persistingService.CurrentLanguage == string.Empty ? DEFAULT_LANGUAGE : _persistingService.CurrentLanguage;
         public event Action OnLanguageChanged;
 
         public void Initialize()

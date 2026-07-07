@@ -2,6 +2,7 @@ using System;
 using Newtonsoft.Json;
 using UniRx;
 using UnityEngine;
+using VContainer;
 using VContainer.Unity;
 using Widgets;
 
@@ -9,12 +10,23 @@ namespace Services
 {
     public class GameplayService : IInitializable
     {
-        private GameplayConfig _gameplayConfig;
+        [Inject] private readonly PersistingService _persistingService;
         
-        public int CurrentShiftIndex { get; private set; }
-        public int CurrentCaseIndex { get; private set; }
-        public CaseConfig CurrentCaseConfig => _gameplayConfig.Shifts[CurrentShiftIndex].Cases[CurrentCaseIndex];
-        public int TotalCaseCountInCurrentShift => _gameplayConfig.Shifts[CurrentShiftIndex].Cases.Count;
+        private GameplayConfig _gameplayConfig;
+
+        public int CurrentCaseIndex
+        {
+            get =>  _persistingService.CurrentCaseIndex;
+            private set => _persistingService.SetCurrentCase(value);
+        }
+        public int CurrentShiftIndex
+        {
+            get => _persistingService.CurrentShiftIndex;
+            private set => _persistingService.SetCurrentShift(value);
+        }
+
+        public CaseConfig CurrentCaseConfig => _gameplayConfig.Shifts[_persistingService.CurrentShiftIndex].Cases[_persistingService.CurrentCaseIndex];
+        public int TotalCaseCountInCurrentShift => _gameplayConfig.Shifts[_persistingService.CurrentShiftIndex].Cases.Count;
         public int TotalShiftCount => _gameplayConfig.Shifts.Count;
 
         private readonly Subject<Unit> _onChangeShift = new();
@@ -51,9 +63,9 @@ namespace Services
             if (toolType == ToolType.Link)
                 return true;
             if (toolType == ToolType.Contact)
-                return CurrentShiftIndex + 1 >= _gameplayConfig.SenderToolOpenShift;
+                return _persistingService.CurrentShiftIndex + 1 >= _gameplayConfig.SenderToolOpenShift;
             if (toolType == ToolType.Db)
-                return CurrentShiftIndex + 1 >= _gameplayConfig.DbToolOpenShift;
+                return _persistingService.CurrentShiftIndex + 1 >= _gameplayConfig.DbToolOpenShift;
             
             throw new ArgumentOutOfRangeException(nameof(toolType), toolType, null);
         }
