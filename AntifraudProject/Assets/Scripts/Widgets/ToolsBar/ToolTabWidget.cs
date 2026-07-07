@@ -69,9 +69,12 @@ namespace Widgets
                 default:
                     throw new ArgumentOutOfRangeException(nameof(SelectedTool), SelectedTool, null);
             }
-            
+
+            _linkButton.enabled = _gameplayService.IsToolAvailable(ToolType.Link);
             _linkUnavaliableForeground.gameObject.SetActive(!_gameplayService.IsToolAvailable(ToolType.Link));
+            _contactButton.enabled = _gameplayService.IsToolAvailable(ToolType.Contact);
             _contactUnavaliableForeground.gameObject.SetActive(!_gameplayService.IsToolAvailable(ToolType.Contact));
+            _dbButton.enabled = _gameplayService.IsToolAvailable(ToolType.Db);
             _dbUnavaliableForeground.gameObject.SetActive(!_gameplayService.IsToolAvailable(ToolType.Db));
         }
     }
