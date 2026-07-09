@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace Services
@@ -8,5 +9,6 @@ namespace Services
         [JsonProperty] public string CurrentLanguage = "en";
         [JsonProperty] public int CurrentShift = 0;
         [JsonProperty] public int CurrentCase = 0;
+        [JsonProperty] public List<int> CasesOrder;
     }
 }

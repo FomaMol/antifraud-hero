@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
 using VContainer.Unity;
@@ -13,6 +14,7 @@ namespace Services
         public string CurrentLanguage => _saveDataCache.CurrentLanguage;
         public int CurrentShiftIndex => _saveDataCache.CurrentShift;
         public int CurrentCaseIndex => _saveDataCache.CurrentCase;
+        public IReadOnlyList<int> CasesOrder => _saveDataCache.CasesOrder;
 
         public void SetLanguage(string language)
         {
@@ -29,6 +31,12 @@ namespace Services
         public void SetCurrentCase(int caseNumber)
         {
             _saveDataCache.CurrentCase = caseNumber;
+            SaveGameplayConfig(_saveDataCache);
+        }
+
+        public void SetCases(IReadOnlyList<int> casesOrder)
+        {
+            _saveDataCache.CasesOrder = new List<int>(casesOrder);
             SaveGameplayConfig(_saveDataCache);
         }
 
