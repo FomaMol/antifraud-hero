@@ -10,5 +10,6 @@ namespace Services
         [JsonProperty] public int CurrentShift = 0;
         [JsonProperty] public int CurrentCase = 0;
         [JsonProperty] public List<int> CasesOrder;
+        [JsonProperty] public List<bool> CaseResultHistory;
     }
 }

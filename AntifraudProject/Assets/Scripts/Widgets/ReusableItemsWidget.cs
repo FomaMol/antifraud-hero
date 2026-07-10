@@ -1,11 +1,15 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using VContainer;
+using VContainer.Unity;
 
 namespace Widgets
 {
     public class ReusableItemsWidget : Widget
     {
+        [Inject] private readonly IObjectResolver _resolver;
+        
         [SerializeField] private List<Transform> _items;
 
         private void Start()
@@ -18,9 +22,10 @@ namespace Widgets
         {
             if (dataList.Count > _items.Count)
             {
-                for (int i = 0; i < dataList.Count - _items.Count; ++i)
+                var missingItemsNumber = dataList.Count - _items.Count;
+                for (int i = 0; i < missingItemsNumber; ++i)
                 {
-                    _items.Add(Instantiate(_items[0], transform));
+                    _items.Add(_resolver.Instantiate(_items[0], transform));
                 }
             }
 
@@ -37,6 +42,11 @@ namespace Widgets
                     item.gameObject.SetActive(false);
                 }
             }
+        }
+
+        public Transform GetItem(int index)
+        {
+            return _items[index];
         }
     }
 }

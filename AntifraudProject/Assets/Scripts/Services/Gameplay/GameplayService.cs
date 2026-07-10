@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Common.Extensions;
 using Newtonsoft.Json;
@@ -31,6 +32,7 @@ namespace Services
         public int TotalCaseCountInCurrentShift => _gameplayConfig.Shifts[_persistingService.CurrentShiftIndex].Cases.Count;
         public int TotalShiftCount => _gameplayConfig.Shifts.Count;
         private int CurrentCaseRealIndex => _persistingService.CasesOrder[CurrentCaseIndex];
+        public IReadOnlyList<CaseConfig> CaseConfigsInCurrentShift => _persistingService.CasesOrder.Select(it => _gameplayConfig.Shifts[CurrentShiftIndex].Cases[it]).ToList(); 
 
         private readonly Subject<Unit> _onChangeShift = new();
         public IObservable<Unit> OnChangeShift => _onChangeShift;
@@ -44,21 +46,28 @@ namespace Services
             _gameplayConfig = JsonConvert.DeserializeObject<GameplayConfig>(json);
             if ((_persistingService.CasesOrder?.Count ?? 0) != TotalCaseCountInCurrentShift)
             {
-                _persistingService.SetCases(Enumerable.Range(0, TotalCaseCountInCurrentShift).Shuffle().ToList());
+                _persistingService.SetCasesOrder(Enumerable.Range(0, TotalCaseCountInCurrentShift).Shuffle().ToList());
+            }
+            if (_persistingService.CaseDecisionHistory == null)
+            {
+                _persistingService.SetCaseResultHistory(new List<bool>());
             }
         }
 
         public void MakeChoice(bool isValid)
         {
+            _persistingService.SetCaseResultHistory(_persistingService.CaseDecisionHistory.Append(isValid).ToList());
+            
             ++CurrentCaseIndex;
             if (CurrentCaseIndex >= _gameplayConfig.Shifts[CurrentShiftIndex].Cases.Count)
             {
                 CurrentCaseIndex = 0;
+                _persistingService.SetCaseResultHistory(new List<bool>());
+                _persistingService.SetCasesOrder(Enumerable.Range(0, TotalCaseCountInCurrentShift).Shuffle().ToList());
                 ++CurrentShiftIndex;
                 if (CurrentShiftIndex >= _gameplayConfig.Shifts.Count)
                 {
                     CurrentShiftIndex = 0;
-                    _persistingService.SetCases(Enumerable.Range(0, TotalCaseCountInCurrentShift).Shuffle().ToList());
                 }
                 _onChangeShift.OnNext(Unit.Default);
             }
@@ -76,6 +85,23 @@ namespace Services
                 return _persistingService.CurrentShiftIndex + 1 >= _gameplayConfig.DbToolOpenShift;
             
             throw new ArgumentOutOfRangeException(nameof(toolType), toolType, null);
+        }
+
+        public bool TryGetCaseDecisionFromHistory(int caseIndex, out bool caseDecision)
+        {
+            caseDecision = false;
+            if (_persistingService.CaseDecisionHistory.IndexOutOfBounds(caseIndex))
+                return false;
+            caseDecision = _persistingService.CaseDecisionHistory[caseIndex];
+            return true;
+        }
+
+        public bool GetExpectedDecisionForCase(int caseIndex)
+        {
+            var caseConfig = CaseConfigsInCurrentShift[caseIndex];
+            return caseConfig.LinkValidationResult == 1 
+                   && caseConfig.DbValidationResult == 1
+                   && caseConfig.LinkValidationResult == 1;
         }
     }
 }

@@ -2,5 +2,6 @@ key,en,ru
 hello.world,My Text,Мой текст
 gameplay.controlbar.accept,ACCEPT,ПОДТВЕРДИТЬ
 gameplay.controlbar.decline,BLOCK,ЗАБЛОКИРОВАТЬ
-gameplay.statusbar.shift_number,SHIFT #{0},СМЕНА#{0}
+gameplay.statusbar.shift_number,SHIFT #{0},СМЕНА #{0}
+gameplay.caselistbar.case_number,CASE #{0},КЕЙС #{0}
 gameplay.statusbar.shift_progress,SHIFT PROGRESS,ПРОГРЕСС СМЕНЫ

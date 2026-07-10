@@ -15,6 +15,7 @@ namespace Services
         public int CurrentShiftIndex => _saveDataCache.CurrentShift;
         public int CurrentCaseIndex => _saveDataCache.CurrentCase;
         public IReadOnlyList<int> CasesOrder => _saveDataCache.CasesOrder;
+        public IReadOnlyList<bool> CaseDecisionHistory => _saveDataCache.CaseResultHistory;
 
         public void SetLanguage(string language)
         {
@@ -34,9 +35,15 @@ namespace Services
             SaveGameplayConfig(_saveDataCache);
         }
 
-        public void SetCases(IReadOnlyList<int> casesOrder)
+        public void SetCasesOrder(IReadOnlyList<int> casesOrder)
         {
             _saveDataCache.CasesOrder = new List<int>(casesOrder);
+            SaveGameplayConfig(_saveDataCache);
+        }
+
+        public void SetCaseResultHistory(IReadOnlyList<bool> caseResultHistory)
+        {
+            _saveDataCache.CaseResultHistory = new List<bool>(caseResultHistory);
             SaveGameplayConfig(_saveDataCache);
         }
 
