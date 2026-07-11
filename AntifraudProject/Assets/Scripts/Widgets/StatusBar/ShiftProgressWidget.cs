@@ -27,17 +27,22 @@ namespace Widgets.StatusBar
 
         private void UpdateView()
         {
-            void ItemInitializeLogic(int i, Image view, bool isActive)
+            void ItemInitializeLogic(int i, Image view, CaseConfig caseConfig)
             {
-                view.color = isActive ? Color.cyan : Color.white;
+                if (i == _gameplayService.CurrentCaseIndex)
+                {
+                    view.color = Color.white;
+                }
+                else if (_gameplayService.TryGetCaseDecisionFromHistory(i, out var decision))
+                {
+                    view.color = decision == _gameplayService.GetExpectedDecisionForCase(i) ? Color.green : Color.red;
+                }
+                else
+                {
+                    view.color = Color.gray;
+                }
             }
-            _cases.SetItems<Image, bool>(GetCaseStatuses().ToList(), ItemInitializeLogic);
-        }
-
-        private IEnumerable<bool> GetCaseStatuses()
-        {
-            for (int i = 0; i < _gameplayService.TotalCaseCountInCurrentShift; ++i)
-                yield return i <= _gameplayService.CurrentCaseIndex;
+            _cases.SetItems<Image, CaseConfig>(_gameplayService.CaseConfigsInCurrentShift, ItemInitializeLogic);
         }
     }
 }
