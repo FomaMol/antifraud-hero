@@ -132,6 +132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 31935725}
   - component: {fileID: 31935727}
+  - component: {fileID: 31935728}
   m_Layer: 5
   m_Name: Winrate
   m_TagString: Untagged
@@ -168,6 +169,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 31935724}
   m_CullTransparentMesh: 1
+--- !u!114 &31935728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31935724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18264d8388845abb77179f1f1015f83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _winrateText: {fileID: 291850582}
 --- !u!1 &68432645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,6 +1552,7 @@ GameObject:
   - component: {fileID: 291850579}
   - component: {fileID: 291850581}
   - component: {fileID: 291850580}
+  - component: {fileID: 291850582}
   m_Layer: 5
   m_Name: WinrateText
   m_TagString: Untagged
@@ -1661,6 +1676,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291850578}
   m_CullTransparentMesh: 1
+--- !u!114 &291850582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291850578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d1091af6b74cd409d3e39c64aed0b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _localizationId: gameplay.statusbar.winrate_value
 --- !u!1 &304190360
 GameObject:
   m_ObjectHideFlags: 0
@@ -7026,6 +7054,7 @@ GameObject:
   - component: {fileID: 1378077385}
   - component: {fileID: 1378077387}
   - component: {fileID: 1378077386}
+  - component: {fileID: 1378077388}
   m_Layer: 5
   m_Name: TitleText
   m_TagString: Untagged
@@ -7149,6 +7178,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378077384}
   m_CullTransparentMesh: 1
+--- !u!114 &1378077388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378077384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d1091af6b74cd409d3e39c64aed0b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _localizationId: gameplay.statusbar.winrate_title
 --- !u!1 &1386560499
 GameObject:
   m_ObjectHideFlags: 0
@@ -8938,6 +8980,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shiftNumberWidget: {fileID: 1146013170}
   _shiftProgressWidget: {fileID: 1707012500}
+  _winrateWidget: {fileID: 31935728}
 --- !u!1 &1657869890
 GameObject:
   m_ObjectHideFlags: 0

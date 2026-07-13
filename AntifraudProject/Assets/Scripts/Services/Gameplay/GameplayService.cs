@@ -14,7 +14,7 @@ namespace Services
     public class GameplayService : IInitializable
     {
         [Inject] private readonly PersistingService _persistingService;
-        
+ 
         private GameplayConfig _gameplayConfig;
 
         public int CurrentCaseIndex
@@ -102,6 +102,13 @@ namespace Services
             return caseConfig.LinkValidationResult == 1 
                    && caseConfig.DbValidationResult == 1
                    && caseConfig.LinkValidationResult == 1;
+        }
+
+        public float GetWinRateForCurrentShift()
+        {
+            return _persistingService.CaseDecisionHistory
+                       .Select((it, index) => it == GetExpectedDecisionForCase(index))
+                       .Sum(it => it ? 1f : 0f) / _persistingService.CaseDecisionHistory.Count;
         }
     }
 }
