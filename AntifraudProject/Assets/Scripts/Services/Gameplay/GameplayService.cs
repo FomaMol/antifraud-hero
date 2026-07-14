@@ -100,8 +100,8 @@ namespace Services
         {
             var caseConfig = CaseConfigsInCurrentShift[caseIndex];
             return caseConfig.LinkValidationResult == 1 
-                   && caseConfig.DbValidationResult == 1
-                   && caseConfig.LinkValidationResult == 1;
+                   && caseConfig.SenderValidationResult == 1
+                   && caseConfig.DbValidationResult == 1;
         }
 
         public float GetWinRateForCurrentShift()

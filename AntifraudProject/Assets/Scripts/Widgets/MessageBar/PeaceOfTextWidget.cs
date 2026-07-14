@@ -11,10 +11,10 @@ namespace Widgets
         [SerializeField] private TMP_Text _informationTypeText;
         [SerializeField] private TMP_Text _text;
 
-        public void Initialize(string type, string text, Action onClick)
+        public void Initialize(string type, string text, Action<(string dataType, string text)> onClick)
         {
             _button.onClick.RemoveAllListeners();
-            _button.onClick.AddListener(() => onClick?.Invoke());
+            _button.onClick.AddListener(() => onClick?.Invoke((type, text)));
             _informationTypeText.SetText(type);
             _text.SetText(text);
         }

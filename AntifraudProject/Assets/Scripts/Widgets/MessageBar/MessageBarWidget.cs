@@ -16,6 +16,8 @@ namespace Widgets
         [SerializeField] private PeaceOfTextWidget _linkTextWidget;
         [SerializeField] private PeaceOfTextWidget _contactTextWidget;
         [SerializeField] private PeaceOfTextWidget _dbTextWidget;
+        [Space]
+        [SerializeField] private ToolsBarWidget _toolsBarWidget; // TODO: Избавиться от прямой ссылки
 
         public void Initialize()
         {
@@ -43,7 +45,7 @@ namespace Widgets
 
         private void TmpLinkHandlerOnOnLinkClicked(string id, string linkText)
         {
-            Debug.Log($"Click on link: id={id}, text={linkText}");
+            InsertDataIntoTool(id, linkText);
         }
 
         private void OnChangeCase(Unit unit)
@@ -63,19 +65,41 @@ namespace Widgets
             {
                 if (tagContent.Key == "link")
                 {
-                    _linkTextWidget.Initialize(tagContent.Key, tagContent.Value, () => Debug.Log($"Type: {tagContent.Key} Text: {tagContent.Value}"));
+                    _linkTextWidget.Initialize(tagContent.Key, tagContent.Value, OnDataButtonClick);
                     _linkTextWidget.gameObject.SetActive(true);
                 }
                 if (tagContent.Key == "contact")
                 {
-                    _contactTextWidget.Initialize(tagContent.Key, tagContent.Value, () => Debug.Log($"Type: {tagContent.Key} Text: {tagContent.Value}"));
+                    _contactTextWidget.Initialize(tagContent.Key, tagContent.Value, OnDataButtonClick);
                     _contactTextWidget.gameObject.SetActive(true);
                 }
                 if (tagContent.Key == "db")
                 {
-                    _dbTextWidget.Initialize(tagContent.Key, tagContent.Value, () => Debug.Log($"Type: {tagContent.Key} Text: {tagContent.Value}"));
+                    _dbTextWidget.Initialize(tagContent.Key, tagContent.Value, OnDataButtonClick);
                     _dbTextWidget.gameObject.SetActive(true);
                 }
+            }
+        }
+
+        private void OnDataButtonClick((string dataType, string text) data)
+        {
+            InsertDataIntoTool(data.dataType, data.text);
+        }
+
+        private void InsertDataIntoTool(string dataType, string text)
+        {
+            Debug.Log($"Type: {dataType} Text: {text}");
+            if (dataType == "link") // TODO: что-то сделать с типами
+            {
+                _toolsBarWidget.InsertData(ToolType.Link, text);
+            }
+            else if (dataType == "contact")
+            {
+                _toolsBarWidget.InsertData(ToolType.Contact, text);
+            }
+            else if (dataType == "db")
+            {
+                _toolsBarWidget.InsertData(ToolType.Db, text);
             }
         }
 

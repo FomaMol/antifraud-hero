@@ -1,5 +1,7 @@
 using System;
 using Localization;
+using Services;
+using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
@@ -15,14 +17,12 @@ namespace Widgets
 
     public class ToolsBarWidget : Widget
     {
+        [Inject] private readonly GameplayService _gameplayService;
+         
         [SerializeField] private ToolTabsWidget _toolTabsWidget;
-        [SerializeField] private LinkToolWidget _linkToolSection;
-        [SerializeField] private ContactToolWidget _contactToolSection;
-        [SerializeField] private DbToolWidget _dbToolSection;
-
-        [Inject] private LocalizationService _localizationService;
-
-        public LocalizationService LocalizationService => _localizationService;
+        [SerializeField] private ToolWidget _linkToolSection;
+        [SerializeField] private ToolWidget _contactToolSection;
+        [SerializeField] private ToolWidget _dbToolSection;
 
         public void OpenTab(ToolType toolType)
         {
@@ -45,17 +45,46 @@ namespace Widgets
             }
         }
 
+        public void InsertData(ToolType toolType, string data)
+        {
+            switch (toolType)
+            {
+                case ToolType.Link:
+                    _linkToolSection.InsertData(data);
+                    break;
+                case ToolType.Contact:
+                    _contactToolSection.InsertData(data);
+                    break;
+                case ToolType.Db:
+                    _dbToolSection.InsertData(data);
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(toolType), toolType, null);
+            }
+            _toolTabsWidget.TryShowAlertPoint(toolType);
+        }
+
+        public void CleanUp()
+        {
+            _linkToolSection.CleanUp();
+            _contactToolSection.CleanUp();
+            _dbToolSection.CleanUp();
+        }
+
         public void Initialize()
         {
-            _linkToolSection.Init();
-            _contactToolSection.Init();
-            _dbToolSection.Init();
+            _gameplayService.OnChangeCase.Subscribe(OnChangeCase).AddTo(this);
+            
+            _linkToolSection.Initialize();
+            _contactToolSection.Initialize();
+            _dbToolSection.Initialize();
 
             _toolTabsWidget.Init(OpenTab);
+        }
 
-            Debug.Log(_localizationService.Get("hello.world"));
-            _localizationService.ChangeLanguage("en");
-            Debug.Log(_localizationService.Get("hello.world"));
+        private void OnChangeCase(Unit unit)
+        {
+            CleanUp();
         }
 
         private void Start()
