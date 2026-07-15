@@ -14,6 +14,8 @@ namespace Services
         public string CurrentLanguage => _saveDataCache.CurrentLanguage;
         public int CurrentShiftIndex => _saveDataCache.CurrentShift;
         public int CurrentCaseIndex => _saveDataCache.CurrentCase;
+        public int AvailableHelpsNumber => _saveDataCache.AvailableHelpsNumber;
+        public bool HelpWasUsedInCurrentCase => _saveDataCache.HelpWasUsedInCurrentCase;
         public IReadOnlyList<int> CasesOrder => _saveDataCache.CasesOrder;
         public IReadOnlyList<bool> CaseDecisionHistory => _saveDataCache.CaseResultHistory;
 
@@ -32,6 +34,18 @@ namespace Services
         public void SetCurrentCase(int caseNumber)
         {
             _saveDataCache.CurrentCase = caseNumber;
+            SaveGameplayConfig(_saveDataCache);
+        }
+
+        public void SetAvailableHelpsNumber(int number)
+        {
+            _saveDataCache.AvailableHelpsNumber = number;
+            SaveGameplayConfig(_saveDataCache);
+        }
+
+        public void SetHelpWasUsedInCurrentCase(bool isUsed)
+        {
+            _saveDataCache.HelpWasUsedInCurrentCase = isUsed;
             SaveGameplayConfig(_saveDataCache);
         }
 

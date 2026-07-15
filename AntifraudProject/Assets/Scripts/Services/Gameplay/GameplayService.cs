@@ -32,13 +32,18 @@ namespace Services
         public int TotalCaseCountInCurrentShift => _gameplayConfig.Shifts[_persistingService.CurrentShiftIndex].Cases.Count;
         public int TotalShiftCount => _gameplayConfig.Shifts.Count;
         private int CurrentCaseRealIndex => _persistingService.CasesOrder[CurrentCaseIndex];
-        public IReadOnlyList<CaseConfig> CaseConfigsInCurrentShift => _persistingService.CasesOrder.Select(it => _gameplayConfig.Shifts[CurrentShiftIndex].Cases[it]).ToList(); 
+        public IReadOnlyList<CaseConfig> CaseConfigsInCurrentShift => _persistingService.CasesOrder.Select(it => _gameplayConfig.Shifts[CurrentShiftIndex].Cases[it]).ToList();
+        public int AvailableHelpsNumber => _persistingService.AvailableHelpsNumber;
+        public bool HelpWasUsedInCurrentCase => _persistingService.HelpWasUsedInCurrentCase;
 
         private readonly Subject<Unit> _onChangeShift = new();
         public IObservable<Unit> OnChangeShift => _onChangeShift;
         
         private readonly Subject<Unit> _onChangeCase = new();
         public IObservable<Unit> OnChangeCase => _onChangeCase;
+        
+        private readonly Subject<Unit> _onUseHelp = new();
+        public IObservable<Unit> OnUseHelp => _onUseHelp;
 
         public void Initialize()
         {
@@ -57,6 +62,7 @@ namespace Services
         public void MakeChoice(bool isValid)
         {
             _persistingService.SetCaseResultHistory(_persistingService.CaseDecisionHistory.Append(isValid).ToList());
+            _persistingService.SetHelpWasUsedInCurrentCase(false);
             
             ++CurrentCaseIndex;
             if (CurrentCaseIndex >= _gameplayConfig.Shifts[CurrentShiftIndex].Cases.Count)
@@ -64,6 +70,7 @@ namespace Services
                 CurrentCaseIndex = 0;
                 _persistingService.SetCaseResultHistory(new List<bool>());
                 _persistingService.SetCasesOrder(Enumerable.Range(0, TotalCaseCountInCurrentShift).Shuffle().ToList());
+                _persistingService.SetAvailableHelpsNumber(3); // TODO: вынести в константы
                 ++CurrentShiftIndex;
                 if (CurrentShiftIndex >= _gameplayConfig.Shifts.Count)
                 {
@@ -73,6 +80,16 @@ namespace Services
             }
 
             _onChangeCase.OnNext(Unit.Default);
+        }
+
+        public void TryUseHelp()
+        {
+            if (AvailableHelpsNumber > 0)
+            {
+                _persistingService.SetAvailableHelpsNumber(AvailableHelpsNumber - 1);
+                _persistingService.SetHelpWasUsedInCurrentCase(true);
+                _onUseHelp.OnNext(Unit.Default);
+            }
         }
 
         public bool IsToolAvailable(ToolType toolType)
