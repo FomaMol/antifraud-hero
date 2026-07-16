@@ -8,4 +8,15 @@ gameplay.statusbar.shift_number,SHIFT #{0},СМЕНА #{0}
 gameplay.statusbar.winrate_title,WINRATE,ТОЧНОСТЬ
 gameplay.statusbar.winrate_value,{0}%,{0}%
 gameplay.caselistbar.case_number,CASE #{0},КЕЙС #{0}
+gameplay.caselistbar.case_queue,CASE QUEUE,ОЧЕРЕДЬ КЕЙСОВ
 gameplay.statusbar.shift_progress,SHIFT PROGRESS,ПРОГРЕСС СМЕНЫ
+gameplay.messagebar.incoming_massage,INCOMING MESSAGE,ВХОДЯЩЕЕ СООБЩЕНИЕ
+gameplay.toolsbar.link_tool_title,LINK CHECK,ПРОВЕРКА ССЫЛОК
+gameplay.toolsbar.contact_tool_title,CONTACT CHECK,ПРОВЕРКА КОНТАКТА
+gameplay.toolsbar.db_tool_title,DATABASE CHECK,ОФИЦИАЛЬНАЯ БАЗА
+gameplay.toolsbar.link_tool_subtitle,LINK SCANNER,СКАННЕР ССЫЛОК
+gameplay.toolsbar.contact_tool_subtitle,CONTACT SCANNER,СКАННЕР КОНТАКТА
+gameplay.toolsbar.db_tool_subtitle,DATABASE SCANNER,СКАННЕР БД
+gameplay.toolsbar.link_empty_tool,FIND LINK,НАЙДИТЕ ССЫЛКУ
+gameplay.toolsbar.contact_empty_tool,FIND CONTACT,НАЙДИТЕ КОНТАКТ
+gameplay.toolsbar.db_empty_tool,FIND ENTRY,НАЙДИТЕ ЗАПИСЬ
