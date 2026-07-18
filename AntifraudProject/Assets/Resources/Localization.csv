@@ -1,5 +1,11 @@
 key,en,ru
-hello.world,My Text,Мой текст
+mainmenu.logo.text,ANTIFRAUD HERO,АНТИФРОД HERO
+mainmenu.buttons.continue,Continue,Продолжить
+mainmenu.buttons.new_game,New Game,Новая Игра
+mainmenu.buttons.how_to_play,How To Play,Как играть
+mainmenu.buttons.language,English,Русский
+mainmenu.buttons.sounds,Sounds,Звуки
+mainmenu.buttons.continue,Continue,Продолжить
 gameplay.controlbar.accept,ACCEPT,ПОДТВЕРДИТЬ
 gameplay.controlbar.decline,BLOCK,ЗАБЛОКИРОВАТЬ
 gameplay.controlbar.help,HELP,ПОМОЩЬ
