@@ -11,7 +11,7 @@ namespace Services
         [JsonProperty] public int CurrentCase = 0;
         [JsonProperty] public int AvailableHelpsNumber = 3;
         [JsonProperty] public bool HelpWasUsedInCurrentCase = false;
-        [JsonProperty] public List<int> CasesOrder;
-        [JsonProperty] public List<bool> CaseResultHistory;
+        [JsonProperty] public List<int> CasesOrder = new();
+        [JsonProperty] public List<bool> CaseResultHistory = new();
     }
 }

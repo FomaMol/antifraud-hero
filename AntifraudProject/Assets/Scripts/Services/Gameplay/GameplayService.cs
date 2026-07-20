@@ -123,6 +123,8 @@ namespace Services
 
         public float GetWinRateForCurrentShift()
         {
+            if (_persistingService.CaseDecisionHistory.Count == 0)
+                return 0;
             return _persistingService.CaseDecisionHistory
                        .Select((it, index) => it == GetExpectedDecisionForCase(index))
                        .Sum(it => it ? 1f : 0f) / _persistingService.CaseDecisionHistory.Count;
