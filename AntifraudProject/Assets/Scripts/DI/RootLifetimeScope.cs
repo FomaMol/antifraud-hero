@@ -1,5 +1,6 @@
 using Localization;
 using Services;
+using Services.MainMenu;
 using Services.Scenes;
 using VContainer;
 using VContainer.Unity;
@@ -14,7 +15,6 @@ namespace DI
         {
             builder.RegisterEntryPoint<PersistingService>().AsSelf();
             builder.RegisterEntryPoint<LocalizationService>().AsSelf();
-            builder.RegisterEntryPoint<GameplayService>().AsSelf();
             builder.RegisterEntryPoint<ScenesService>().AsSelf();
         }
 

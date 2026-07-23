@@ -12,12 +12,13 @@ namespace Services
         private SaveData _saveDataCache;
 
         public string CurrentLanguage => _saveDataCache.CurrentLanguage;
-        public int CurrentShiftIndex => _saveDataCache.CurrentShift;
-        public int CurrentCaseIndex => _saveDataCache.CurrentCase;
-        public int AvailableHelpsNumber => _saveDataCache.AvailableHelpsNumber;
-        public bool HelpWasUsedInCurrentCase => _saveDataCache.HelpWasUsedInCurrentCase;
-        public IReadOnlyList<int> CasesOrder => _saveDataCache.CasesOrder;
-        public IReadOnlyList<bool> CaseDecisionHistory => _saveDataCache.CaseResultHistory;
+        public int CurrentShiftIndex => _saveDataCache.Gameplay.CurrentShift;
+        public int CurrentCaseIndex => _saveDataCache.Gameplay.CurrentCase;
+        public int AvailableHelpsNumber => _saveDataCache.Gameplay.AvailableHelpsNumber;
+        public bool HelpWasUsedInCurrentCase => _saveDataCache.Gameplay.HelpWasUsedInCurrentCase;
+        public IReadOnlyList<int> CasesOrder => _saveDataCache.Gameplay.CasesOrder;
+        public IReadOnlyList<bool> CaseDecisionHistory => _saveDataCache.Gameplay.CaseResultHistory;
+        public bool WasGameplayPlayed => _saveDataCache.WasGameplayPlayed;
 
         public void SetLanguage(string language)
         {
@@ -27,37 +28,37 @@ namespace Services
 
         public void SetCurrentShift(int shift)
         {
-            _saveDataCache.CurrentShift = shift;
+            _saveDataCache.Gameplay.CurrentShift = shift;
             SaveGameplayConfig(_saveDataCache);
         }
 
         public void SetCurrentCase(int caseNumber)
         {
-            _saveDataCache.CurrentCase = caseNumber;
+            _saveDataCache.Gameplay.CurrentCase = caseNumber;
             SaveGameplayConfig(_saveDataCache);
         }
 
         public void SetAvailableHelpsNumber(int number)
         {
-            _saveDataCache.AvailableHelpsNumber = number;
+            _saveDataCache.Gameplay.AvailableHelpsNumber = number;
             SaveGameplayConfig(_saveDataCache);
         }
 
         public void SetHelpWasUsedInCurrentCase(bool isUsed)
         {
-            _saveDataCache.HelpWasUsedInCurrentCase = isUsed;
+            _saveDataCache.Gameplay.HelpWasUsedInCurrentCase = isUsed;
             SaveGameplayConfig(_saveDataCache);
         }
 
         public void SetCasesOrder(IReadOnlyList<int> casesOrder)
         {
-            _saveDataCache.CasesOrder = new List<int>(casesOrder);
+            _saveDataCache.Gameplay.CasesOrder = new List<int>(casesOrder);
             SaveGameplayConfig(_saveDataCache);
         }
 
         public void SetCaseResultHistory(IReadOnlyList<bool> caseResultHistory)
         {
-            _saveDataCache.CaseResultHistory = new List<bool>(caseResultHistory);
+            _saveDataCache.Gameplay.CaseResultHistory = new List<bool>(caseResultHistory);
             SaveGameplayConfig(_saveDataCache);
         }
 
@@ -82,6 +83,18 @@ namespace Services
         {
             var json = PlayerPrefs.GetString(GameplayConfigKey, null);
             return string.IsNullOrEmpty(json) ? null : JsonConvert.DeserializeObject<SaveData>(json);
+        }
+
+        public void ResetGameplayProgress()
+        {
+            _saveDataCache.Gameplay = new GameplaySaveData();
+            SaveGameplayConfig(_saveDataCache);
+        }
+
+        public void SetWasGameplayPlayed(bool wasGameplayPlayed)
+        {
+            _saveDataCache.WasGameplayPlayed = wasGameplayPlayed;
+            SaveGameplayConfig(_saveDataCache);
         }
     }
 }

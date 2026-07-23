@@ -57,6 +57,7 @@ namespace Services
             {
                 _persistingService.SetCaseResultHistory(new List<bool>());
             }
+            _persistingService.SetWasGameplayPlayed(true);
         }
 
         public void MakeChoice(bool isValid)

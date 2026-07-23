@@ -1,6 +1,4 @@
-using System;
-using Localization;
-using Services.Scenes;
+using Services.MainMenu;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
@@ -9,9 +7,8 @@ namespace Widgets.MainMenu
 {
     public class MainMenuWidget : Widget
     {
-        [Inject] private readonly ScenesService _scenesService;
-        [Inject] private readonly LocalizationService _localizationService;
-        
+        [Inject] private readonly MainMenuService _mainMenuService;
+
         [SerializeField] private Button _continueButton;
         [SerializeField] private Button _newGameButton;
         [SerializeField] private Button _howToPlayButton;
@@ -30,16 +27,23 @@ namespace Widgets.MainMenu
             _howToPlayButton.onClick.AddListener(OnHowToPlayButtonClick);
             _changeLanguageButton.onClick.AddListener(OnChangeLanguageButtonClick);
             _toggleSoundsButton.onClick.AddListener(OnToggleSoundsButtonClick);
+
+            UpdateView();
+        }
+
+        private void UpdateView()
+        {
+            _continueButton.gameObject.SetActive(_mainMenuService.WasGameplayPlayed);
         }
 
         private void OnContinueButtonClick()
         {
-            _scenesService.LaunchGameplay();
+            _mainMenuService.ContinueGame();
         }
 
         private void OnNewGameButtonClick()
         {
-            _scenesService.LaunchGameplay();
+            _mainMenuService.StartNewGame();
         }
 
         private void OnHowToPlayButtonClick()
@@ -48,7 +52,7 @@ namespace Widgets.MainMenu
 
         private void OnChangeLanguageButtonClick()
         {
-            _localizationService.ChangeLanguage(_localizationService.Language == "en" ? "ru" : "en");
+            _mainMenuService.ToggleLocalization();
         }
 
         private void OnToggleSoundsButtonClick()
