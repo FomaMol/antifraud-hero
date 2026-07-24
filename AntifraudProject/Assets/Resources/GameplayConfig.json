@@ -7,80 +7,80 @@
       "cases": [
         {
           "type_text": "SMS",
-          "message_text": "Ваша карта заблокирована. Нажмите на ссылку для разблокировки: [link]https://vk.com[/link]",
-          "link_validation_text": "Этой ссылки нет",
+          "message_text": "gameplay.shift1.case1.message",
+          "link_validation_text": "gameplay.shift1.case1.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Этого человека нет",
+          "sender_validation_text": "gameplay.shift1.case1.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Отправитель ок",
+          "db_validation_text": "gameplay.shift1.case1.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это был скам. Будь внимательнее"
+          "result_text": "gameplay.shift1.case1.result"
         },
         {
           "type_text": "SMS",
-          "message_text": "Поздравляем! Вы выиграли 50 000 руб. Перейдите для получения приза: [link]https://loto-bank-prize.ru[/link]",
-          "link_validation_text": "Ссылка не в белом списке",
+          "message_text": "gameplay.shift1.case2.message",
+          "link_validation_text": "gameplay.shift1.case2.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Отправитель не найден",
+          "sender_validation_text": "gameplay.shift1.case2.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Данных нет",
+          "db_validation_text": "gameplay.shift1.case2.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это был скам. Мошенники используют призы как приманку"
+          "result_text": "gameplay.shift1.case2.result"
         },
         {
           "type_text": "Email",
-          "message_text": "Ваш аккаунт будет заблокирован. Подтвердите данные по ссылке: [link]https://sber-secure.ru/confirm[/link]",
-          "link_validation_text": "Домен не совпадает с официальным",
+          "message_text": "gameplay.shift1.case3.message",
+          "link_validation_text": "gameplay.shift1.case3.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Email не в базе отправителей",
+          "sender_validation_text": "gameplay.shift1.case3.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Подозрительная активность",
+          "db_validation_text": "gameplay.shift1.case3.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это был фишинг. Официальные банки не запрашивают данные по почте"
+          "result_text": "gameplay.shift1.case3.result"
         },
         {
           "type_text": "SMS",
-          "message_text": "Ваша посылка ожидает получения. Оплатите доставку: [link]https://pochta-ru.delivery[/link]",
-          "link_validation_text": "Домен не является официальным",
+          "message_text": "gameplay.shift1.case4.message",
+          "link_validation_text": "gameplay.shift1.case4.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Имя отправителя совпадает",
+          "sender_validation_text": "gameplay.shift1.case4.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Номер посылки не найден",
+          "db_validation_text": "gameplay.shift1.case4.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это был скам. Мошенники подделывают имя отправителя"
+          "result_text": "gameplay.shift1.case4.result"
         },
         {
           "type_text": "SMS",
-          "message_text": "Операция на 3 200 руб. в магазине Пятёрочка. Детали операции: [link]https://sberbank.ru/operations[/link]",
-          "link_validation_text": "Официальный домен банка",
+          "message_text": "gameplay.shift1.case5.message",
+          "link_validation_text": "gameplay.shift1.case5.link_validation",
           "link_validation_result": 0,
-          "sender_validation_text": "Отправитель подтверждён",
+          "sender_validation_text": "gameplay.shift1.case5.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Официальный отправитель",
+          "db_validation_text": "gameplay.shift1.case5.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это легитимное сообщение от банка. Всё в порядке"
+          "result_text": "gameplay.shift1.case5.result"
         },
         {
           "type_text": "Email",
-          "message_text": "Срочная вакансия! Заработок от 100 000 руб/месяц, без опыта. Откликнитесь здесь: [link]https://rabota-online24.com/apply[/link]",
-          "link_validation_text": "Сайт зарегистрирован недавно",
+          "message_text": "gameplay.shift1.case6.message",
+          "link_validation_text": "gameplay.shift1.case6.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Email домен не верифицирован",
+          "sender_validation_text": "gameplay.shift1.case6.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Данных об отправителе нет",
+          "db_validation_text": "gameplay.shift1.case6.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это был скам. Слишком выгодные предложения — признак мошенничества"
+          "result_text": "gameplay.shift1.case6.result"
         },
         {
           "type_text": "SMS",
-          "message_text": "Ваше заявление одобрено. Выплата будет произведена в течение 3 рабочих дней. Детали: [link]https://gosuslugi.ru/profile/orders[/link]",
-          "link_validation_text": "Официальный домен Госуслуг",
+          "message_text": "gameplay.shift1.case7.message",
+          "link_validation_text": "gameplay.shift1.case7.link_validation",
           "link_validation_result": 0,
-          "sender_validation_text": "Отправитель в базе",
+          "sender_validation_text": "gameplay.shift1.case7.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Официальный государственный отправитель",
+          "db_validation_text": "gameplay.shift1.case7.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это легитимное сообщение от Госуслуг. Всё в порядке"
+          "result_text": "gameplay.shift1.case7.result"
         }
       ]
     },
@@ -89,80 +89,80 @@
       "cases": [
         {
           "type_text": "SMS",
-          "message_text": "[contact]Тинькофф[/contact]: Ваш кредитный лимит увеличен до 200 000 руб. Подтвердите согласие: [link]https://tinkoff-credit-ok.ru[/link]",
-          "link_validation_text": "Домен не принадлежит банку",
+          "message_text": "gameplay.shift2.case1.message",
+          "link_validation_text": "gameplay.shift2.case1.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Имя совпадает с известным банком",
+          "sender_validation_text": "gameplay.shift2.case1.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Номер отправителя не в реестре",
+          "db_validation_text": "gameplay.shift2.case1.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это был скам. Банки не повышают лимит через SMS со ссылками"
+          "result_text": "gameplay.shift2.case1.result"
         },
         {
           "type_text": "Email",
-          "message_text": "Письмо от [contact]noreply@gosuslugi.ru[/contact]. Ваши документы успешно загружены. Статус заявки можно отследить в личном кабинете.",
-          "link_validation_text": "Ссылок нет",
+          "message_text": "gameplay.shift2.case2.message",
+          "link_validation_text": "gameplay.shift2.case2.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Email совпадает с официальным",
+          "sender_validation_text": "gameplay.shift2.case2.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Официальный государственный отправитель",
+          "db_validation_text": "gameplay.shift2.case2.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это легитимное письмо от Госуслуг. Всё в порядке"
+          "result_text": "gameplay.shift2.case2.result"
         },
         {
           "type_text": "SMS",
-          "message_text": "[contact]Служба безопасности[/contact]: Зафиксирован вход в ваш аккаунт с нового устройства. Если это не вы — срочно позвоните: [link]https://security-alert-ru.com[/link]",
-          "link_validation_text": "Сайт не в списке доверенных",
+          "message_text": "gameplay.shift2.case3.message",
+          "link_validation_text": "gameplay.shift2.case3.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Отправитель не идентифицирован",
+          "sender_validation_text": "gameplay.shift2.case3.sender_validation",
           "sender_validation_result": 0,
-          "db_validation_text": "Данных нет",
+          "db_validation_text": "gameplay.shift2.case3.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это был скам. Настоящие службы безопасности не присылают ссылки в SMS"
+          "result_text": "gameplay.shift2.case3.result"
         },
         {
           "type_text": "SMS",
-          "message_text": "[contact]МТС[/contact]: Ваш баланс пополнен на 300 руб. Остаток: 342,50 руб.",
-          "link_validation_text": "Ссылок нет",
+          "message_text": "gameplay.shift2.case4.message",
+          "link_validation_text": "gameplay.shift2.case4.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Отправитель подтверждён",
+          "sender_validation_text": "gameplay.shift2.case4.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Официальный оператор",
+          "db_validation_text": "gameplay.shift2.case4.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это легитимное уведомление от оператора. Всё в порядке"
+          "result_text": "gameplay.shift2.case4.result"
         },
         {
           "type_text": "Email",
-          "message_text": "Письмо от [contact]invoice@ozon-seller.biz[/contact]. Счёт на оплату заказа. Скачайте документ: [link]https://ozon-seller.biz/invoice78234.exe[/link]",
-          "link_validation_text": "Ссылка ведёт на исполняемый файл",
+          "message_text": "gameplay.shift2.case5.message",
+          "link_validation_text": "gameplay.shift2.case5.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Домен отличается от официального",
+          "sender_validation_text": "gameplay.shift2.case5.sender_validation",
           "sender_validation_result": 0,
-          "db_validation_text": "Подозрительная активность домена",
+          "db_validation_text": "gameplay.shift2.case5.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это был скам. Никогда не скачивайте .exe файлы из писем"
+          "result_text": "gameplay.shift2.case5.result"
         },
         {
           "type_text": "SMS",
-          "message_text": "[contact]Андрей[/contact] пишет: Привет, это я из отдела кадров. Скинь свои банковские реквизиты для начисления премии на [link]https://hr-bonus-form.ru[/link]",
-          "link_validation_text": "Домен зарегистрирован 2 дня назад",
+          "message_text": "gameplay.shift2.case6.message",
+          "link_validation_text": "gameplay.shift2.case6.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Личный номер, не корпоративный",
+          "sender_validation_text": "gameplay.shift2.case6.sender_validation",
           "sender_validation_result": 0,
-          "db_validation_text": "Данных нет",
+          "db_validation_text": "gameplay.shift2.case6.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это был скам. Реквизиты запрашивают только через официальные каналы"
+          "result_text": "gameplay.shift2.case6.result"
         },
         {
           "type_text": "Email",
-          "message_text": "Письмо от [contact]support@hh.ru[/contact]. Ваше резюме просмотрели 12 работодателей на этой неделе. Откройте статистику в личном кабинете.",
-          "link_validation_text": "Ссылок нет",
+          "message_text": "gameplay.shift2.case7.message",
+          "link_validation_text": "gameplay.shift2.case7.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Email совпадает с официальным сервисом",
+          "sender_validation_text": "gameplay.shift2.case7.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Известный сервис, данные совпадают",
+          "db_validation_text": "gameplay.shift2.case7.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это легитимное письмо от hh.ru. Всё в порядке"
+          "result_text": "gameplay.shift2.case7.result"
         }
       ]
     },
@@ -171,80 +171,80 @@
       "cases": [
         {
           "type_text": "SMS",
-          "message_text": "[contact]ФНС России[/contact]: По ИНН [db]772901834521[/db] выявлена задолженность 4 800 руб. Оплатите до 15 апреля: [link]https://fns-oplata.ru[/link]",
-          "link_validation_text": "Домен не является официальным сайтом ФНС",
+          "message_text": "gameplay.shift3.case1.message",
+          "link_validation_text": "gameplay.shift3.case1.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Имя совпадает с ведомством",
+          "sender_validation_text": "gameplay.shift3.case1.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Номер не зарегистрирован за ФНС",
+          "db_validation_text": "gameplay.shift3.case1.db_validation",
           "db_validation_result": 0,
-          "result_text": "Это был скам. ФНС уведомляет только через личный кабинет на nalog.ru"
+          "result_text": "gameplay.shift3.case1.result"
         },
         {
           "type_text": "Email",
-          "message_text": "Письмо от [contact]security@google.com[/contact]. Ваш пароль был изменён. Если это не вы — восстановите доступ через личный кабинет Google.",
-          "link_validation_text": "Ссылок нет",
+          "message_text": "gameplay.shift3.case2.message",
+          "link_validation_text": "gameplay.shift3.case2.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Email подтверждён",
+          "sender_validation_text": "gameplay.shift3.case2.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Официальный домен Google",
+          "db_validation_text": "gameplay.shift3.case2.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это легитимное уведомление от Google. Всё в порядке"
+          "result_text": "gameplay.shift3.case2.result"
         },
         {
           "type_text": "SMS",
-          "message_text": "[contact]Мама[/contact]: Сынок, я попала в аварию, срочно нужны деньги. Переведи на карту [link]https://переводденег.рф[/link]",
-          "link_validation_text": "Ссылка ведёт на фишинговый сайт",
+          "message_text": "gameplay.shift3.case3.message",
+          "link_validation_text": "gameplay.shift3.case3.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Номер не совпадает с контактом",
+          "sender_validation_text": "gameplay.shift3.case3.sender_validation",
           "sender_validation_result": 0,
-          "db_validation_text": "Данных нет",
+          "db_validation_text": "gameplay.shift3.case3.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это был скам. Мошенники часто притворяются родственниками в беде"
+          "result_text": "gameplay.shift3.case3.result"
         },
         {
           "type_text": "Email",
-          "message_text": "Письмо от [contact]noreply@sberbank.ru[/contact]. Чек по операции [db]SBR-0409-559271[/db] от 09.04.2026 на сумму 1 250 руб. Детали в приложении.",
-          "link_validation_text": "Ссылок нет",
+          "message_text": "gameplay.shift3.case4.message",
+          "link_validation_text": "gameplay.shift3.case4.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Официальный домен банка",
+          "sender_validation_text": "gameplay.shift3.case4.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Отправитель верифицирован",
+          "db_validation_text": "gameplay.shift3.case4.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это легитимный чек от Сбербанка. Всё в порядке"
+          "result_text": "gameplay.shift3.case4.result"
         },
         {
           "type_text": "SMS",
-          "message_text": "Ваши инвестиции выросли на 340%! Выведите прибыль прямо сейчас: [link]https://cryptopro-withdraw.io[/link]",
-          "link_validation_text": "Домен зарегистрирован недавно",
+          "message_text": "gameplay.shift3.case5.message",
+          "link_validation_text": "gameplay.shift3.case5.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Отправитель неизвестен",
+          "sender_validation_text": "gameplay.shift3.case5.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Данных нет",
+          "db_validation_text": "gameplay.shift3.case5.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это был скам. Обещания сверхприбыли — классический признак мошенничества"
+          "result_text": "gameplay.shift3.case5.result"
         },
         {
           "type_text": "Email",
-          "message_text": "Ваш заказ №[db]9183746[/db] отправлен. Ожидаемая дата доставки: 11 апреля.",
-          "link_validation_text": "Ссылок нет",
+          "message_text": "gameplay.shift3.case6.message",
+          "link_validation_text": "gameplay.shift3.case6.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Домен совпадает с официальным",
+          "sender_validation_text": "gameplay.shift3.case6.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Известный интернет-магазин",
+          "db_validation_text": "gameplay.shift3.case6.db_validation",
           "db_validation_result": 1,
-          "result_text": "Это легитимное уведомление от Wildberries. Всё в порядке"
+          "result_text": "gameplay.shift3.case6.result"
         },
         {
           "type_text": "SMS",
-          "message_text": "Одобрен кредит 500 000 руб. под 3.9% годовых. Номер заявки: [db]RBK-2026-50000[/db]. Для получения перейдите: [link]https://rosbank-kredit.online[/link]",
-          "link_validation_text": "Домен не принадлежит Росбанку",
+          "message_text": "gameplay.shift3.case7.message",
+          "link_validation_text": "gameplay.shift3.case7.link_validation",
           "link_validation_result": 1,
-          "sender_validation_text": "Имя совпадает с известным банком",
+          "sender_validation_text": "gameplay.shift3.case7.sender_validation",
           "sender_validation_result": 1,
-          "db_validation_text": "Номер не зарегистрирован за банком",
-          "db_validation_result": 0,
-          "result_text": "Это был скам. Банки не рассылают одобрения незапрошенных кредитов через SMS"
+          "db_validation_text": "gameplay.shift3.case7.db_validation",
+          "db_validation_result": 1,
+          "result_text": "gameplay.shift3.case7.result"
         }
       ]
     }

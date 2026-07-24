@@ -1,4 +1,5 @@
 using System;
+using Localization;
 using Services;
 using TMPro;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace Widgets
     public class ToolWidget : Widget
     {
         [Inject] private readonly GameplayService _gameplayService;
+        [Inject] private readonly LocalizationService _localizationService;
 
         [SerializeField] private ToolType _toolType;
         
@@ -55,14 +57,15 @@ namespace Widgets
         private string GetValidationText()
         {
             var currentCaseConfig = _gameplayService.CurrentCaseConfig;
-            
-            return _toolType switch
+
+            var key = _toolType switch
             {
                 ToolType.Link => currentCaseConfig.LinkValidationText,
                 ToolType.Contact => currentCaseConfig.SenderValidationText,
                 ToolType.Db => currentCaseConfig.DbValidationText,
                 _ => throw new ArgumentOutOfRangeException()
             };
+            return _localizationService.Get(key);
         }
 
         public void InsertData(string data)

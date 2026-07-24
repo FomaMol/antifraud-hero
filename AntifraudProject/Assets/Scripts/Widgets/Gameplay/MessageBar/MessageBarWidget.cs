@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using Localization;
 using Services;
 using UniRx;
 using UnityEngine;
@@ -11,6 +12,7 @@ namespace Widgets
     public class MessageBarWidget : Widget
     {
         [Inject] private readonly GameplayService _gameplayService;
+        [Inject] private readonly LocalizationService _localizationService;
         
         [SerializeField] private TMPLinkHandler _tmpLinkHandler;
         [SerializeField] private PeaceOfTextWidget _linkTextWidget;
@@ -55,7 +57,8 @@ namespace Widgets
 
         private void UpdateView()
         {
-            var (processedText, tagContents) = ReplaceCustomTags(_gameplayService.CurrentCaseConfig.MessageText);
+            var localizedMessage = _localizationService.Get(_gameplayService.CurrentCaseConfig.MessageText);
+            var (processedText, tagContents) = ReplaceCustomTags(localizedMessage);
             _tmpLinkHandler.Text.SetText(processedText);
             
             _linkTextWidget.gameObject.SetActive(false);

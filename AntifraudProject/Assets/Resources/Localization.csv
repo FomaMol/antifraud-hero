@@ -26,3 +26,108 @@ gameplay.toolsbar.db_tool_subtitle,DATABASE SCANNER,СКАННЕР БД
 gameplay.toolsbar.link_empty_tool,FIND LINK,НАЙДИТЕ ССЫЛКУ
 gameplay.toolsbar.contact_empty_tool,FIND CONTACT,НАЙДИТЕ КОНТАКТ
 gameplay.toolsbar.db_empty_tool,FIND ENTRY,НАЙДИТЕ ЗАПИСЬ
+gameplay.shift1.case1.message,Your card has been blocked. Click the link to unblock it: [link]https://vk.com[/link],Ваша карта заблокирована. Нажмите на ссылку для разблокировки: [link]https://vk.com[/link]
+gameplay.shift1.case1.link_validation,This link does not exist,Этой ссылки нет
+gameplay.shift1.case1.sender_validation,This person does not exist,Этого человека нет
+gameplay.shift1.case1.db_validation,Sender OK,Отправитель ок
+gameplay.shift1.case1.result,This was a scam. Be more careful,Это был скам. Будь внимательнее
+gameplay.shift1.case2.message,"Congratulations! You won 50,000 RUB. Go here to claim your prize: [link]https://loto-bank-prize.ru[/link]",Поздравляем! Вы выиграли 50 000 руб. Перейдите для получения приза: [link]https://loto-bank-prize.ru[/link]
+gameplay.shift1.case2.link_validation,Link is not whitelisted,Ссылка не в белом списке
+gameplay.shift1.case2.sender_validation,Sender not found,Отправитель не найден
+gameplay.shift1.case2.db_validation,No data available,Данных нет
+gameplay.shift1.case2.result,This was a scam. Fraudsters use prizes as bait,Это был скам. Мошенники используют призы как приманку
+gameplay.shift1.case3.message,Your account will be blocked. Confirm your details via the link: [link]https://sber-secure.ru/confirm[/link],Ваш аккаунт будет заблокирован. Подтвердите данные по ссылке: [link]https://sber-secure.ru/confirm[/link]
+gameplay.shift1.case3.link_validation,Domain does not match the official one,Домен не совпадает с официальным
+gameplay.shift1.case3.sender_validation,Email is not in the sender database,Email не в базе отправителей
+gameplay.shift1.case3.db_validation,Suspicious activity,Подозрительная активность
+gameplay.shift1.case3.result,This was phishing. Official banks do not request data via email,Это был фишинг. Официальные банки не запрашивают данные по почте
+gameplay.shift1.case4.message,Your parcel is awaiting pickup. Pay for delivery: [link]https://pochta-ru.delivery[/link],Ваша посылка ожидает получения. Оплатите доставку: [link]https://pochta-ru.delivery[/link]
+gameplay.shift1.case4.link_validation,Domain is not official,Домен не является официальным
+gameplay.shift1.case4.sender_validation,Sender name matches,Имя отправителя совпадает
+gameplay.shift1.case4.db_validation,Parcel number not found,Номер посылки не найден
+gameplay.shift1.case4.result,This was a scam. Fraudsters forge the sender name,Это был скам. Мошенники подделывают имя отправителя
+gameplay.shift1.case5.message,"Transaction of 3,200 RUB at Pyatyorochka store. Transaction details: [link]https://sberbank.ru/operations[/link]",Операция на 3 200 руб. в магазине Пятёрочка. Детали операции: [link]https://sberbank.ru/operations[/link]
+gameplay.shift1.case5.link_validation,Official bank domain,Официальный домен банка
+gameplay.shift1.case5.sender_validation,Sender verified,Отправитель подтверждён
+gameplay.shift1.case5.db_validation,Official sender,Официальный отправитель
+gameplay.shift1.case5.result,This is a legitimate message from the bank. Everything is fine,Это легитимное сообщение от банка. Всё в порядке
+gameplay.shift1.case6.message,"Urgent vacancy! Earn from 100,000 RUB/month, no experience needed. Apply here: [link]https://rabota-online24.com/apply[/link]","Срочная вакансия! Заработок от 100 000 руб/месяц, без опыта. Откликнитесь здесь: [link]https://rabota-online24.com/apply[/link]"
+gameplay.shift1.case6.link_validation,Website was recently registered,Сайт зарегистрирован недавно
+gameplay.shift1.case6.sender_validation,Email domain is not verified,Email домен не верифицирован
+gameplay.shift1.case6.db_validation,No data on the sender,Данных об отправителе нет
+gameplay.shift1.case6.result,This was a scam. Too-good-to-be-true offers are a sign of fraud,Это был скам. Слишком выгодные предложения — признак мошенничества
+gameplay.shift1.case7.message,Your application has been approved. Payment will be processed within 3 business days. Details: [link]https://gosuslugi.ru/profile/orders[/link],Ваше заявление одобрено. Выплата будет произведена в течение 3 рабочих дней. Детали: [link]https://gosuslugi.ru/profile/orders[/link]
+gameplay.shift1.case7.link_validation,Official Gosuslugi domain,Официальный домен Госуслуг
+gameplay.shift1.case7.sender_validation,Sender is in the database,Отправитель в базе
+gameplay.shift1.case7.db_validation,Official government sender,Официальный государственный отправитель
+gameplay.shift1.case7.result,This is a legitimate message from Gosuslugi. Everything is fine,Это легитимное сообщение от Госуслуг. Всё в порядке
+gameplay.shift2.case1.message,"[contact]Tinkoff[/contact]: Your credit limit has been increased to 200,000 RUB. Confirm your consent: [link]https://tinkoff-credit-ok.ru[/link]",[contact]Тинькофф[/contact]: Ваш кредитный лимит увеличен до 200 000 руб. Подтвердите согласие: [link]https://tinkoff-credit-ok.ru[/link]
+gameplay.shift2.case1.link_validation,Domain does not belong to the bank,Домен не принадлежит банку
+gameplay.shift2.case1.sender_validation,Name matches a known bank,Имя совпадает с известным банком
+gameplay.shift2.case1.db_validation,Sender number is not in the registry,Номер отправителя не в реестре
+gameplay.shift2.case1.result,This was a scam. Banks do not increase limits via SMS with links,Это был скам. Банки не повышают лимит через SMS со ссылками
+gameplay.shift2.case2.message,Email from [contact]noreply@gosuslugi.ru[/contact]. Your documents have been uploaded successfully. You can track your application status in your account.,Письмо от [contact]noreply@gosuslugi.ru[/contact]. Ваши документы успешно загружены. Статус заявки можно отследить в личном кабинете.
+gameplay.shift2.case2.link_validation,No links,Ссылок нет
+gameplay.shift2.case2.sender_validation,Email matches the official one,Email совпадает с официальным
+gameplay.shift2.case2.db_validation,Official government sender,Официальный государственный отправитель
+gameplay.shift2.case2.result,This is a legitimate email from Gosuslugi. Everything is fine,Это легитимное письмо от Госуслуг. Всё в порядке
+gameplay.shift2.case3.message,[contact]Security Service[/contact]: A login from a new device was detected on your account. If it wasn't you — call urgently: [link]https://security-alert-ru.com[/link],[contact]Служба безопасности[/contact]: Зафиксирован вход в ваш аккаунт с нового устройства. Если это не вы — срочно позвоните: [link]https://security-alert-ru.com[/link]
+gameplay.shift2.case3.link_validation,Website is not in the trusted list,Сайт не в списке доверенных
+gameplay.shift2.case3.sender_validation,Sender not identified,Отправитель не идентифицирован
+gameplay.shift2.case3.db_validation,No data available,Данных нет
+gameplay.shift2.case3.result,This was a scam. Real security services do not send links via SMS,Это был скам. Настоящие службы безопасности не присылают ссылки в SMS
+gameplay.shift2.case4.message,[contact]MTS[/contact]: Your balance has been topped up by 300 RUB. Remaining: 342.50 RUB.,"[contact]МТС[/contact]: Ваш баланс пополнен на 300 руб. Остаток: 342,50 руб."
+gameplay.shift2.case4.link_validation,No links,Ссылок нет
+gameplay.shift2.case4.sender_validation,Sender verified,Отправитель подтверждён
+gameplay.shift2.case4.db_validation,Official carrier,Официальный оператор
+gameplay.shift2.case4.result,This is a legitimate notification from the carrier. Everything is fine,Это легитимное уведомление от оператора. Всё в порядке
+gameplay.shift2.case5.message,Email from [contact]invoice@ozon-seller.biz[/contact]. Invoice for order payment. Download the document: [link]https://ozon-seller.biz/invoice78234.exe[/link],Письмо от [contact]invoice@ozon-seller.biz[/contact]. Счёт на оплату заказа. Скачайте документ: [link]https://ozon-seller.biz/invoice78234.exe[/link]
+gameplay.shift2.case5.link_validation,Link leads to an executable file,Ссылка ведёт на исполняемый файл
+gameplay.shift2.case5.sender_validation,Domain differs from the official one,Домен отличается от официального
+gameplay.shift2.case5.db_validation,Suspicious domain activity,Подозрительная активность домена
+gameplay.shift2.case5.result,This was a scam. Never download .exe files from emails,Это был скам. Никогда не скачивайте .exe файлы из писем
+gameplay.shift2.case6.message,"[contact]Andrey[/contact] writes: Hi, it's me from HR. Send your bank details for the bonus payment to [link]https://hr-bonus-form.ru[/link]","[contact]Андрей[/contact] пишет: Привет, это я из отдела кадров. Скинь свои банковские реквизиты для начисления премии на [link]https://hr-bonus-form.ru[/link]"
+gameplay.shift2.case6.link_validation,Domain was registered 2 days ago,Домен зарегистрирован 2 дня назад
+gameplay.shift2.case6.sender_validation,"Personal number, not corporate","Личный номер, не корпоративный"
+gameplay.shift2.case6.db_validation,No data available,Данных нет
+gameplay.shift2.case6.result,This was a scam. Bank details are only requested through official channels,Это был скам. Реквизиты запрашивают только через официальные каналы
+gameplay.shift2.case7.message,Email from [contact]support@hh.ru[/contact]. Your resume was viewed by 12 employers this week. View the statistics in your account.,Письмо от [contact]support@hh.ru[/contact]. Ваше резюме просмотрели 12 работодателей на этой неделе. Откройте статистику в личном кабинете.
+gameplay.shift2.case7.link_validation,No links,Ссылок нет
+gameplay.shift2.case7.sender_validation,Email matches the official service,Email совпадает с официальным сервисом
+gameplay.shift2.case7.db_validation,"Known service, data matches","Известный сервис, данные совпадают"
+gameplay.shift2.case7.result,This is a legitimate email from hh.ru. Everything is fine,Это легитимное письмо от hh.ru. Всё в порядке
+gameplay.shift3.case1.message,"[contact]Federal Tax Service[/contact]: Tax debt of 4,800 RUB found for TIN [db]772901834521[/db]. Pay by April 15: [link]https://fns-oplata.ru[/link]",[contact]ФНС России[/contact]: По ИНН [db]772901834521[/db] выявлена задолженность 4 800 руб. Оплатите до 15 апреля: [link]https://fns-oplata.ru[/link]
+gameplay.shift3.case1.link_validation,Domain is not the official FTS website,Домен не является официальным сайтом ФНС
+gameplay.shift3.case1.sender_validation,Name matches the agency,Имя совпадает с ведомством
+gameplay.shift3.case1.db_validation,Number is not registered with the FTS,Номер не зарегистрирован за ФНС
+gameplay.shift3.case1.result,This was a scam. The FTS only notifies through the account on nalog.ru,Это был скам. ФНС уведомляет только через личный кабинет на nalog.ru
+gameplay.shift3.case2.message,Email from [contact]security@google.com[/contact]. Your password has been changed. If it wasn't you — restore access through your Google account.,Письмо от [contact]security@google.com[/contact]. Ваш пароль был изменён. Если это не вы — восстановите доступ через личный кабинет Google.
+gameplay.shift3.case2.link_validation,No links,Ссылок нет
+gameplay.shift3.case2.sender_validation,Email verified,Email подтверждён
+gameplay.shift3.case2.db_validation,Official Google domain,Официальный домен Google
+gameplay.shift3.case2.result,This is a legitimate notification from Google. Everything is fine,Это легитимное уведомление от Google. Всё в порядке
+gameplay.shift3.case3.message,"[contact]Mom[/contact]: Son, I've been in an accident, I urgently need money. Transfer to the card [link]https://переводденег.рф[/link]","[contact]Мама[/contact]: Сынок, я попала в аварию, срочно нужны деньги. Переведи на карту [link]https://переводденег.рф[/link]"
+gameplay.shift3.case3.link_validation,Link leads to a phishing site,Ссылка ведёт на фишинговый сайт
+gameplay.shift3.case3.sender_validation,Number does not match the contact,Номер не совпадает с контактом
+gameplay.shift3.case3.db_validation,No data available,Данных нет
+gameplay.shift3.case3.result,This was a scam. Fraudsters often pretend to be relatives in trouble,Это был скам. Мошенники часто притворяются родственниками в беде
+gameplay.shift3.case4.message,"Email from [contact]noreply@sberbank.ru[/contact]. Receipt for transaction [db]SBR-0409-559271[/db] dated 04/09/2026 for 1,250 RUB. Details in attachment.",Письмо от [contact]noreply@sberbank.ru[/contact]. Чек по операции [db]SBR-0409-559271[/db] от 09.04.2026 на сумму 1 250 руб. Детали в приложении.
+gameplay.shift3.case4.link_validation,No links,Ссылок нет
+gameplay.shift3.case4.sender_validation,Official bank domain,Официальный домен банка
+gameplay.shift3.case4.db_validation,Sender verified,Отправитель верифицирован
+gameplay.shift3.case4.result,This is a legitimate receipt from Sberbank. Everything is fine,Это легитимный чек от Сбербанка. Всё в порядке
+gameplay.shift3.case5.message,Your investments grew by 340%! Withdraw your profit now: [link]https://cryptopro-withdraw.io[/link],Ваши инвестиции выросли на 340%! Выведите прибыль прямо сейчас: [link]https://cryptopro-withdraw.io[/link]
+gameplay.shift3.case5.link_validation,Domain was recently registered,Домен зарегистрирован недавно
+gameplay.shift3.case5.sender_validation,Sender unknown,Отправитель неизвестен
+gameplay.shift3.case5.db_validation,No data available,Данных нет
+gameplay.shift3.case5.result,This was a scam. Promises of huge profits are a classic sign of fraud,Это был скам. Обещания сверхприбыли — классический признак мошенничества
+gameplay.shift3.case6.message,Your order #[db]9183746[/db] has been shipped. Expected delivery date: April 11.,Ваш заказ №[db]9183746[/db] отправлен. Ожидаемая дата доставки: 11 апреля.
+gameplay.shift3.case6.link_validation,No links,Ссылок нет
+gameplay.shift3.case6.sender_validation,Domain matches the official one,Домен совпадает с официальным
+gameplay.shift3.case6.db_validation,Known online store,Известный интернет-магазин
+gameplay.shift3.case6.result,This is a legitimate notification from Wildberries. Everything is fine,Это легитимное уведомление от Wildberries. Всё в порядке
+gameplay.shift3.case7.message,"Loan of 500,000 RUB approved at 3.9% APR. Application number: [db]RBK-2026-50000[/db]. To receive funds go to: [link]https://rosbank-kredit.online[/link]",Одобрен кредит 500 000 руб. под 3.9% годовых. Номер заявки: [db]RBK-2026-50000[/db]. Для получения перейдите: [link]https://rosbank-kredit.online[/link]
+gameplay.shift3.case7.link_validation,Domain does not belong to Rosbank,Домен не принадлежит Росбанку
+gameplay.shift3.case7.sender_validation,Name matches a known bank,Имя совпадает с известным банком
+gameplay.shift3.case7.db_validation,Number is not registered with the bank,Номер не зарегистрирован за банком
+gameplay.shift3.case7.result,This was a scam. Banks do not send unsolicited loan approvals via SMS,Это был скам. Банки не рассылают одобрения незапрошенных кредитов через SMS
