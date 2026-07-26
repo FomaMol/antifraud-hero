@@ -5,7 +5,6 @@ mainmenu.buttons.new_game,New Game,Новая Игра
 mainmenu.buttons.how_to_play,How To Play,Как играть
 mainmenu.buttons.language,English,Русский
 mainmenu.buttons.sounds,Sounds,Звуки
-mainmenu.buttons.continue,Continue,Продолжить
 gameplay.controlbar.accept,ACCEPT,ПОДТВЕРДИТЬ
 gameplay.controlbar.decline,BLOCK,ЗАБЛОКИРОВАТЬ
 gameplay.controlbar.help,HELP,ПОМОЩЬ
@@ -131,3 +130,11 @@ gameplay.shift3.case7.link_validation,Domain does not belong to Rosbank,Доме
 gameplay.shift3.case7.sender_validation,Name matches a known bank,Имя совпадает с известным банком
 gameplay.shift3.case7.db_validation,Number is not registered with the bank,Номер не зарегистрирован за банком
 gameplay.shift3.case7.result,This was a scam. Banks do not send unsolicited loan approvals via SMS,Это был скам. Банки не рассылают одобрения незапрошенных кредитов через SMS
+popups.howtoplay.card1,Open a case from the list on the left,Открой кейс из списка слева
+popups.howtoplay.card2,Use the tools on the right to verify the data,Используй инструменты справа для проверки данных
+popups.howtoplay.card3,Make your verdict: Accept or Block,Вынеси вердикт: Подтвердить или Заблокировать
+popups.howtoplay.norrator_message1,"Hello! I'm your mentor. Today you'll start your first shift in the Antifraud department.","Привет! Я твой наставник. Сегодня ты начнешь свою первую смену в отделе Антифрода."
+popups.howtoplay.norrator_message2,Your task is to check incoming messages and transactions for fraud.,Твоя задача - проверять входящие сообщения и транзакции на предмет мошенничества.
+popups.howtoplay.norrator_message3,"Use the tools on the right to find inconsistencies. Good luck!","Используй инструменты справа, чтобы найти нестыковки. Удачи!"
+popups.howtoplay.next_button,Next,Далее
+popups.howtoplay.play_button,Play,Играть
