@@ -2,7 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Common.Extensions;
+using Cysharp.Threading.Tasks;
+using GameLogic.UI.Popups;
 using Newtonsoft.Json;
+using Popups;
 using UniRx;
 using UnityEngine;
 using VContainer;
@@ -14,6 +17,7 @@ namespace Services
     public class GameplayService : IInitializable
     {
         [Inject] private readonly PersistingService _persistingService;
+        [Inject] private readonly PopupService _popupService;
  
         private GameplayConfig _gameplayConfig;
 
@@ -60,8 +64,14 @@ namespace Services
             _persistingService.SetWasGameplayPlayed(true);
         }
 
-        public void MakeChoice(bool isValid)
+        public async void MakeChoice(bool isValid)
         {
+            if (!HelpWasUsedInCurrentCase)
+            {
+                _popupService.OpenPopup<ICaseResultPopupPresenter>(new Help_CaseResultPopupPresenter(isValid == GetExpectedDecisionForCase(CurrentCaseIndex), CurrentCaseConfig.ResultText)).Forget();
+                await UniTask.WaitWhile(() => _popupService.IsPopupOpened<ICaseResultPopupPresenter>());
+            }
+
             _persistingService.SetCaseResultHistory(_persistingService.CaseDecisionHistory.Append(isValid).ToList());
             _persistingService.SetHelpWasUsedInCurrentCase(false);
             
@@ -90,6 +100,7 @@ namespace Services
                 _persistingService.SetAvailableHelpsNumber(AvailableHelpsNumber - 1);
                 _persistingService.SetHelpWasUsedInCurrentCase(true);
                 _onUseHelp.OnNext(Unit.Default);
+                _popupService.OpenPopup<ICaseResultPopupPresenter>(new Help_CaseResultPopupPresenter(GetExpectedDecisionForCase(CurrentCaseIndex), CurrentCaseConfig.ResultText)).Forget();
             }
         }
 

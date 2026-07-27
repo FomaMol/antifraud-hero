@@ -138,3 +138,7 @@ popups.howtoplay.norrator_message2,Your task is to check incoming messages and t
 popups.howtoplay.norrator_message3,"Use the tools on the right to find inconsistencies. Good luck!","Используй инструменты справа, чтобы найти нестыковки. Удачи!"
 popups.howtoplay.next_button,Next,Далее
 popups.howtoplay.play_button,Play,Играть
+popups.case_result.next_button,Next case,Следующий кейс
+popups.case_result.close_button,Close,Закрыть
+popups.case_result.success,Success,Успех
+popups.case_result.fail,Fail,Провал
