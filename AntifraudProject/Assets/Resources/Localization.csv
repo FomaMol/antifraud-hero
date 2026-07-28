@@ -142,3 +142,11 @@ popups.case_result.next_button,Next case,Следующий кейс
 popups.case_result.close_button,Close,Закрыть
 popups.case_result.success,Success,Успех
 popups.case_result.fail,Fail,Провал
+popups.new_tool.title,NEW TOOL!,НОВЫЙ ИНСТРУМЕНТ!
+popups.new_tool.link_scanner_name,Link scanner,Сканнер ссылок
+popups.new_tool.link_scanner_description,Проверяй подозрительные ссылки на фишинг,Проверяй подозрительные ссылки на фишинг
+popups.new_tool.contact_scanner_name,Contact scanner,Сканнер контактов
+popups.new_tool.contact_scanner_description,Сверяй имя отправителя с базой данный,Сверяй имя отправителя с базой данный
+popups.new_tool.db_scanner_name,DB scanner,Поиск в БД
+popups.new_tool.db_scanner_description,Проверяй регистрационные данные в Госреестре,Проверяй регистрационные данные в Госреестре
+popups.new_tool.close_button,К работе,К работе
