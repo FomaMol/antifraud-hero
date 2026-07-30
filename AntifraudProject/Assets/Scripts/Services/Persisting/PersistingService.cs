@@ -88,6 +88,7 @@ namespace Services
         public void ResetGameplayProgress()
         {
             _saveDataCache.Gameplay = new GameplaySaveData();
+            _saveDataCache.WasGameplayPlayed = false;
             SaveGameplayConfig(_saveDataCache);
         }
 

@@ -6,6 +6,7 @@ using Cysharp.Threading.Tasks;
 using GameLogic.UI.Popups;
 using Newtonsoft.Json;
 using Popups;
+using Services.Scenes;
 using UniRx;
 using UnityEngine;
 using VContainer;
@@ -18,6 +19,7 @@ namespace Services
     {
         [Inject] private readonly PersistingService _persistingService;
         [Inject] private readonly PopupService _popupService;
+        [Inject] private readonly ScenesService _scenesService;
  
         private GameplayConfig _gameplayConfig;
 
@@ -53,15 +55,22 @@ namespace Services
         {
             var json = Resources.Load<TextAsset>("GameplayConfig").text;
             _gameplayConfig = JsonConvert.DeserializeObject<GameplayConfig>(json);
-            if ((_persistingService.CasesOrder?.Count ?? 0) != TotalCaseCountInCurrentShift)
-            {
-                _persistingService.SetCasesOrder(Enumerable.Range(0, TotalCaseCountInCurrentShift).Shuffle().ToList());
-            }
-            if (_persistingService.CaseDecisionHistory == null)
-            {
-                _persistingService.SetCaseResultHistory(new List<bool>());
-            }
+
+            if (!_persistingService.WasGameplayPlayed)
+                ForceProgressTo(0, 0);
+        }
+
+        private void ForceProgressTo(int shiftIndex, int caseIndex)
+        {
+            _persistingService.ResetGameplayProgress();
             _persistingService.SetWasGameplayPlayed(true);
+            _persistingService.SetCurrentShift(shiftIndex);
+            _persistingService.SetCurrentCase(caseIndex);
+            _persistingService.SetCasesOrder(Enumerable.Range(0, TotalCaseCountInCurrentShift).Shuffle().ToList());
+            _persistingService.SetCaseResultHistory(new List<bool>());
+
+            _onChangeShift.OnNext(Unit.Default);
+            _onChangeCase.OnNext(Unit.Default);
         }
 
         public async void MakeChoice(bool isValid)
@@ -74,23 +83,24 @@ namespace Services
 
             _persistingService.SetCaseResultHistory(_persistingService.CaseDecisionHistory.Append(isValid).ToList());
             _persistingService.SetHelpWasUsedInCurrentCase(false);
-            
-            ++CurrentCaseIndex;
-            if (CurrentCaseIndex >= _gameplayConfig.Shifts[CurrentShiftIndex].Cases.Count)
+
+            var nextCaseIndex = CurrentCaseIndex + 1;
+            if (nextCaseIndex < _gameplayConfig.Shifts[CurrentShiftIndex].Cases.Count)
             {
-                CurrentCaseIndex = 0;
-                _persistingService.SetCaseResultHistory(new List<bool>());
-                _persistingService.SetCasesOrder(Enumerable.Range(0, TotalCaseCountInCurrentShift).Shuffle().ToList());
-                _persistingService.SetAvailableHelpsNumber(3); // TODO: вынести в константы
-                ++CurrentShiftIndex;
-                if (CurrentShiftIndex >= _gameplayConfig.Shifts.Count)
-                {
-                    CurrentShiftIndex = 0;
-                }
-                _onChangeShift.OnNext(Unit.Default);
+                CurrentCaseIndex = nextCaseIndex;
+                _onChangeCase.OnNext(Unit.Default);
+                return;
             }
 
-            _onChangeCase.OnNext(Unit.Default);
+            var nextShiftIndex = CurrentShiftIndex + 1;
+            if (nextShiftIndex < _gameplayConfig.Shifts.Count)
+            {
+                ForceProgressTo(nextShiftIndex, 0);
+                return;
+            }
+
+            _persistingService.ResetGameplayProgress();
+            _scenesService.LaunchMainMenu();
         }
 
         public void TryUseHelp()
