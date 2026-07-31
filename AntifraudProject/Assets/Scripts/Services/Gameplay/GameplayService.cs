@@ -58,6 +58,8 @@ namespace Services
 
             if (!_persistingService.WasGameplayPlayed)
                 ForceProgressTo(0, 0);
+            else
+                TryShowNewToolPopupForCurrentShift();
         }
 
         private void ForceProgressTo(int shiftIndex, int caseIndex)
@@ -71,6 +73,28 @@ namespace Services
 
             _onChangeShift.OnNext(Unit.Default);
             _onChangeCase.OnNext(Unit.Default);
+
+            TryShowNewToolPopupForCurrentShift();
+        }
+
+        private void TryShowNewToolPopupForCurrentShift()
+        {
+            if (CurrentCaseIndex != 0)
+                return;
+
+            var shiftNumber = CurrentShiftIndex + 1;
+            INewToolPopupPresenter presenter = null;
+            if (shiftNumber == _gameplayConfig.LinkToolOpenShift)
+                presenter = new LinkTool_NewToolPopupPresenter();
+            else if (shiftNumber == _gameplayConfig.SenderToolOpenShift)
+                presenter = new ContactTool_NewToolPopupPresenter();
+            else if (shiftNumber == _gameplayConfig.DbToolOpenShift)
+                presenter = new DbTool_NewToolPopupPresenter();
+
+            if (presenter == null)
+                return;
+
+            _popupService.OpenPopup<INewToolPopupPresenter>(presenter, queued: true).Forget();
         }
 
         public async void MakeChoice(bool isValid)

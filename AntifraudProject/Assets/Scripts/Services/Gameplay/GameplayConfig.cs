@@ -6,6 +6,9 @@ namespace Services
     [JsonObject(MemberSerialization.OptIn)]
     public class GameplayConfig
     {
+        [JsonProperty("link_tool_open_shift")]
+        public int LinkToolOpenShift { get; private set; }
+
         [JsonProperty("sender_tool_open_shift")]
         public int SenderToolOpenShift { get; private set; }
 

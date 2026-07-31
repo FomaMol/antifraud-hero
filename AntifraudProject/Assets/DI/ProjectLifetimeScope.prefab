@@ -1194,6 +1194,7 @@ MonoBehaviour:
   _popups:
   - {fileID: 6670350067637672127}
   - {fileID: 2563144474291209739}
+  - {fileID: 2129666864646680030}
   _background: {fileID: 7368908078096785928}
   _backgroundButton: {fileID: 1118512909054739189}
   _backgroundFade: 0.75
@@ -3035,9 +3036,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _popupWindowAnimation: {fileID: 0}
-  _toolName: {fileID: 0}
-  _toolDescription: {fileID: 0}
-  _closeButton: {fileID: 0}
+  _toolName: {fileID: 3929101021350379436}
+  _toolDescription: {fileID: 693279639543735605}
+  _closeButton: {fileID: 6741412737417503296}
 --- !u!1 &5110154225293466203
 GameObject:
   m_ObjectHideFlags: 0
