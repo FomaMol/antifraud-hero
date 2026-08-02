@@ -150,3 +150,14 @@ popups.new_tool.contact_scanner_description,Сверяй имя отправит
 popups.new_tool.db_scanner_name,DB scanner,Поиск в БД
 popups.new_tool.db_scanner_description,Проверяй регистрационные данные в Госреестре,Проверяй регистрационные данные в Госреестре
 popups.new_tool.close_button,К работе,К работе
+popups.shift_results.narrator_speech_success,Отличная работа! Ты справился с этой сменой. Твои показатели впечатляют,Отличная работа! Ты справился с этой сменой. Твои показатели впечатляют
+popups.shift_results.narrator_speech_fail,К сожалению, этого недостаточно. Нам нужно больше точности, чтобы защитить клиентов.,К сожалению, этого недостаточно. Нам нужно больше точности, чтобы защитить клиентов.
+popups.shift_results.title,ИТОГИ СМЕНЫ,ИТОГИ СМЕНЫ
+popups.shift_results.checked_block_title,Checked,Проверено
+popups.shift_results.mistakes_block_title,Mistakes,Ошибок
+popups.shift_results.winrate_block_title,Winrate,Точность
+popups.shift_results.good_result,Good,Хорошо
+popups.shift_results.bad_result,Bad,Плохо
+popups.shift_results.retry_button,Retry,Заново
+popups.shift_results.continue_button,Continue,Продолжить
+popups.shift_results.menu_button,Menu,Меню
