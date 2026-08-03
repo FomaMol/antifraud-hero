@@ -105,26 +105,58 @@ namespace Services
                 await UniTask.WaitWhile(() => _popupService.IsPopupOpened<ICaseResultPopupPresenter>());
             }
 
-            _persistingService.SetCaseResultHistory(_persistingService.CaseDecisionHistory.Append(isValid).ToList());
             _persistingService.SetHelpWasUsedInCurrentCase(false);
 
             var nextCaseIndex = CurrentCaseIndex + 1;
             if (nextCaseIndex < _gameplayConfig.Shifts[CurrentShiftIndex].Cases.Count)
             {
+                _persistingService.SetCaseResultHistory(_persistingService.CaseDecisionHistory.Append(isValid).ToList());
                 CurrentCaseIndex = nextCaseIndex;
                 _onChangeCase.OnNext(Unit.Default);
                 return;
             }
 
-            var nextShiftIndex = CurrentShiftIndex + 1;
-            if (nextShiftIndex < _gameplayConfig.Shifts.Count)
-            {
-                ForceProgressTo(nextShiftIndex, 0);
-                return;
-            }
+            ShowShiftResultsPopup(isValid);
+        }
 
-            _persistingService.ResetGameplayProgress();
-            _scenesService.LaunchMainMenu();
+        private void ShowShiftResultsPopup(bool lastCaseIsValid)
+        {
+            var allDecisions = _persistingService.CaseDecisionHistory.Append(lastCaseIsValid).ToList();
+            var checkedAmount = allDecisions.Count;
+            var correctCount = allDecisions.Select((d, i) => d == GetExpectedDecisionForCase(i)).Count(x => x);
+            var errorsAmount = checkedAmount - correctCount;
+            var winrate = (int)(correctCount / (float)checkedAmount * 100);
+
+            var isSuccess = winrate >= _gameplayConfig.Shifts[CurrentShiftIndex].MinWinrate;
+
+            IShiftResultsPopupPresenter presenter = isSuccess
+                ? new Success_ShiftResultsPopupPresenter(checkedAmount, errorsAmount, winrate, OnShiftResultClick)
+                : (IShiftResultsPopupPresenter)new Fail_ShiftResultsPopupPresenter(checkedAmount, errorsAmount, winrate, OnShiftResultClick);
+
+            _popupService.OpenPopup<IShiftResultsPopupPresenter>(presenter, queued: true).Forget();
+
+            void OnShiftResultClick(IShiftResultsPopupPresenter.ClickType clickType)
+            {
+                switch (clickType)
+                {
+                    case IShiftResultsPopupPresenter.ClickType.Continue:
+                        var nextShiftIndex = CurrentShiftIndex + 1;
+                        if (nextShiftIndex < _gameplayConfig.Shifts.Count)
+                            ForceProgressTo(nextShiftIndex, 0);
+                        else
+                        {
+                            _persistingService.ResetGameplayProgress();
+                            _scenesService.LaunchMainMenu();
+                        }
+                        break;
+                    case IShiftResultsPopupPresenter.ClickType.Retry:
+                        ForceProgressTo(CurrentShiftIndex, 0);
+                        break;
+                    case IShiftResultsPopupPresenter.ClickType.Menu:
+                        _scenesService.LaunchMainMenu();
+                        break;
+                }
+            }
         }
 
         public void TryUseHelp()

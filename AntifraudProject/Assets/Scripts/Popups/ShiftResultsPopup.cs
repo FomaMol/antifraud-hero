@@ -89,7 +89,7 @@ namespace Popups
             _narratorTextLocalizationKey.SetText(popupPresenter.NarratorTextLocalizationKey);
             _checkedAmountText.SetText("{0}", popupPresenter.CheckedAmount);
             _errorsAmountText.SetText("{0}", popupPresenter.ErrorsAmount);
-            _winrateText.SetText("{0}%", popupPresenter.CheckedAmount);
+            _winrateText.SetText("{0}%", popupPresenter.Winrate);
             base.OnOpen(popupPresenter);
         }
 
