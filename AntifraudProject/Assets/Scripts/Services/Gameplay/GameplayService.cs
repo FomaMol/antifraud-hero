@@ -147,6 +147,7 @@ namespace Services
                         {
                             _persistingService.ResetGameplayProgress();
                             _scenesService.LaunchMainMenu();
+                            _popupService.OpenPopup<IGameWinPopupPresenter>(new GameWinPopupPresenter(), queued: true, withBackGround: false).Forget();
                         }
                         break;
                     case IShiftResultsPopupPresenter.ClickType.Retry:
