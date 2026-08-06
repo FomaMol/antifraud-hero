@@ -144,15 +144,15 @@ popups.case_result.success,Success,Успех
 popups.case_result.fail,Fail,Провал
 popups.new_tool.title,NEW TOOL!,НОВЫЙ ИНСТРУМЕНТ!
 popups.new_tool.link_scanner_name,Link scanner,Сканнер ссылок
-popups.new_tool.link_scanner_description,Проверяй подозрительные ссылки на фишинг,Проверяй подозрительные ссылки на фишинг
+popups.new_tool.link_scanner_description,Check suspicious links for phishing,Проверяй подозрительные ссылки на фишинг
 popups.new_tool.contact_scanner_name,Contact scanner,Сканнер контактов
-popups.new_tool.contact_scanner_description,Сверяй имя отправителя с базой данный,Сверяй имя отправителя с базой данный
+popups.new_tool.contact_scanner_description,Match sender name with the database,Сверяй имя отправителя с базой данный
 popups.new_tool.db_scanner_name,DB scanner,Поиск в БД
-popups.new_tool.db_scanner_description,Проверяй регистрационные данные в Госреестре,Проверяй регистрационные данные в Госреестре
+popups.new_tool.db_scanner_description,Check registration data in the State Register,Проверяй регистрационные данные в Госреестре
 popups.new_tool.close_button,К работе,К работе
-popups.shift_results.narrator_speech_success,Отличная работа! Ты справился с этой сменой. Твои показатели впечатляют,Отличная работа! Ты справился с этой сменой. Твои показатели впечатляют
-popups.shift_results.narrator_speech_fail,"К сожалению, этого недостаточно. Нам нужно больше точности, чтобы защитить клиентов.","К сожалению, этого недостаточно. Нам нужно больше точности, чтобы защитить клиентов."
-popups.shift_results.title,ИТОГИ СМЕНЫ,ИТОГИ СМЕНЫ
+popups.shift_results.narrator_speech_success,Great job! You handled this shift perfectly. Your metrics are impressive!,Отличная работа! Ты справился с этой сменой. Твои показатели впечатляют
+popups.shift_results.narrator_speech_fail,"Unfortunately, that's not enough. We need more accuracy to protect our clients.","К сожалению, этого недостаточно. Нам нужно больше точности, чтобы защитить клиентов."
+popups.shift_results.title,SHIFT RESULTS,ИТОГИ СМЕНЫ
 popups.shift_results.checked_block_title,Checked,Проверено
 popups.shift_results.mistakes_block_title,Mistakes,Ошибок
 popups.shift_results.winrate_block_title,Winrate,Точность
@@ -162,6 +162,6 @@ popups.shift_results.retry_button,Retry,Заново
 popups.shift_results.continue_button,Continue,Продолжить
 popups.shift_results.menu_button,Menu,Меню
 popups.game_win.title,ПОЗДРАВЛЯЕМ!,ПОЗДРАВЛЯЕМ!
-popups.game_win.narrator_speech,Вы прошли все уровни и стали настоящим героем антифрода!,Вы прошли все уровни и стали настоящим героем антифрода!
-popups.game_win.description,"Ты доказал, что внимательность и знание инструментов - лучшая защита от мошенников. Твой вклад в безопасность неоценим.","Ты доказал, что внимательность и знание инструментов - лучшая защита от мошенников. Твой вклад в безопасность неоценим."
+popups.game_win.narrator_speech,You've completed all levels and become a true antifraud hero!,Вы прошли все уровни и стали настоящим героем антифрода!
+popups.game_win.description,"You've proven that attention to detail and tool knowledge are the best defense against fraudsters. Your contribution to security is invaluable.","Ты доказал, что внимательность и знание инструментов - лучшая защита от мошенников. Твой вклад в безопасность неоценим."
 popups.game_win.close_button,В меню,В меню
