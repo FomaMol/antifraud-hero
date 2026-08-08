@@ -20,7 +20,6 @@ namespace Services.MainMenu
         {
             _persistingService.ResetGameplayProgress();
             _scenesService.LaunchGameplay();
-            OpenHowToPlayPopup();
         }
 
         public void ContinueGame()
@@ -35,7 +34,7 @@ namespace Services.MainMenu
 
         public void OpenHowToPlayPopup()
         {
-            _popupService.OpenPopup<IHowToPlayPopupPresenter>(new HowToPlayPopupPresenter(), withBackGround: false).Forget();
+            _popupService.OpenPopup<IHowToPlayPopupPresenter>(new HowToPlayPopupPresenter()).Forget();
         }
     }
 }

@@ -1,9 +1,7 @@
 using GameLogic.UI.Popups;
 using Localization;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using VContainer;
 
 namespace Popups
 {
@@ -13,32 +11,42 @@ namespace Popups
 
     public class HowToPlayPopupPresenter : IHowToPlayPopupPresenter
     {
-        
     }
-    
+
     public class HowToPlayPopup : PopupBase<IHowToPlayPopupPresenter>
     {
-        [Inject] private readonly LocalizationService _localizationService;
-        
-        [SerializeField] private GameObject _firstTutorialStepUnavailable;
-        [SerializeField] private GameObject _secondTutorialStepUnavailable;
-        [SerializeField] private GameObject _thirdTutorialStepUnavailable;
         [SerializeField] private Button _nextStepButton;
+        [SerializeField] private Button _skipButton;
         [SerializeField] private Button _playButton;
-        [SerializeField] private TMP_Text _norratorMessageText;
+        [SerializeField] private TextMeshProLocalization _narratorSpeechText;
+        [SerializeField] private TextMeshProLocalization _tutorialText;
+
+        private readonly string[] NarratorSpeechTextKeys = {
+            "popups.howtoplay.norrator_message1",
+            "popups.howtoplay.norrator_message2",
+            "popups.howtoplay.norrator_message3"
+        };
         
+        private readonly string[] TutorialTextKeys =
+        {
+            "popups.howtoplay.card1",
+            "popups.howtoplay.card2",
+            "popups.howtoplay.card3"
+        };
+
         private int _currentStepIndex = 0;
 
         protected override void Init()
         {
             _nextStepButton.onClick.AddListener(OnNextStepButtonClick);
             _playButton.onClick.AddListener(OnPlayButtonClick);
+            _skipButton.onClick.AddListener(OnSkipButtonClick);
         }
 
         protected override void OnOpen(IHowToPlayPopupPresenter popupPresenter)
         {
             SetStep(_currentStepIndex = 0);
-            
+
             base.OnOpen(popupPresenter);
         }
 
@@ -52,35 +60,17 @@ namespace Popups
             Close();
         }
 
+        private void OnSkipButtonClick()
+        {
+            Close();
+        }
+
         private void SetStep(int index)
         {
-            if (index == 0)
-            {
-                _firstTutorialStepUnavailable.SetActive(false);
-                _secondTutorialStepUnavailable.SetActive(true);
-                _thirdTutorialStepUnavailable.SetActive(true);
-                _nextStepButton.gameObject.SetActive(true);
-                _playButton.gameObject.SetActive(false);
-                _norratorMessageText.SetText(_localizationService.Get("popups.howtoplay.norrator_message1"));
-            }
-            else if (index == 1)
-            {
-                _firstTutorialStepUnavailable.SetActive(false);
-                _secondTutorialStepUnavailable.SetActive(false);
-                _thirdTutorialStepUnavailable.SetActive(true);
-                _nextStepButton.gameObject.SetActive(true);
-                _playButton.gameObject.SetActive(false);
-                _norratorMessageText.SetText(_localizationService.Get("popups.howtoplay.norrator_message2"));
-            }
-            else if (index == 2)
-            {
-                _firstTutorialStepUnavailable.SetActive(false);
-                _secondTutorialStepUnavailable.SetActive(false);
-                _thirdTutorialStepUnavailable.SetActive(false);
-                _nextStepButton.gameObject.SetActive(false);
-                _playButton.gameObject.SetActive(true);
-                _norratorMessageText.SetText(_localizationService.Get("popups.howtoplay.norrator_message3"));
-            }
+            _narratorSpeechText.SetText(NarratorSpeechTextKeys[index]);
+            _tutorialText.SetText(TutorialTextKeys[index]);
+            _nextStepButton.gameObject.SetActive(index != 2);
+            _playButton.gameObject.SetActive(index == 2);
         }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using Services;
+using TMPro;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,19 +13,26 @@ namespace Widgets
         [Inject] private readonly GameplayService _gameplayService;
 
         [SerializeField] private Button _linkButton;
-        [SerializeField] private Transform _linkSelectedBackground;
         [SerializeField] private Transform _linkUnavaliableForeground;
         [SerializeField] private Transform _linkAlertPoint;
+        [SerializeField] private TMP_Text _linkText;
+        [SerializeField] private Outline _linkIconOutline;
         [Space] 
         [SerializeField] private Button _contactButton;
-        [SerializeField] private Transform _contactSelectedBackground;
         [SerializeField] private Transform _contactUnavaliableForeground;
         [SerializeField] private Transform _contactAlertPoint;
+        [SerializeField] private TMP_Text _contactText;
+        [SerializeField] private Outline _contactIconOutline;
         [Space]
         [SerializeField] private Button _dbButton;
-        [SerializeField] private Transform _dbSelectedBackground;
         [SerializeField] private Transform _dbUnavaliableForeground;
         [SerializeField] private Transform _dbAlertPoint;
+        [SerializeField] private TMP_Text _dbText;
+        [SerializeField] private Outline _dbIconOutline;
+        [Space]
+        [SerializeField] private Color _normalTextColor;
+        [SerializeField] private Color _selectedTextColor;
+        
 
         public ToolType SelectedTool { get; private set; }
 
@@ -62,19 +70,25 @@ namespace Widgets
 
         private void UpdateView()
         {
-            _linkSelectedBackground.gameObject.SetActive(false);
-            _contactSelectedBackground.gameObject.SetActive(false);
-            _dbSelectedBackground.gameObject.SetActive(false);
+            _linkIconOutline.enabled = false;
+            _contactIconOutline.enabled = false;
+            _dbIconOutline.enabled = false;
+            _linkText.color = _normalTextColor;
+            _contactText.color = _normalTextColor;
+            _dbText.color = _normalTextColor;
             switch (SelectedTool)
             {
                 case ToolType.Link:
-                    _linkSelectedBackground.gameObject.SetActive(true);
+                    _linkIconOutline.enabled = true;
+                    _linkText.color = _selectedTextColor;
                     break;
                 case ToolType.Contact:
-                    _contactSelectedBackground.gameObject.SetActive(true);
+                    _contactIconOutline.enabled = true;
+                    _contactText.color = _selectedTextColor;
                     break;
                 case ToolType.Db:
-                    _dbSelectedBackground.gameObject.SetActive(true);
+                    _dbIconOutline.enabled = true;
+                    _dbText.color = _selectedTextColor;
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(SelectedTool), SelectedTool, null);

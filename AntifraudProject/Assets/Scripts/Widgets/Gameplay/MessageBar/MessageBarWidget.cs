@@ -39,7 +39,7 @@ namespace Widgets
                 text = Regex.Replace(text, $@"\[{type}\](.*?)\[\/{type}\]", match =>
                 {
                     tagContents[type] = match.Groups[1].Value;
-                    return $"<link={type}><u><color=#4A90D9>{match.Groups[1].Value}</color></u></link>";
+                    return $"<link={type}><color=#CEBA18>{match.Groups[1].Value}</color></link>";
                 });
             }
             return (text, tagContents);
