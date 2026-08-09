@@ -13,6 +13,10 @@ namespace Widgets.StatusBar
         [Inject] private readonly GameplayService _gameplayService;
         
         [SerializeField] private ReusableItemsWidget _cases;
+        [SerializeField] private Sprite _successCaseSprite;
+        [SerializeField] private Sprite _failCaseSprite;
+        [SerializeField] private Sprite _currentCaseSprite;
+        [SerializeField] private Sprite _voidCaseSprite;
         
         public void Initialize()
         {
@@ -31,15 +35,15 @@ namespace Widgets.StatusBar
             {
                 if (i == _gameplayService.CurrentCaseIndex)
                 {
-                    view.color = Color.white;
+                    view.sprite = _currentCaseSprite;
                 }
                 else if (_gameplayService.TryGetCaseDecisionFromHistory(i, out var decision))
                 {
-                    view.color = decision == _gameplayService.GetExpectedDecisionForCase(i) ? Color.green : Color.red;
+                    view.sprite = decision == _gameplayService.GetExpectedDecisionForCase(i) ? _successCaseSprite : _failCaseSprite;
                 }
                 else
                 {
-                    view.color = Color.gray;
+                    view.sprite = _voidCaseSprite;
                 }
             }
             _cases.SetItems<Image, CaseConfig>(_gameplayService.CaseConfigsInCurrentShift, ItemInitializeLogic);

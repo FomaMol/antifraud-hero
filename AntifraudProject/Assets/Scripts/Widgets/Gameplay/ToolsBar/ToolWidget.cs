@@ -24,8 +24,7 @@ namespace Widgets
         [SerializeField] private Button _validateButton;
         [SerializeField] private Transform _validationResultVerified;
         [SerializeField] private Transform _validationResultFailed;
-        [SerializeField] private TMP_Text _validationResultMessageText;
-        
+
         public void Initialize()
         {
             _validateButton.onClick.AddListener(OnValidateButtonClick);
@@ -37,8 +36,6 @@ namespace Widgets
             var validationResult = GetValidationResult(); 
             _validationResultVerified.gameObject.SetActive(validationResult);
             _validationResultFailed.gameObject.SetActive(!validationResult);
-            _validationResultMessageText.SetText(GetValidationText());
-            _validationResultMessageText.gameObject.SetActive(true);
         }
 
         private bool GetValidationResult()
@@ -82,7 +79,6 @@ namespace Widgets
             _emptyState.gameObject.SetActive(true);
             _validationResultVerified.gameObject.SetActive(false);
             _validationResultFailed.gameObject.SetActive(false);
-            _validationResultMessageText.gameObject.SetActive(false);
         }
     }
 }

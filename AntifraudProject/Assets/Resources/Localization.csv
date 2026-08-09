@@ -12,19 +12,29 @@ gameplay.controlbar.help_number,Tips:{0},Подсказки:{0}
 gameplay.statusbar.shift_number,SHIFT #{0},СМЕНА #{0}
 gameplay.statusbar.winrate_title,WINRATE,ТОЧНОСТЬ
 gameplay.statusbar.winrate_value,{0}%,{0}%
-gameplay.caselistbar.case_number,CASE #{0},КЕЙС #{0}
+gameplay.caselistbar.case_number,Message #{0},Сообщение #{0}
+gameplay.caselistbar.sms,SMS,SMS
+gameplay.caselistbar.email,EMAIL,EMAIL
 gameplay.caselistbar.case_queue,CASE QUEUE,ОЧЕРЕДЬ КЕЙСОВ
-gameplay.statusbar.shift_progress,SHIFT PROGRESS,ПРОГРЕСС СМЕНЫ
-gameplay.messagebar.incoming_massage,INCOMING MESSAGE,ВХОДЯЩЕЕ СООБЩЕНИЕ
-gameplay.toolsbar.link_tool_title,LINK CHECK,ПРОВЕРКА ССЫЛОК
-gameplay.toolsbar.contact_tool_title,CONTACT CHECK,ПРОВЕРКА КОНТАКТА
-gameplay.toolsbar.db_tool_title,DATABASE CHECK,ОФИЦИАЛЬНАЯ БАЗА
+gameplay.statusbar.shift_progress,shift progress,прогресс смены
+gameplay.messagebar.incoming_massage,incoming message,входящее сообщение
+gameplay.messagebar.sender,Sender:,Отправитель:
+gameplay.messagebar.time,Time:,Время:
+gameplay.toolsbar.enter_link,Enter the link to check:,Введите ссылку:
+gameplay.toolsbar.enter_contact,Enter the contact to check:,Введите контакт:
+gameplay.toolsbar.enter_db,Enter the db entry to check:,Введите запись:
+gameplay.toolsbar.link_tool_title,LINK<br>SCANNER,СКАНЕР<br>ССЫЛОК
+gameplay.toolsbar.contact_tool_title,CONTACT<br>CHECK,ПРОВЕРКА<br>КОНТАКТА
+gameplay.toolsbar.db_tool_title,DATABASE<br>CHECK,ОФИЦИАЛЬНАЯ<br>БАЗА
 gameplay.toolsbar.link_tool_subtitle,LINK SCANNER,СКАННЕР ССЫЛОК
 gameplay.toolsbar.contact_tool_subtitle,CONTACT SCANNER,СКАННЕР КОНТАКТА
 gameplay.toolsbar.db_tool_subtitle,DATABASE SCANNER,СКАННЕР БД
 gameplay.toolsbar.link_empty_tool,FIND LINK,НАЙДИТЕ ССЫЛКУ
 gameplay.toolsbar.contact_empty_tool,FIND CONTACT,НАЙДИТЕ КОНТАКТ
 gameplay.toolsbar.db_empty_tool,FIND ENTRY,НАЙДИТЕ ЗАПИСЬ
+gameplay.toolsbar.check_button,CHECK,ПРОВЕРИТЬ
+gameplay.toolsbar.ok,OK,ОК
+gameplay.toolsbar.error,NOT TRUE,ОШИБКА
 gameplay.shift1.case1.message,Your card has been blocked. Click the link to unblock it: [link]https://vk.com[/link],Ваша карта заблокирована. Нажмите на ссылку для разблокировки: [link]https://vk.com[/link]
 gameplay.shift1.case1.link_validation,This link does not exist,Этой ссылки нет
 gameplay.shift1.case1.sender_validation,This person does not exist,Этого человека нет
@@ -130,11 +140,12 @@ gameplay.shift3.case7.link_validation,Domain does not belong to Rosbank,Доме
 gameplay.shift3.case7.sender_validation,Name matches a known bank,Имя совпадает с известным банком
 gameplay.shift3.case7.db_validation,Number is not registered with the bank,Номер не зарегистрирован за банком
 gameplay.shift3.case7.result,This was a scam. Banks do not send unsolicited loan approvals via SMS,Это был скам. Банки не рассылают одобрения незапрошенных кредитов через SMS
-popups.howtoplay.card1,Open a case from the list on the left,Открой кейс из списка слева
+popups.howtoplay.title,TUTORIAL,ОБУЧЕНИЕ
+popups.howtoplay.card1,Open a *case* from the list on the left,Открой *кейс* из списка слева
 popups.howtoplay.card2,Use the tools on the right to verify the data,Используй инструменты справа для проверки данных
 popups.howtoplay.card3,Make your verdict: Accept or Block,Вынеси вердикт: Подтвердить или Заблокировать
 popups.howtoplay.norrator_message1,"Hello! I'm your mentor. Today you'll start your first shift in the Antifraud department.","Привет! Я твой наставник. Сегодня ты начнешь свою первую смену в отделе Антифрода."
-popups.howtoplay.norrator_message2,Your task is to check incoming messages and transactions for fraud.,Твоя задача - проверять входящие сообщения и транзакции на предмет мошенничества.
+popups.howtoplay.norrator_message2,Your *task* is to check incoming messages and transactions for fraud.,Твоя задача - проверять входящие сообщения и транзакции на предмет мошенничества.
 popups.howtoplay.norrator_message3,"Use the tools on the right to find inconsistencies. Good luck!","Используй инструменты справа, чтобы найти нестыковки. Удачи!"
 popups.howtoplay.next_button,Next,Далее
 popups.howtoplay.play_button,Play,Играть
@@ -149,19 +160,21 @@ popups.new_tool.contact_scanner_name,Contact scanner,Сканнер контак
 popups.new_tool.contact_scanner_description,Match sender name with the database,Сверяй имя отправителя с базой данный
 popups.new_tool.db_scanner_name,DB scanner,Поиск в БД
 popups.new_tool.db_scanner_description,Check registration data in the State Register,Проверяй регистрационные данные в Госреестре
-popups.new_tool.close_button,К работе,К работе
+popups.new_tool.close_button,Get to Work,К работе
 popups.shift_results.narrator_speech_success,Great job! You handled this shift perfectly. Your metrics are impressive!,Отличная работа! Ты справился с этой сменой. Твои показатели впечатляют
 popups.shift_results.narrator_speech_fail,"Unfortunately, that's not enough. We need more accuracy to protect our clients.","К сожалению, этого недостаточно. Нам нужно больше точности, чтобы защитить клиентов."
 popups.shift_results.title,SHIFT RESULTS,ИТОГИ СМЕНЫ
 popups.shift_results.checked_block_title,Checked,Проверено
 popups.shift_results.mistakes_block_title,Mistakes,Ошибок
 popups.shift_results.winrate_block_title,Winrate,Точность
-popups.shift_results.good_result,Good,Хорошо
-popups.shift_results.bad_result,Bad,Плохо
+popups.shift_results.good_result,SHIFT COMPLETED SUCCESSFULLY,СМЕНА ЗАВЕРШЕНА УСПЕШНО
+popups.shift_results.good_result_description,Great job! Keep it up!,Отличная работа! Продолжай в том же духе!
+popups.shift_results.bad_result,SHIFT COMPLETED UNSUCCESSFULLY,СМЕНА ЗАВЕРШЕНА НЕУСПЕШНО
+popups.shift_results.bad_result_description,There's room for improvement. Don't give up!,Есть над чем поработать. Не сдавайся!
 popups.shift_results.retry_button,Retry,Заново
 popups.shift_results.continue_button,Continue,Продолжить
 popups.shift_results.menu_button,Menu,Меню
-popups.game_win.title,ПОЗДРАВЛЯЕМ!,ПОЗДРАВЛЯЕМ!
+popups.game_win.title,CONGRATULATIONS!,ПОЗДРАВЛЯЕМ!
 popups.game_win.narrator_speech,You've completed all levels and become a true antifraud hero!,Вы прошли все уровни и стали настоящим героем антифрода!
 popups.game_win.description,"You've proven that attention to detail and tool knowledge are the best defense against fraudsters. Your contribution to security is invaluable.","Ты доказал, что внимательность и знание инструментов - лучшая защита от мошенников. Твой вклад в безопасность неоценим."
-popups.game_win.close_button,В меню,В меню
+popups.game_win.close_button,To Menu,В меню

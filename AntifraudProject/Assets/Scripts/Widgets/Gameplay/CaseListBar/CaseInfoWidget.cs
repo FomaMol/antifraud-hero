@@ -11,28 +11,33 @@ namespace Widgets.CaseListBar
     {
         [Inject] private readonly GameplayService _gameplayService;
         
-        [SerializeField] private TMP_Text _caseTypeText;
-        [SerializeField] private TextMeshProLocalization _caseNumberText;
-        [SerializeField] private Image _typeIconImage;
-        [SerializeField] private Transform _selectedMarker;
+        [SerializeField] private TextMeshProLocalization _caseTitle;
+        [SerializeField] private Image _smsTypeIconImage;
+        [SerializeField] private Image _webTypeIconImage;
+        [SerializeField] private TextMeshProLocalization _smsTypeText;
+        [SerializeField] private TextMeshProLocalization _webTypeText;
         [SerializeField] private Transform _selectedBackground;
-        [SerializeField] private Image _resultIconImage;
+        [SerializeField] private Image _successResultIconImage;
+        [SerializeField] private Image _failResultIconImage;
 
         public void Initialize(int number, string caseType, bool selected)
         {
-            _caseTypeText.SetText(caseType);
-            _caseNumberText.SetArgs(number);
-            _typeIconImage.color = caseType.ToLower() == "sms" ? Color.blue : Color.yellow;
-            _selectedMarker.gameObject.SetActive(selected);
+            _caseTitle.SetArgs(number);
+            _smsTypeIconImage.gameObject.SetActive(caseType.ToLower() == "sms");
+            _webTypeIconImage.gameObject.SetActive(caseType.ToLower() == "email");
+            _smsTypeText.gameObject.SetActive(caseType.ToLower() == "sms");
+            _webTypeText.gameObject.SetActive(caseType.ToLower() == "email");
             _selectedBackground.gameObject.SetActive(selected);
             if (_gameplayService.TryGetCaseDecisionFromHistory(number - 1, out var decision))
             {
-                _resultIconImage.color = decision == _gameplayService.GetExpectedDecisionForCase(number - 1) ? Color.green : Color.red;
-                _resultIconImage.gameObject.SetActive(true);
+                var wasSuccess = decision == _gameplayService.GetExpectedDecisionForCase(number - 1);
+                _successResultIconImage.gameObject.SetActive(wasSuccess);
+                _failResultIconImage.gameObject.SetActive(!wasSuccess);
             }
             else
             {
-                _resultIconImage.gameObject.SetActive(false);
+                _successResultIconImage.gameObject.SetActive(false);
+                _failResultIconImage.gameObject.SetActive(false);
             }
         }
     }

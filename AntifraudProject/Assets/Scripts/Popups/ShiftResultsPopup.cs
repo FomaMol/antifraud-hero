@@ -17,7 +17,6 @@ namespace Popups
         }
         
         public bool IsSuccess { get; }
-        public string NarratorTextLocalizationKey { get; }
         public int CheckedAmount { get; }
         public int ErrorsAmount { get; }
         public int Winrate { get; }
@@ -27,7 +26,6 @@ namespace Popups
     public class Success_ShiftResultsPopupPresenter : IShiftResultsPopupPresenter
     {
         public bool IsSuccess => true;
-        public string NarratorTextLocalizationKey => "popups.shift_results.narrator_speech_success";
         public int CheckedAmount { get; }
         public int ErrorsAmount { get; }
         public int Winrate { get; }
@@ -45,7 +43,6 @@ namespace Popups
     public class Fail_ShiftResultsPopupPresenter : IShiftResultsPopupPresenter
     {
         public bool IsSuccess => false;
-        public string NarratorTextLocalizationKey => "popups.shift_results.narrator_speech_fail";
         public int CheckedAmount { get; }
         public int ErrorsAmount { get; }
         public int Winrate { get; }
@@ -62,7 +59,6 @@ namespace Popups
     
     public class ShiftResultsPopup : PopupBase<IShiftResultsPopupPresenter>
     {
-        [SerializeField] private TextMeshProLocalization _narratorTextLocalizationKey;
         [SerializeField] private TMP_Text _checkedAmountText;
         [SerializeField] private TMP_Text _errorsAmountText;
         [SerializeField] private TMP_Text _winrateText;
@@ -86,7 +82,6 @@ namespace Popups
             _menuButton.gameObject.SetActive(true);
             _successTextContainer.gameObject.SetActive(popupPresenter.IsSuccess);
             _failTextContainer.gameObject.SetActive(!popupPresenter.IsSuccess);
-            _narratorTextLocalizationKey.SetText(popupPresenter.NarratorTextLocalizationKey);
             _checkedAmountText.SetText("{0}", popupPresenter.CheckedAmount);
             _errorsAmountText.SetText("{0}", popupPresenter.ErrorsAmount);
             _winrateText.SetText("{0}%", popupPresenter.Winrate);

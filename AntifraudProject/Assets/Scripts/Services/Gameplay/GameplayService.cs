@@ -57,7 +57,10 @@ namespace Services
             _gameplayConfig = JsonConvert.DeserializeObject<GameplayConfig>(json);
 
             if (!_persistingService.WasGameplayPlayed)
+            {
+                _popupService.OpenPopup<IHowToPlayPopupPresenter>(new HowToPlayPopupPresenter(), queued: true).Forget();
                 ForceProgressTo(0, 0);
+            }
             else
                 TryShowNewToolPopupForCurrentShift();
         }

@@ -42,19 +42,23 @@ namespace Popups
     {
         [SerializeField] private GameObject _successHeaderContainer;
         [SerializeField] private GameObject _failHeaderContainer;
-        [SerializeField] private Button _nextCaseButton;
+        [SerializeField] private Button _nextCaseRedButton;
+        [SerializeField] private Button _nextCaseGreenButton;
         [SerializeField] private TextMeshProLocalization _buttonText;
         [SerializeField] private TextMeshProLocalization _resultText;
 
         protected override void Init()
         {
-            _nextCaseButton.onClick.AddListener(OnNextCaseButtonClick);
+            _nextCaseRedButton.onClick.AddListener(OnNextCaseButtonClick);
+            _nextCaseGreenButton.onClick.AddListener(OnNextCaseButtonClick);
         }
 
         protected override void OnOpen(ICaseResultPopupPresenter popupPresenter)
         {
             _successHeaderContainer.SetActive(popupPresenter.Success);
             _failHeaderContainer.SetActive(!popupPresenter.Success);
+            _nextCaseGreenButton.gameObject.SetActive(_successHeaderContainer.activeSelf);
+            _nextCaseRedButton.gameObject.SetActive(_failHeaderContainer.activeSelf);
             _buttonText.SetText(popupPresenter.ButtonTextLocalizationKey);
             _resultText.SetText(popupPresenter.ResultTextLocalizationKey);
             base.OnOpen(popupPresenter);

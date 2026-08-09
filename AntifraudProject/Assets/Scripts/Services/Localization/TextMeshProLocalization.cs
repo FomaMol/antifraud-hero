@@ -1,4 +1,5 @@
 ﻿using System;
+using Common.Extensions;
 using DI;
 using TMPro;
 using UnityEngine;
@@ -12,6 +13,7 @@ namespace Localization
         [Inject] private LocalizationService _localization;
 
         [SerializeField] private string _localizationId;
+        [SerializeField] private Color _accentColor;
 
         private TMP_Text _text;
         private object[] _args;
@@ -67,13 +69,15 @@ namespace Localization
                 return;
             }
 
+            var colorHex = $"#{ColorUtility.ToHtmlStringRGBA(_accentColor)}";
+
             if (_args == null || _args.Length == 0)
             {
-                TextComponent.SetText(_localization.Get(_localizationId));
+                TextComponent.SetText(_localization.Get(_localizationId).FormatColored(colorHex));
                 return;
             }
 
-            TextComponent.SetText(string.Format(_localization.Get(_localizationId), _args));
+            TextComponent.SetText(string.Format(_localization.Get(_localizationId), _args).FormatColored(colorHex));
         }
 
         private void OnDestroy()

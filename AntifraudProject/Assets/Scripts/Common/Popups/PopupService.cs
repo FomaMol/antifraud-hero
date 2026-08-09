@@ -153,6 +153,9 @@ namespace GameLogic.UI.Popups
 
         private void OnBackgroundButtonClick()
         {
+            if (_openedPopups.Count == 0)
+                return;
+
             var openedPopupData = _openedPopups.Last().Value;
             if (openedPopupData.WithBackGround)
                 openedPopupData.Popup.OnBackgroundButtonClick();
