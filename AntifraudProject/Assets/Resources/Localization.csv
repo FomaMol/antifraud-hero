@@ -1,13 +1,13 @@
-key,en,ru
+﻿key,en,ru
 mainmenu.logo.text,ANTIFRAUD HERO,АНТИФРОД HERO
 mainmenu.buttons.continue,Continue,Продолжить
 mainmenu.buttons.new_game,New Game,Новая Игра
 mainmenu.buttons.how_to_play,How To Play,Как играть
 mainmenu.buttons.language,English,Русский
 mainmenu.buttons.sounds,Sounds,Звуки
-gameplay.controlbar.accept,ACCEPT,ПОДТВЕРДИТЬ
+gameplay.controlbar.accept,APPROVE,ПОДТВЕРДИТЬ
 gameplay.controlbar.decline,BLOCK,ЗАБЛОКИРОВАТЬ
-gameplay.controlbar.help,HELP,ПОМОЩЬ
+gameplay.controlbar.help,TIP,ПОДСКАЗКА
 gameplay.controlbar.help_number,Tips:{0},Подсказки:{0}
 gameplay.statusbar.shift_number,SHIFT #{0},СМЕНА #{0}
 gameplay.statusbar.winrate_title,WINRATE,ТОЧНОСТЬ
@@ -15,7 +15,7 @@ gameplay.statusbar.winrate_value,{0}%,{0}%
 gameplay.caselistbar.case_number,Message #{0},Сообщение #{0}
 gameplay.caselistbar.sms,SMS,SMS
 gameplay.caselistbar.email,EMAIL,EMAIL
-gameplay.caselistbar.case_queue,CASE QUEUE,ОЧЕРЕДЬ КЕЙСОВ
+gameplay.caselistbar.case_queue,TASKS,ЗАДАЧИ
 gameplay.statusbar.shift_progress,shift progress,прогресс смены
 gameplay.messagebar.incoming_massage,incoming message,входящее сообщение
 gameplay.messagebar.sender,Sender:,Отправитель:
@@ -35,124 +35,124 @@ gameplay.toolsbar.db_empty_tool,FIND ENTRY,НАЙДИТЕ ЗАПИСЬ
 gameplay.toolsbar.check_button,CHECK,ПРОВЕРИТЬ
 gameplay.toolsbar.ok,OK,ОК
 gameplay.toolsbar.error,NOT TRUE,ОШИБКА
-gameplay.shift1.case1.message,Your card has been blocked. Click the link to unblock it: [link]https://vk.com[/link],Ваша карта заблокирована. Нажмите на ссылку для разблокировки: [link]https://vk.com[/link]
-gameplay.shift1.case1.link_validation,This link does not exist,Этой ссылки нет
-gameplay.shift1.case1.sender_validation,This person does not exist,Этого человека нет
-gameplay.shift1.case1.db_validation,Sender OK,Отправитель ок
-gameplay.shift1.case1.result,This was a scam. Be more careful,Это был скам. Будь внимательнее
-gameplay.shift1.case2.message,"Congratulations! You won 50,000 RUB. Go here to claim your prize: [link]https://loto-bank-prize.ru[/link]",Поздравляем! Вы выиграли 50 000 руб. Перейдите для получения приза: [link]https://loto-bank-prize.ru[/link]
-gameplay.shift1.case2.link_validation,Link is not whitelisted,Ссылка не в белом списке
-gameplay.shift1.case2.sender_validation,Sender not found,Отправитель не найден
-gameplay.shift1.case2.db_validation,No data available,Данных нет
-gameplay.shift1.case2.result,This was a scam. Fraudsters use prizes as bait,Это был скам. Мошенники используют призы как приманку
-gameplay.shift1.case3.message,Your account will be blocked. Confirm your details via the link: [link]https://sber-secure.ru/confirm[/link],Ваш аккаунт будет заблокирован. Подтвердите данные по ссылке: [link]https://sber-secure.ru/confirm[/link]
-gameplay.shift1.case3.link_validation,Domain does not match the official one,Домен не совпадает с официальным
-gameplay.shift1.case3.sender_validation,Email is not in the sender database,Email не в базе отправителей
-gameplay.shift1.case3.db_validation,Suspicious activity,Подозрительная активность
-gameplay.shift1.case3.result,This was phishing. Official banks do not request data via email,Это был фишинг. Официальные банки не запрашивают данные по почте
-gameplay.shift1.case4.message,Your parcel is awaiting pickup. Pay for delivery: [link]https://pochta-ru.delivery[/link],Ваша посылка ожидает получения. Оплатите доставку: [link]https://pochta-ru.delivery[/link]
-gameplay.shift1.case4.link_validation,Domain is not official,Домен не является официальным
-gameplay.shift1.case4.sender_validation,Sender name matches,Имя отправителя совпадает
-gameplay.shift1.case4.db_validation,Parcel number not found,Номер посылки не найден
-gameplay.shift1.case4.result,This was a scam. Fraudsters forge the sender name,Это был скам. Мошенники подделывают имя отправителя
-gameplay.shift1.case5.message,"Transaction of 3,200 RUB at Pyatyorochka store. Transaction details: [link]https://sberbank.ru/operations[/link]",Операция на 3 200 руб. в магазине Пятёрочка. Детали операции: [link]https://sberbank.ru/operations[/link]
-gameplay.shift1.case5.link_validation,Official bank domain,Официальный домен банка
-gameplay.shift1.case5.sender_validation,Sender verified,Отправитель подтверждён
-gameplay.shift1.case5.db_validation,Official sender,Официальный отправитель
-gameplay.shift1.case5.result,This is a legitimate message from the bank. Everything is fine,Это легитимное сообщение от банка. Всё в порядке
-gameplay.shift1.case6.message,"Urgent vacancy! Earn from 100,000 RUB/month, no experience needed. Apply here: [link]https://rabota-online24.com/apply[/link]","Срочная вакансия! Заработок от 100 000 руб/месяц, без опыта. Откликнитесь здесь: [link]https://rabota-online24.com/apply[/link]"
-gameplay.shift1.case6.link_validation,Website was recently registered,Сайт зарегистрирован недавно
-gameplay.shift1.case6.sender_validation,Email domain is not verified,Email домен не верифицирован
-gameplay.shift1.case6.db_validation,No data on the sender,Данных об отправителе нет
-gameplay.shift1.case6.result,This was a scam. Too-good-to-be-true offers are a sign of fraud,Это был скам. Слишком выгодные предложения — признак мошенничества
-gameplay.shift1.case7.message,Your application has been approved. Payment will be processed within 3 business days. Details: [link]https://gosuslugi.ru/profile/orders[/link],Ваше заявление одобрено. Выплата будет произведена в течение 3 рабочих дней. Детали: [link]https://gosuslugi.ru/profile/orders[/link]
-gameplay.shift1.case7.link_validation,Official Gosuslugi domain,Официальный домен Госуслуг
-gameplay.shift1.case7.sender_validation,Sender is in the database,Отправитель в базе
-gameplay.shift1.case7.db_validation,Official government sender,Официальный государственный отправитель
-gameplay.shift1.case7.result,This is a legitimate message from Gosuslugi. Everything is fine,Это легитимное сообщение от Госуслуг. Всё в порядке
-gameplay.shift2.case1.message,"[contact]Tinkoff[/contact]: Your credit limit has been increased to 200,000 RUB. Confirm your consent: [link]https://tinkoff-credit-ok.ru[/link]",[contact]Тинькофф[/contact]: Ваш кредитный лимит увеличен до 200 000 руб. Подтвердите согласие: [link]https://tinkoff-credit-ok.ru[/link]
-gameplay.shift2.case1.link_validation,Domain does not belong to the bank,Домен не принадлежит банку
-gameplay.shift2.case1.sender_validation,Name matches a known bank,Имя совпадает с известным банком
-gameplay.shift2.case1.db_validation,Sender number is not in the registry,Номер отправителя не в реестре
-gameplay.shift2.case1.result,This was a scam. Banks do not increase limits via SMS with links,Это был скам. Банки не повышают лимит через SMS со ссылками
-gameplay.shift2.case2.message,Email from [contact]noreply@gosuslugi.ru[/contact]. Your documents have been uploaded successfully. You can track your application status in your account.,Письмо от [contact]noreply@gosuslugi.ru[/contact]. Ваши документы успешно загружены. Статус заявки можно отследить в личном кабинете.
+gameplay.shift1.case1.message,MetroBank Security: We detected an unusual sign-in from a new device. Confirm your identity within 30 minutes to avoid account suspension: [link]https://secure-metrobank-login.com/verify[/link],"MetroBank Security: Мы обнаружили необычный вход с нового устройства. Подтвердите личность в течение 30 минут, иначе аккаунт будет заблокирован: [link]https://secure-metrobank-login.com/verify[/link]"
+gameplay.shift1.case1.link_validation,ALERT: Domain is not owned by MetroBank,ТРЕВОГА: домен не принадлежит MetroBank
+gameplay.shift1.case1.sender_validation,Contact check unavailable,Проверка контакта недоступна
+gameplay.shift1.case1.db_validation,Database check unavailable,Проверка по базе недоступна
+gameplay.shift1.case1.result,Fake bank alert. The link uses a lookalike domain and asks for sensitive data.,Фальшивое банковское уведомление. Ссылка ведёт на похожий домен и запрашивает конфиденциальные данные.
+gameplay.shift1.case2.message,NorthStar Post: Your package is out for delivery today. Track your shipment here: [link]https://northstarpost.com/track/NP-42891[/link],NorthStar Post: Ваша посылка будет доставлена сегодня. Отследить отправление можно здесь: [link]https://northstarpost.com/track/NP-42891[/link]
+gameplay.shift1.case2.link_validation,OK: Official NorthStar Post domain,ОК: официальный домен NorthStar Post
+gameplay.shift1.case2.sender_validation,Contact check unavailable,Проверка контакта недоступна
+gameplay.shift1.case2.db_validation,Database check unavailable,Проверка по базе недоступна
+gameplay.shift1.case2.result,Legitimate delivery notice. The tracking link belongs to the real delivery service.,Легитимное уведомление о доставке. Ссылка отслеживания принадлежит настоящей службе доставки.
+gameplay.shift1.case3.message,StreamBox: Your subscription payment failed. Update your payment method now to keep watching: [link]https://streamb0x-billing.com/update[/link],"StreamBox: Платёж за подписку не прошёл. Обновите способ оплаты, чтобы продолжить просмотр: [link]https://streamb0x-billing.com/update[/link]"
+gameplay.shift1.case3.link_validation,"ALERT: Lookalike domain, streamb0x instead of streambox","ТРЕВОГА: похожий домен, streamb0x вместо streambox"
+gameplay.shift1.case3.sender_validation,Contact check unavailable,Проверка контакта недоступна
+gameplay.shift1.case3.db_validation,Database check unavailable,Проверка по базе недоступна
+gameplay.shift1.case3.result,Fake subscription warning. The domain replaces the letter o with zero.,Фальшивое предупреждение о подписке. В домене буква o заменена на ноль.
+gameplay.shift1.case4.message,Orbit Payroll: Your annual benefits summary is ready. View your documents here: [link]https://orbitpayroll.com/employee/benefits[/link],Orbit Payroll: Годовая сводка по льготам готова. Посмотреть документы можно здесь: [link]https://orbitpayroll.com/employee/benefits[/link]
+gameplay.shift1.case4.link_validation,OK: Verified Orbit Payroll domain,ОК: проверенный домен Orbit Payroll
+gameplay.shift1.case4.sender_validation,Contact check unavailable,Проверка контакта недоступна
+gameplay.shift1.case4.db_validation,Database check unavailable,Проверка по базе недоступна
+gameplay.shift1.case4.result,Legitimate payroll notice. The domain is verified and safe.,Легитимное уведомление от payroll-сервиса. Домен подтверждён и безопасен.
+gameplay.shift1.case5.message,"Limited offer: turn $100 into $1,000 in 48 hours with our AI crypto system. Only 12 spots left. Start here: [link]https://cryptowinner-prize.net/start[/link]","Ограниченное предложение: превратите $100 в $1,000 за 48 часов с нашей AI-криптосистемой. Осталось 12 мест. Начать здесь: [link]https://cryptowinner-prize.net/start[/link]"
+gameplay.shift1.case5.link_validation,ALERT: High-risk crypto domain,ТРЕВОГА: высокорисковый криптодомен
+gameplay.shift1.case5.sender_validation,Contact check unavailable,Проверка контакта недоступна
+gameplay.shift1.case5.db_validation,Database check unavailable,Проверка по базе недоступна
+gameplay.shift1.case5.result,Investment scam. The page promises guaranteed profit and asks for wallet access.,Инвестиционный скам. Страница обещает гарантированную прибыль и просит доступ к кошельку.
+gameplay.shift1.case6.message,Tax Refund Office: You are eligible for a $287 refund. Claim it before midnight: [link]https://gov-refund-service.com/tax2026[/link],Tax Refund Office: Вам одобрен налоговый возврат $287. Получите его до полуночи: [link]https://gov-refund-service.com/tax2026[/link]
+gameplay.shift1.case6.link_validation,ALERT: Not an official government domain,ТРЕВОГА: это не официальный государственный домен
+gameplay.shift1.case6.sender_validation,Contact check unavailable,Проверка контакта недоступна
+gameplay.shift1.case6.db_validation,Database check unavailable,Проверка по базе недоступна
+gameplay.shift1.case6.result,Fake tax refund. Official services do not use this domain or request card details.,Фальшивый налоговый возврат. Официальные сервисы не используют этот домен и не запрашивают данные карты.
+gameplay.shift1.case7.message,Redwood Animal Shelter: Help us provide winter care for rescued pets. Donation page: [link]https://redwoodanimalshelter.org/winter-care[/link],Redwood Animal Shelter: Помогите нам обеспечить зимний уход для спасённых животных. Страница пожертвования: [link]https://redwoodanimalshelter.org/winter-care[/link]
+gameplay.shift1.case7.link_validation,OK: Verified shelter donation page,ОК: проверенная страница пожертвований приюта
+gameplay.shift1.case7.sender_validation,Contact check unavailable,Проверка контакта недоступна
+gameplay.shift1.case7.db_validation,Database check unavailable,Проверка по базе недоступна
+gameplay.shift1.case7.result,Legitimate charity message. The link belongs to the animal shelter.,Легитимное сообщение от благотворительной организации. Ссылка принадлежит приюту для животных.
+gameplay.shift2.case1.message,"[contact]Dad[/contact]: Hey, my phone broke, so I’m texting from a new number. I need you to send $420 for a repair bill. Use this payment link for Mark Lane: [link]https://safe-pay.com/u/marklane[/link]","[contact]Папа[/contact]: Привет, мой телефон сломался, поэтому пишу с нового номера. Нужно отправить $420 за ремонт. Используй ссылку для оплаты на имя Mark Lane: [link]https://safe-pay.com/u/marklane[/link]"
+gameplay.shift2.case1.link_validation,OK: Payment domain is known and secure,ОК: платёжный домен известен и безопасен
+gameplay.shift2.case1.sender_validation,ALERT: Number and recipient do not match trusted contacts,ТРЕВОГА: номер и получатель не совпадают с доверенными контактами
+gameplay.shift2.case1.db_validation,Database check unavailable,Проверка по базе недоступна
+gameplay.shift2.case1.result,"Family impersonation scam. The link is clean, but the contact data does not match.","Скам с подменой родственника. Ссылка чистая, но данные контакта не совпадают."
+gameplay.shift2.case2.message,"[contact]Aunt Maria[/contact]: Hi sweetie, could you send $35 to my pharmacy card? I forgot my wallet and need to pick up my medicine today.","[contact]Тётя Мария[/contact]: Привет, солнышко, можешь отправить $35 на карту моей аптеки? Я забыла кошелёк, а лекарства нужно забрать сегодня."
 gameplay.shift2.case2.link_validation,No links,Ссылок нет
-gameplay.shift2.case2.sender_validation,Email matches the official one,Email совпадает с официальным
-gameplay.shift2.case2.db_validation,Official government sender,Официальный государственный отправитель
-gameplay.shift2.case2.result,This is a legitimate email from Gosuslugi. Everything is fine,Это легитимное письмо от Госуслуг. Всё в порядке
-gameplay.shift2.case3.message,[contact]Security Service[/contact]: A login from a new device was detected on your account. If it wasn't you — call urgently: [link]https://security-alert-ru.com[/link],[contact]Служба безопасности[/contact]: Зафиксирован вход в ваш аккаунт с нового устройства. Если это не вы — срочно позвоните: [link]https://security-alert-ru.com[/link]
-gameplay.shift2.case3.link_validation,Website is not in the trusted list,Сайт не в списке доверенных
-gameplay.shift2.case3.sender_validation,Sender not identified,Отправитель не идентифицирован
-gameplay.shift2.case3.db_validation,No data available,Данных нет
-gameplay.shift2.case3.result,This was a scam. Real security services do not send links via SMS,Это был скам. Настоящие службы безопасности не присылают ссылки в SMS
-gameplay.shift2.case4.message,[contact]MTS[/contact]: Your balance has been topped up by 300 RUB. Remaining: 342.50 RUB.,"[contact]МТС[/contact]: Ваш баланс пополнен на 300 руб. Остаток: 342,50 руб."
-gameplay.shift2.case4.link_validation,No links,Ссылок нет
-gameplay.shift2.case4.sender_validation,Sender verified,Отправитель подтверждён
-gameplay.shift2.case4.db_validation,Official carrier,Официальный оператор
-gameplay.shift2.case4.result,This is a legitimate notification from the carrier. Everything is fine,Это легитимное уведомление от оператора. Всё в порядке
-gameplay.shift2.case5.message,Email from [contact]invoice@ozon-seller.biz[/contact]. Invoice for order payment. Download the document: [link]https://ozon-seller.biz/invoice78234.exe[/link],Письмо от [contact]invoice@ozon-seller.biz[/contact]. Счёт на оплату заказа. Скачайте документ: [link]https://ozon-seller.biz/invoice78234.exe[/link]
-gameplay.shift2.case5.link_validation,Link leads to an executable file,Ссылка ведёт на исполняемый файл
-gameplay.shift2.case5.sender_validation,Domain differs from the official one,Домен отличается от официального
-gameplay.shift2.case5.db_validation,Suspicious domain activity,Подозрительная активность домена
-gameplay.shift2.case5.result,This was a scam. Never download .exe files from emails,Это был скам. Никогда не скачивайте .exe файлы из писем
-gameplay.shift2.case6.message,"[contact]Andrey[/contact] writes: Hi, it's me from HR. Send your bank details for the bonus payment to [link]https://hr-bonus-form.ru[/link]","[contact]Андрей[/contact] пишет: Привет, это я из отдела кадров. Скинь свои банковские реквизиты для начисления премии на [link]https://hr-bonus-form.ru[/link]"
-gameplay.shift2.case6.link_validation,Domain was registered 2 days ago,Домен зарегистрирован 2 дня назад
-gameplay.shift2.case6.sender_validation,"Personal number, not corporate","Личный номер, не корпоративный"
-gameplay.shift2.case6.db_validation,No data available,Данных нет
-gameplay.shift2.case6.result,This was a scam. Bank details are only requested through official channels,Это был скам. Реквизиты запрашивают только через официальные каналы
-gameplay.shift2.case7.message,Email from [contact]support@hh.ru[/contact]. Your resume was viewed by 12 employers this week. View the statistics in your account.,Письмо от [contact]support@hh.ru[/contact]. Ваше резюме просмотрели 12 работодателей на этой неделе. Откройте статистику в личном кабинете.
-gameplay.shift2.case7.link_validation,No links,Ссылок нет
-gameplay.shift2.case7.sender_validation,Email matches the official service,Email совпадает с официальным сервисом
-gameplay.shift2.case7.db_validation,"Known service, data matches","Известный сервис, данные совпадают"
-gameplay.shift2.case7.result,This is a legitimate email from hh.ru. Everything is fine,Это легитимное письмо от hh.ru. Всё в порядке
-gameplay.shift3.case1.message,"[contact]Federal Tax Service[/contact]: Tax debt of 4,800 RUB found for TIN [db]772901834521[/db]. Pay by April 15: [link]https://fns-oplata.ru[/link]",[contact]ФНС России[/contact]: По ИНН [db]772901834521[/db] выявлена задолженность 4 800 руб. Оплатите до 15 апреля: [link]https://fns-oplata.ru[/link]
-gameplay.shift3.case1.link_validation,Domain is not the official FTS website,Домен не является официальным сайтом ФНС
-gameplay.shift3.case1.sender_validation,Name matches the agency,Имя совпадает с ведомством
-gameplay.shift3.case1.db_validation,Number is not registered with the FTS,Номер не зарегистрирован за ФНС
-gameplay.shift3.case1.result,This was a scam. The FTS only notifies through the account on nalog.ru,Это был скам. ФНС уведомляет только через личный кабинет на nalog.ru
-gameplay.shift3.case2.message,Email from [contact]security@google.com[/contact]. Your password has been changed. If it wasn't you — restore access through your Google account.,Письмо от [contact]security@google.com[/contact]. Ваш пароль был изменён. Если это не вы — восстановите доступ через личный кабинет Google.
-gameplay.shift3.case2.link_validation,No links,Ссылок нет
-gameplay.shift3.case2.sender_validation,Email verified,Email подтверждён
-gameplay.shift3.case2.db_validation,Official Google domain,Официальный домен Google
-gameplay.shift3.case2.result,This is a legitimate notification from Google. Everything is fine,Это легитимное уведомление от Google. Всё в порядке
-gameplay.shift3.case3.message,"[contact]Mom[/contact]: Son, I've been in an accident, I urgently need money. Transfer to the card [link]https://переводденег.рф[/link]","[contact]Мама[/contact]: Сынок, я попала в аварию, срочно нужны деньги. Переведи на карту [link]https://переводденег.рф[/link]"
-gameplay.shift3.case3.link_validation,Link leads to a phishing site,Ссылка ведёт на фишинговый сайт
-gameplay.shift3.case3.sender_validation,Number does not match the contact,Номер не совпадает с контактом
-gameplay.shift3.case3.db_validation,No data available,Данных нет
-gameplay.shift3.case3.result,This was a scam. Fraudsters often pretend to be relatives in trouble,Это был скам. Мошенники часто притворяются родственниками в беде
-gameplay.shift3.case4.message,"Email from [contact]noreply@sberbank.ru[/contact]. Receipt for transaction [db]SBR-0409-559271[/db] dated 04/09/2026 for 1,250 RUB. Details in attachment.",Письмо от [contact]noreply@sberbank.ru[/contact]. Чек по операции [db]SBR-0409-559271[/db] от 09.04.2026 на сумму 1 250 руб. Детали в приложении.
-gameplay.shift3.case4.link_validation,No links,Ссылок нет
-gameplay.shift3.case4.sender_validation,Official bank domain,Официальный домен банка
-gameplay.shift3.case4.db_validation,Sender verified,Отправитель верифицирован
-gameplay.shift3.case4.result,This is a legitimate receipt from Sberbank. Everything is fine,Это легитимный чек от Сбербанка. Всё в порядке
-gameplay.shift3.case5.message,Your investments grew by 340%! Withdraw your profit now: [link]https://cryptopro-withdraw.io[/link],Ваши инвестиции выросли на 340%! Выведите прибыль прямо сейчас: [link]https://cryptopro-withdraw.io[/link]
-gameplay.shift3.case5.link_validation,Domain was recently registered,Домен зарегистрирован недавно
-gameplay.shift3.case5.sender_validation,Sender unknown,Отправитель неизвестен
-gameplay.shift3.case5.db_validation,No data available,Данных нет
-gameplay.shift3.case5.result,This was a scam. Promises of huge profits are a classic sign of fraud,Это был скам. Обещания сверхприбыли — классический признак мошенничества
-gameplay.shift3.case6.message,Your order #[db]9183746[/db] has been shipped. Expected delivery date: April 11.,Ваш заказ №[db]9183746[/db] отправлен. Ожидаемая дата доставки: 11 апреля.
-gameplay.shift3.case6.link_validation,No links,Ссылок нет
-gameplay.shift3.case6.sender_validation,Domain matches the official one,Домен совпадает с официальным
-gameplay.shift3.case6.db_validation,Known online store,Известный интернет-магазин
-gameplay.shift3.case6.result,This is a legitimate notification from Wildberries. Everything is fine,Это легитимное уведомление от Wildberries. Всё в порядке
-gameplay.shift3.case7.message,"Loan of 500,000 RUB approved at 3.9% APR. Application number: [db]RBK-2026-50000[/db]. To receive funds go to: [link]https://rosbank-kredit.online[/link]",Одобрен кредит 500 000 руб. под 3.9% годовых. Номер заявки: [db]RBK-2026-50000[/db]. Для получения перейдите: [link]https://rosbank-kredit.online[/link]
-gameplay.shift3.case7.link_validation,Domain does not belong to Rosbank,Домен не принадлежит Росбанку
-gameplay.shift3.case7.sender_validation,Name matches a known bank,Имя совпадает с известным банком
-gameplay.shift3.case7.db_validation,Number is not registered with the bank,Номер не зарегистрирован за банком
-gameplay.shift3.case7.result,This was a scam. Banks do not send unsolicited loan approvals via SMS,Это был скам. Банки не рассылают одобрения незапрошенных кредитов через SMS
+gameplay.shift2.case2.sender_validation,OK: Sender and pharmacy recipient match trusted records,ОК: отправитель и аптека-получатель совпадают с доверенными данными
+gameplay.shift2.case2.db_validation,Database check unavailable,Проверка по базе недоступна
+gameplay.shift2.case2.result,Legitimate request. The sender and recipient match trusted contact records.,Легитимная просьба. Отправитель и получатель совпадают с доверенными контактами.
+gameplay.shift2.case3.message,[contact]MetroBank Fraud Team[/contact]: Suspicious debit card activity detected. Visit [link]https://metrobank.com/security[/link] or call our agent immediately at +1-555-019-7741.,[contact]MetroBank Fraud Team[/contact]: Обнаружена подозрительная активность по дебетовой карте. Перейдите на [link]https://metrobank.com/security[/link] или срочно позвоните агенту по номеру +1-555-019-7741.
+gameplay.shift2.case3.link_validation,OK: Official MetroBank domain,ОК: официальный домен MetroBank
+gameplay.shift2.case3.sender_validation,ALERT: Callback number is not an official bank contact,ТРЕВОГА: номер для обратного звонка не является официальным контактом банка
+gameplay.shift2.case3.db_validation,Database check unavailable,Проверка по базе недоступна
+gameplay.shift2.case3.result,"Phone scam. The link is real, but the callback number is fake.","Телефонный скам. Ссылка настоящая, но номер для звонка фальшивый."
+gameplay.shift2.case4.message,[contact]Kevin from Finance[/contact]: Your travel reimbursement is ready for review. Please check the expense portal: [link]https://officehub.com/expenses/TR-88214[/link],[contact]Кевин из финансового отдела[/contact]: Возмещение командировочных готово к проверке. Посмотрите в портале расходов: [link]https://officehub.com/expenses/TR-88214[/link]
+gameplay.shift2.case4.link_validation,OK: Approved company expense portal,ОК: одобренный корпоративный портал расходов
+gameplay.shift2.case4.sender_validation,OK: Sender matches company Finance contact,ОК: отправитель совпадает с контактом финансового отдела
+gameplay.shift2.case4.db_validation,Database check unavailable,Проверка по базе недоступна
+gameplay.shift2.case4.result,Legitimate work reimbursement. Both the sender and portal are verified.,Легитимное возмещение расходов. Отправитель и портал подтверждены.
+gameplay.shift2.case5.message,NorthStar Post: We could not deliver your package due to incomplete address details. Pay $1.50 redelivery fee here: [link]https://northstarpost-delivery.com/redeliver[/link],NorthStar Post: Мы не смогли доставить посылку из-за неполного адреса. Оплатите повторную доставку $1.50 здесь: [link]https://northstarpost-delivery.com/redeliver[/link]
+gameplay.shift2.case5.link_validation,ALERT: Domain is not owned by NorthStar Post,ТРЕВОГА: домен не принадлежит NorthStar Post
+gameplay.shift2.case5.sender_validation,No trusted contact required,Доверенный контакт не требуется
+gameplay.shift2.case5.db_validation,Database check unavailable,Проверка по базе недоступна
+gameplay.shift2.case5.result,Fake delivery fee. The fraud signal is the lookalike delivery domain.,Фальшивая плата за доставку. Главный признак — поддельный домен службы доставки.
+gameplay.shift2.case6.message,[contact]Emma Wilson[/contact]: I bought your camera. The marketplace is holding my payment until you verify your card. Open this page and pay the $1 verification fee: [link]https://safehold-pay.com/release/8842[/link],"[contact]Emma Wilson[/contact]: Я купила вашу камеру. Маркетплейс удерживает оплату, пока вы не подтвердите карту. Откройте страницу и оплатите проверочный сбор $1: [link]https://safehold-pay.com/release/8842[/link]"
+gameplay.shift2.case6.link_validation,ALERT: Link is not connected to the marketplace,ТРЕВОГА: ссылка не связана с маркетплейсом
+gameplay.shift2.case6.sender_validation,OK: Buyer profile matches marketplace chat,ОК: профиль покупателя совпадает с чатом маркетплейса
+gameplay.shift2.case6.db_validation,Database check unavailable,Проверка по базе недоступна
+gameplay.shift2.case6.result,"Marketplace scam. The buyer profile is real, but the payment link is fake.","Скам на маркетплейсе. Профиль покупателя настоящий, но платёжная ссылка фальшивая."
+gameplay.shift2.case7.message,[contact]Greenfield School[/contact]: Your child’s lunch balance is $18.75. You can pay through the school portal: [link]https://greenfieldschool.edu/payments[/link],[contact]Greenfield School[/contact]: Баланс школьного обеда вашего ребёнка составляет $18.75. Оплатить можно через школьный портал: [link]https://greenfieldschool.edu/payments[/link]
+gameplay.shift2.case7.link_validation,OK: Official school payment page,ОК: официальная страница оплаты школы
+gameplay.shift2.case7.sender_validation,OK: Sender and lunch account match trusted records,ОК: отправитель и обеденный счёт совпадают с доверенными данными
+gameplay.shift2.case7.db_validation,Database check unavailable,Проверка по базе недоступна
+gameplay.shift2.case7.result,Legitimate school payment notice. The link and contact data are verified.,Легитимное школьное уведомление об оплате. Ссылка и контактные данные подтверждены.
+gameplay.shift3.case1.message,[contact]City Parking Authority[/contact]: Unpaid parking citation [db]CP-84219[/db]. Pay within 2 hours to avoid additional penalties: [link]https://cityparking.gov/pay[/link],"[contact]City Parking Authority[/contact]: Неоплаченный парковочный штраф [db]CP-84219[/db]. Оплатите в течение 2 часов, чтобы избежать дополнительных санкций: [link]https://cityparking.gov/pay[/link]"
+gameplay.shift3.case1.link_validation,OK: Official city parking domain,ОК: официальный домен городской парковки
+gameplay.shift3.case1.sender_validation,OK: Sender and recipient match official records,ОК: отправитель и получатель совпадают с официальными данными
+gameplay.shift3.case1.db_validation,ALERT: Citation ID not found,ТРЕВОГА: номер штрафа не найден
+gameplay.shift3.case1.result,"Fake fine notice. The link and sender look official, but the citation does not exist.","Фальшивое уведомление о штрафе. Ссылка и отправитель выглядят официально, но штрафа в базе нет."
+gameplay.shift3.case2.message,[contact]City Parking Authority[/contact]: Citation [db]CPA-448219[/db] for vehicle plate KMR-214 is due on May 14. Pay here: [link]https://cityparking.gov/pay[/link],[contact]City Parking Authority[/contact]: Штраф [db]CPA-448219[/db] для автомобиля KMR-214 должен быть оплачен до 14 мая. Оплата здесь: [link]https://cityparking.gov/pay[/link]
+gameplay.shift3.case2.link_validation,OK: Official city parking domain,ОК: официальный домен городской парковки
+gameplay.shift3.case2.sender_validation,OK: Sender and recipient match official records,ОК: отправитель и получатель совпадают с официальными данными
+gameplay.shift3.case2.db_validation,"OK: Citation, plate, amount, and due date match","ОК: штраф, номер авто, сумма и срок оплаты совпадают"
+gameplay.shift3.case2.result,Legitimate parking fine. All checks match the official records.,Легитимный парковочный штраф. Все проверки совпадают с официальными данными.
+gameplay.shift3.case3.message,[contact]County Court Notice[/contact]: Case [db]C-11823[/db] requires a same-day administrative payment. Pay $120 to Samuel Reed via QuickPay. Details: [link]https://countycourt.gov/case/C-11823[/link],[contact]County Court Notice[/contact]: По делу [db]C-11823[/db] требуется административный платёж сегодня. Переведите $120 Samuel Reed через QuickPay. Детали: [link]https://countycourt.gov/case/C-11823[/link]
+gameplay.shift3.case3.link_validation,OK: Official county court domain,ОК: официальный домен окружного суда
+gameplay.shift3.case3.sender_validation,ALERT: Payment recipient is a private person,ТРЕВОГА: получатель платежа — частное лицо
+gameplay.shift3.case3.db_validation,OK: Case exists in the court database,ОК: дело существует в базе суда
+gameplay.shift3.case3.result,"Payment redirection scam. The case is real, but the recipient is not official.","Скам с подменой получателя. Дело настоящее, но получатель платежа неофициальный."
+gameplay.shift3.case4.message,[contact]Federal Tax Service[/contact]: Your refund [db]TR-71920[/db] is approved. Confirm your bank card within 24 hours: [link]https://taxservice-secure.com/refund[/link],[contact]Federal Tax Service[/contact]: Ваш возврат [db]TR-71920[/db] одобрен. Подтвердите банковскую карту в течение 24 часов: [link]https://taxservice-secure.com/refund[/link]
+gameplay.shift3.case4.link_validation,ALERT: Link is not an official tax domain,ТРЕВОГА: ссылка не является официальным налоговым доменом
+gameplay.shift3.case4.sender_validation,OK: Agency name matches official records,ОК: название ведомства совпадает с официальными данными
+gameplay.shift3.case4.db_validation,OK: Refund reference exists,ОК: номер возврата существует
+gameplay.shift3.case4.result,"Tax phishing. The reference exists, but the link is fake and asks for card details.","Налоговый фишинг. Номер возврата существует, но ссылка фальшивая и просит данные карты."
+gameplay.shift3.case5.message,[contact]NorthGrid Energy[/contact]: Invoice [db]NG-92351[/db] is overdue. Service may be paused after May 16. Pay through your account portal: [link]https://northgridenergy.com/billing[/link],[contact]NorthGrid Energy[/contact]: Счёт [db]NG-92351[/db] просрочен. Услуга может быть приостановлена после 16 мая. Оплатите через личный кабинет: [link]https://northgridenergy.com/billing[/link]
+gameplay.shift3.case5.link_validation,OK: Official NorthGrid Energy domain,ОК: официальный домен NorthGrid Energy
+gameplay.shift3.case5.sender_validation,OK: Sender and recipient match utility records,ОК: отправитель и получатель совпадают с данными поставщика услуг
+gameplay.shift3.case5.db_validation,OK: Invoice amount and due date match,ОК: сумма счёта и срок оплаты совпадают
+gameplay.shift3.case5.result,"Legitimate utility notice. Domain, recipient, and invoice data all match.","Легитимное уведомление от поставщика услуг. Домен, получатель и данные счёта совпадают."
+gameplay.shift3.case6.message,"[contact]Community Relief Program[/contact]: You have been selected for a $1,200 emergency grant. Pay the $25 processing fee to unlock your funds: [link]https://communityrelief.org/claim[/link] Grant ID: [db]CRG-44781[/db]","[contact]Community Relief Program[/contact]: Вы выбраны для получения экстренного гранта $1,200. Оплатите сбор $25, чтобы разблокировать средства: [link]https://communityrelief.org/claim[/link] ID гранта: [db]CRG-44781[/db]"
+gameplay.shift3.case6.link_validation,OK: Registered nonprofit domain,ОК: домен зарегистрированной некоммерческой организации
+gameplay.shift3.case6.sender_validation,OK: Organization exists in public records,ОК: организация есть в публичных данных
+gameplay.shift3.case6.db_validation,ALERT: Grant ID not found,ТРЕВОГА: ID гранта не найден
+gameplay.shift3.case6.result,"Grant scam. The organization exists, but the specific grant record is fake.","Грантовый скам. Организация существует, но конкретная запись о гранте фальшивая."
+gameplay.shift3.case7.message,[contact]State Benefit Office[/contact]: Your childcare benefit review is due today. Upload the requested documents here: [link]https://statebenefits.gov/review[/link] Case ID: [db]SB-55201[/db],[contact]State Benefit Office[/contact]: Проверка пособия на ребёнка должна быть завершена сегодня. Загрузите документы здесь: [link]https://statebenefits.gov/review[/link] ID дела: [db]SB-55201[/db]
+gameplay.shift3.case7.link_validation,OK: Official state benefits domain,ОК: официальный домен службы пособий
+gameplay.shift3.case7.sender_validation,OK: Sender matches official agency records,ОК: отправитель совпадает с официальными данными ведомства
+gameplay.shift3.case7.db_validation,OK: Case exists and no payment is requested,"ОК: дело существует, платёж не запрашивается"
+gameplay.shift3.case7.result,"Legitimate government notice. Link, sender, and case database all match.","Легитимное государственное уведомление. Ссылка, отправитель и база дел совпадают."
 popups.howtoplay.title,TUTORIAL,ОБУЧЕНИЕ
 popups.howtoplay.card1,Open a *case* from the list on the left,Открой *кейс* из списка слева
 popups.howtoplay.card2,Use the tools on the right to verify the data,Используй инструменты справа для проверки данных
 popups.howtoplay.card3,Make your verdict: Accept or Block,Вынеси вердикт: Подтвердить или Заблокировать
-popups.howtoplay.norrator_message1,"Hello! I'm your mentor. Today you'll start your first shift in the Antifraud department.","Привет! Я твой наставник. Сегодня ты начнешь свою первую смену в отделе Антифрода."
+popups.howtoplay.norrator_message1,Hello! I'm your mentor. Today you'll start your first shift in the Antifraud department.,Привет! Я твой наставник. Сегодня ты начнешь свою первую смену в отделе Антифрода.
 popups.howtoplay.norrator_message2,Your *task* is to check incoming messages and transactions for fraud.,Твоя задача - проверять входящие сообщения и транзакции на предмет мошенничества.
-popups.howtoplay.norrator_message3,"Use the tools on the right to find inconsistencies. Good luck!","Используй инструменты справа, чтобы найти нестыковки. Удачи!"
+popups.howtoplay.norrator_message3,Use the tools on the right to find inconsistencies. Good luck!,"Используй инструменты справа, чтобы найти нестыковки. Удачи!"
 popups.howtoplay.next_button,Next,Далее
 popups.howtoplay.play_button,Play,Играть
 popups.case_result.next_button,Next case,Следующий кейс
 popups.case_result.close_button,Close,Закрыть
-popups.case_result.success,Success,Успех
-popups.case_result.fail,Fail,Провал
+popups.case_result.success,Correct,Верно
+popups.case_result.fail,Incorrect,Неверно
 popups.new_tool.title,NEW TOOL!,НОВЫЙ ИНСТРУМЕНТ!
 popups.new_tool.link_scanner_name,Link scanner,Сканнер ссылок
 popups.new_tool.link_scanner_description,Check suspicious links for phishing,Проверяй подозрительные ссылки на фишинг
@@ -176,5 +176,5 @@ popups.shift_results.continue_button,Continue,Продолжить
 popups.shift_results.menu_button,Menu,Меню
 popups.game_win.title,CONGRATULATIONS!,ПОЗДРАВЛЯЕМ!
 popups.game_win.narrator_speech,You've completed all levels and become a true antifraud hero!,Вы прошли все уровни и стали настоящим героем антифрода!
-popups.game_win.description,"You've proven that attention to detail and tool knowledge are the best defense against fraudsters. Your contribution to security is invaluable.","Ты доказал, что внимательность и знание инструментов - лучшая защита от мошенников. Твой вклад в безопасность неоценим."
+popups.game_win.description,You've proven that attention to detail and tool knowledge are the best defense against fraudsters. Your contribution to security is invaluable.,"Ты доказал, что внимательность и знание инструментов - лучшая защита от мошенников. Твой вклад в безопасность неоценим."
 popups.game_win.close_button,To Menu,В меню
