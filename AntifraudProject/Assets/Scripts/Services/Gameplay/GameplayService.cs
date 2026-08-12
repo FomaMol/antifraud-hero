@@ -17,10 +17,13 @@ namespace Services
 {
     public class GameplayService : IInitializable
     {
+        private const int ShiftStartHour = 9;
+        private const int ShiftDurationMinutes = 8 * 60;
+
         [Inject] private readonly PersistingService _persistingService;
         [Inject] private readonly PopupService _popupService;
         [Inject] private readonly ScenesService _scenesService;
- 
+
         private GameplayConfig _gameplayConfig;
 
         public int CurrentCaseIndex
@@ -62,7 +65,11 @@ namespace Services
                 ForceProgressTo(0, 0);
             }
             else
+            {
+                if (_persistingService.CaseMessageTimes.Count != TotalCaseCountInCurrentShift)
+                    GenerateMessageTimesForCurrentShift();
                 TryShowNewToolPopupForCurrentShift();
+            }
         }
 
         private void ForceProgressTo(int shiftIndex, int caseIndex)
@@ -73,12 +80,29 @@ namespace Services
             _persistingService.SetCurrentCase(caseIndex);
             _persistingService.SetCasesOrder(Enumerable.Range(0, TotalCaseCountInCurrentShift).Shuffle().ToList());
             _persistingService.SetCaseResultHistory(new List<bool>());
+            GenerateMessageTimesForCurrentShift();
 
             _onChangeShift.OnNext(Unit.Default);
             _onChangeCase.OnNext(Unit.Default);
 
             TryShowNewToolPopupForCurrentShift();
         }
+
+        private void GenerateMessageTimesForCurrentShift()
+        {
+            var count = TotalCaseCountInCurrentShift;
+            var shiftStart = DateTime.Today.AddHours(ShiftStartHour);
+            var times = Enumerable.Range(0, ShiftDurationMinutes)
+                .Shuffle()
+                .Take(count)
+                .OrderBy(m => m)
+                .Select(m => shiftStart.AddMinutes(m))
+                .ToList();
+            _persistingService.SetCaseMessageTimes(times);
+        }
+
+        public DateTime GetMessageTimeForCase(int caseIndex)
+            => _persistingService.CaseMessageTimes[caseIndex];
 
         private void TryShowNewToolPopupForCurrentShift()
         {

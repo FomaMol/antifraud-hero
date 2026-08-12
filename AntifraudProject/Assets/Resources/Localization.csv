@@ -18,7 +18,7 @@ gameplay.caselistbar.email,EMAIL,EMAIL
 gameplay.caselistbar.case_queue,TASKS,ЗАДАЧИ
 gameplay.statusbar.shift_progress,shift progress,прогресс смены
 gameplay.messagebar.incoming_massage,incoming message,входящее сообщение
-gameplay.messagebar.sender,Sender:,Отправитель:
+gameplay.messagebar.type,Type:,Тип:
 gameplay.messagebar.time,Time:,Время:
 gameplay.toolsbar.enter_link,Enter the link to check:,Введите ссылку:
 gameplay.toolsbar.enter_contact,Enter the contact to check:,Введите контакт:
