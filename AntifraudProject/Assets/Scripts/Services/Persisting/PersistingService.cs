@@ -1,4 +1,7 @@
+using System;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Newtonsoft.Json;
 using UnityEngine;
 using VContainer.Unity;
@@ -18,6 +21,7 @@ namespace Services
         public bool HelpWasUsedInCurrentCase => _saveDataCache.Gameplay.HelpWasUsedInCurrentCase;
         public IReadOnlyList<int> CasesOrder => _saveDataCache.Gameplay.CasesOrder;
         public IReadOnlyList<bool> CaseDecisionHistory => _saveDataCache.Gameplay.CaseResultHistory;
+        public IReadOnlyList<DateTime> CaseMessageTimes => _saveDataCache.Gameplay.CaseMessageTimes.Select(DateTime.FromBinary).ToList();
         public bool WasGameplayPlayed => _saveDataCache.WasGameplayPlayed;
 
         public void SetLanguage(string language)
@@ -59,6 +63,12 @@ namespace Services
         public void SetCaseResultHistory(IReadOnlyList<bool> caseResultHistory)
         {
             _saveDataCache.Gameplay.CaseResultHistory = new List<bool>(caseResultHistory);
+            SaveGameplayConfig(_saveDataCache);
+        }
+
+        public void SetCaseMessageTimes(IReadOnlyList<DateTime> caseMessageTimes)
+        {
+            _saveDataCache.Gameplay.CaseMessageTimes = caseMessageTimes.Select(t => t.ToBinary()).ToList();
             SaveGameplayConfig(_saveDataCache);
         }
 

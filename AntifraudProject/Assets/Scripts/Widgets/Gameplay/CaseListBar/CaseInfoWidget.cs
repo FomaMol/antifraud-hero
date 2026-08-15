@@ -10,7 +10,8 @@ namespace Widgets.CaseListBar
     public class CaseInfoWidget : Widget
     {
         [Inject] private readonly GameplayService _gameplayService;
-        
+        [Inject] private readonly LocalizationService _localizationService;
+
         [SerializeField] private TextMeshProLocalization _caseTitle;
         [SerializeField] private Image _smsTypeIconImage;
         [SerializeField] private Image _webTypeIconImage;
@@ -19,6 +20,7 @@ namespace Widgets.CaseListBar
         [SerializeField] private Transform _selectedBackground;
         [SerializeField] private Image _successResultIconImage;
         [SerializeField] private Image _failResultIconImage;
+        [SerializeField] private TMP_Text _timeText;
 
         public void Initialize(int number, string caseType, bool selected)
         {
@@ -27,6 +29,7 @@ namespace Widgets.CaseListBar
             _webTypeIconImage.gameObject.SetActive(caseType.ToLower() == "email");
             _smsTypeText.gameObject.SetActive(caseType.ToLower() == "sms");
             _webTypeText.gameObject.SetActive(caseType.ToLower() == "email");
+            _timeText.SetText(_localizationService.FormatTime(_gameplayService.GetMessageTimeForCase(number - 1)));
             _selectedBackground.gameObject.SetActive(selected);
             if (_gameplayService.TryGetCaseDecisionFromHistory(number - 1, out var decision))
             {

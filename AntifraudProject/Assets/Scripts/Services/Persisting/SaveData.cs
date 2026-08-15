@@ -12,6 +12,7 @@ namespace Services
         [JsonProperty] public bool HelpWasUsedInCurrentCase = false;
         [JsonProperty] public List<int> CasesOrder = new();
         [JsonProperty] public List<bool> CaseResultHistory = new();
+        [JsonProperty] public List<long> CaseMessageTimes = new();
     }
     
     [JsonObject(MemberSerialization.OptIn)]

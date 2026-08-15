@@ -1,8 +1,8 @@
-using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Localization;
 using Services;
+using TMPro;
 using UniRx;
 using UnityEngine;
 using VContainer;
@@ -18,6 +18,8 @@ namespace Widgets
         [SerializeField] private PeaceOfTextWidget _linkTextWidget;
         [SerializeField] private PeaceOfTextWidget _contactTextWidget;
         [SerializeField] private PeaceOfTextWidget _dbTextWidget;
+        [SerializeField] private TMP_Text _typeText;
+        [SerializeField] private TMP_Text _timeText;
         [Space]
         [SerializeField] private ToolsBarWidget _toolsBarWidget; // TODO: Избавиться от прямой ссылки
 
@@ -60,6 +62,9 @@ namespace Widgets
             var localizedMessage = _localizationService.Get(_gameplayService.CurrentCaseConfig.MessageText);
             var (processedText, tagContents) = ReplaceCustomTags(localizedMessage);
             _tmpLinkHandler.Text.SetText(processedText);
+            
+            _typeText.SetText(_gameplayService.CurrentCaseConfig.TypeText);
+            _timeText.SetText(_localizationService.FormatTime(_gameplayService.GetMessageTimeForCase(_gameplayService.CurrentCaseIndex)));
             
             _linkTextWidget.gameObject.SetActive(false);
             _contactTextWidget.gameObject.SetActive(false);
