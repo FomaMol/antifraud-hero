@@ -71,12 +71,15 @@ namespace Widgets
             _dataText.SetText(data);
             _emptyState.gameObject.SetActive(false);
             _toolState.gameObject.SetActive(true);
+            _validateButton.interactable = true;
         }
         
         public void CleanUp()
         {
-            _toolState.gameObject.SetActive(false);
-            _emptyState.gameObject.SetActive(true);
+            // _toolState.gameObject.SetActive(false);
+            // _emptyState.gameObject.SetActive(true);
+            _dataText.SetText(string.Empty);
+            _validateButton.interactable = false;
             _validationResultVerified.gameObject.SetActive(false);
             _validationResultFailed.gameObject.SetActive(false);
         }
