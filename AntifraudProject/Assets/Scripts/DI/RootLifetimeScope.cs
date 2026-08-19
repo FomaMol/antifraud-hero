@@ -1,3 +1,4 @@
+using GameLogic.Audio;
 using GameLogic.UI.Popups;
 using Localization;
 using Services;
@@ -11,6 +12,7 @@ namespace DI
     public class RootLifetimeScope : LifetimeScope
     {
         [SerializeField] private PopupService _popupService;
+        [SerializeField] private AudioService _audioService;
         
         public static IObjectResolver GlobalContainer { get; private set; }
 
@@ -20,6 +22,7 @@ namespace DI
             builder.RegisterEntryPoint<LocalizationService>().AsSelf();
             builder.RegisterEntryPoint<ScenesService>().AsSelf();
             builder.RegisterComponent(_popupService).AsImplementedInterfaces().AsSelf();
+            builder.RegisterComponent(_audioService).AsImplementedInterfaces().AsSelf();
         }
 
         protected override void Awake()

@@ -1,9 +1,12 @@
 using System;
+using GameLogic.Audio;
 using GameLogic.UI.Popups;
 using Localization;
+using Services;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using VContainer;
 
 namespace Popups
 {
@@ -59,6 +62,8 @@ namespace Popups
     
     public class ShiftResultsPopup : PopupBase<IShiftResultsPopupPresenter>
     {
+        [Inject] private readonly AudioService _audioService;
+        
         [SerializeField] private TMP_Text _checkedAmountText;
         [SerializeField] private TMP_Text _errorsAmountText;
         [SerializeField] private TMP_Text _winrateText;
@@ -86,6 +91,8 @@ namespace Popups
             _errorsAmountText.SetText("{0}", popupPresenter.ErrorsAmount);
             _winrateText.SetText("{0}%", popupPresenter.Winrate);
             base.OnOpen(popupPresenter);
+            
+            _audioService.Play(popupPresenter.IsSuccess ? "level_completed" : "level_failed");
         }
 
         private void OnButtonClick(IShiftResultsPopupPresenter.ClickType type)
