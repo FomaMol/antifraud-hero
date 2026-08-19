@@ -1,7 +1,9 @@
+using GameLogic.Audio;
 using GameLogic.UI.Popups;
 using Localization;
 using UnityEngine;
 using UnityEngine.UI;
+using VContainer;
 
 namespace Popups
 {
@@ -40,6 +42,8 @@ namespace Popups
     
     public class CaseResultPopup : PopupBase<ICaseResultPopupPresenter>
     {
+        [Inject] private readonly AudioService _audioService;
+        
         [SerializeField] private GameObject _successHeaderContainer;
         [SerializeField] private GameObject _failHeaderContainer;
         [SerializeField] private Button _nextCaseRedButton;
@@ -62,6 +66,8 @@ namespace Popups
             _buttonText.SetText(popupPresenter.ButtonTextLocalizationKey);
             _resultText.SetText(popupPresenter.ResultTextLocalizationKey);
             base.OnOpen(popupPresenter);
+            
+            _audioService.Play(popupPresenter.Success ? "case_success" : "case_failed");
         }
 
         private void OnNextCaseButtonClick()

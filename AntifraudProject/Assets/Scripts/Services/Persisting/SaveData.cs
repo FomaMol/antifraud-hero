@@ -20,6 +20,7 @@ namespace Services
     {
         [JsonProperty] public string CurrentLanguage = "en";
         [JsonProperty] public bool WasGameplayPlayed = false;
+        [JsonProperty] public bool SoundsEnabled = true;
         [JsonProperty] public GameplaySaveData Gameplay = new();
     }
 }

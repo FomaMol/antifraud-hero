@@ -23,6 +23,9 @@ namespace Services
         public IReadOnlyList<bool> CaseDecisionHistory => _saveDataCache.Gameplay.CaseResultHistory;
         public IReadOnlyList<DateTime> CaseMessageTimes => _saveDataCache.Gameplay.CaseMessageTimes.Select(DateTime.FromBinary).ToList();
         public bool WasGameplayPlayed => _saveDataCache.WasGameplayPlayed;
+        public bool SoundsEnabled => _saveDataCache.SoundsEnabled;
+
+        public event Action<bool> OnSoundsEnabledUpdate;
 
         public void SetLanguage(string language)
         {
@@ -106,6 +109,13 @@ namespace Services
         {
             _saveDataCache.WasGameplayPlayed = wasGameplayPlayed;
             SaveGameplayConfig(_saveDataCache);
+        }
+
+        public void SetSoundsEnabled(bool enabled)
+        {
+            _saveDataCache.SoundsEnabled = enabled;
+            SaveGameplayConfig(_saveDataCache);
+            OnSoundsEnabledUpdate?.Invoke(enabled);
         }
     }
 }

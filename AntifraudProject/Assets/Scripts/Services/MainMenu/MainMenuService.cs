@@ -15,6 +15,7 @@ namespace Services.MainMenu
         [Inject] private readonly PopupService _popupService;
 
         public bool WasGameplayPlayed => _persistingService.WasGameplayPlayed;
+        public bool SoundsEnabled => _persistingService.SoundsEnabled;
 
         public void StartNewGame()
         {
@@ -30,6 +31,11 @@ namespace Services.MainMenu
         public void ToggleLocalization()
         {
             _localizationService.ChangeLanguage(_localizationService.Language == "en" ? "ru" : "en");
+        }
+
+        public void ToggleAudio()
+        {
+            _persistingService.SetSoundsEnabled(!_persistingService.SoundsEnabled);
         }
 
         public void OpenHowToPlayPopup()

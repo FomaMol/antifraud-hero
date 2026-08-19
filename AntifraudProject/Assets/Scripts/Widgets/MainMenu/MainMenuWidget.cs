@@ -1,4 +1,5 @@
 using Services.MainMenu;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using VContainer;
@@ -34,6 +35,11 @@ namespace Widgets.MainMenu
         private void UpdateView()
         {
             _continueButton.gameObject.SetActive(_mainMenuService.WasGameplayPlayed);
+            var label = _toggleSoundsButton.GetComponentInChildren<TMP_Text>();
+            if (_mainMenuService.SoundsEnabled)
+                label.fontStyle &= ~FontStyles.Strikethrough;
+            else
+                label.fontStyle |= FontStyles.Strikethrough;
         }
 
         private void OnContinueButtonClick()
@@ -58,6 +64,8 @@ namespace Widgets.MainMenu
 
         private void OnToggleSoundsButtonClick()
         {
+            _mainMenuService.ToggleAudio();
+            UpdateView();
         }
     }
 }
