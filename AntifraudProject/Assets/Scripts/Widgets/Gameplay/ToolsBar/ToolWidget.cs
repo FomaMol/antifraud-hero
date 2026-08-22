@@ -24,6 +24,7 @@ namespace Widgets
         [SerializeField] private Button _validateButton;
         [SerializeField] private Transform _validationResultVerified;
         [SerializeField] private Transform _validationResultFailed;
+        [SerializeField] private TextMeshProLocalization _checkResultText;
 
         public void Initialize()
         {
@@ -36,6 +37,7 @@ namespace Widgets
             var validationResult = GetValidationResult(); 
             _validationResultVerified.gameObject.SetActive(validationResult);
             _validationResultFailed.gameObject.SetActive(!validationResult);
+            _checkResultText.SetText(GetValidationText());
         }
 
         private bool GetValidationResult()
@@ -82,6 +84,7 @@ namespace Widgets
             _validateButton.interactable = false;
             _validationResultVerified.gameObject.SetActive(false);
             _validationResultFailed.gameObject.SetActive(false);
+            _checkResultText.SetText(string.Empty);
         }
     }
 }
