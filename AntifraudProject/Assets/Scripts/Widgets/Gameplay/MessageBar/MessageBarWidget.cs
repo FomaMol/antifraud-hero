@@ -5,6 +5,7 @@ using Services;
 using TMPro;
 using UniRx;
 using UnityEngine;
+using UnityEngine.UI;
 using VContainer;
 
 namespace Widgets
@@ -20,6 +21,8 @@ namespace Widgets
         [SerializeField] private PeaceOfTextWidget _dbTextWidget;
         [SerializeField] private TMP_Text _typeText;
         [SerializeField] private TMP_Text _timeText;
+        [SerializeField] private Image _senderPhotoImage;
+        [SerializeField] private Sprite[] _senderPhotos;
         [Space]
         [SerializeField] private ToolsBarWidget _toolsBarWidget; // TODO: Избавиться от прямой ссылки
 
@@ -65,6 +68,7 @@ namespace Widgets
             
             _typeText.SetText(_gameplayService.CurrentCaseConfig.TypeText);
             _timeText.SetText(_localizationService.FormatTime(_gameplayService.GetMessageTimeForCase(_gameplayService.CurrentCaseIndex)));
+            _senderPhotoImage.sprite = _senderPhotos[_gameplayService.CurrentCaseConfig.SenderPhotoIndex];
             
             _linkTextWidget.gameObject.SetActive(false);
             _contactTextWidget.gameObject.SetActive(false);

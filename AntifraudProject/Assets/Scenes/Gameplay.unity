@@ -21919,6 +21919,9 @@ MonoBehaviour:
   _dbTextWidget: {fileID: 1986149001}
   _typeText: {fileID: 1631332263}
   _timeText: {fileID: 246642982}
+  _senderPhotoImage: {fileID: 198017633}
+  _senderPhotos:
+  - {fileID: 21300000, guid: d6302aa8edc1d411797bcff8961b5b15, type: 3}
   _toolsBarWidget: {fileID: 1180031668}
 --- !u!1 &2143801525
 GameObject:

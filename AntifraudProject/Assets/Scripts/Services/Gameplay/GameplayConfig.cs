@@ -35,6 +35,9 @@ namespace Services
         [JsonProperty("type_text")]
         public string TypeText { get; private set; }
 
+        [JsonProperty("sender_photo_index")]
+        public int SenderPhotoIndex { get; private set; }
+
         [JsonProperty("message_text")]
         public string MessageText { get; private set; }
 
