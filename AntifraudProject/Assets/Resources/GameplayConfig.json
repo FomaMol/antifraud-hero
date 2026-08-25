@@ -8,7 +8,7 @@
       "cases": [
         {
           "type_text": "SMS",
-          "sender_photo_index": 0,
+          "sender_photo_index": 3,
           "message_text": "gameplay.shift1.case1.message",
           "link_validation_text": "gameplay.shift1.case1.link_validation",
           "link_validation_result": 0,
@@ -20,7 +20,7 @@
         },
         {
           "type_text": "SMS",
-          "sender_photo_index": 0,
+          "sender_photo_index": 11,
           "message_text": "gameplay.shift1.case2.message",
           "link_validation_text": "gameplay.shift1.case2.link_validation",
           "link_validation_result": 1,
@@ -32,7 +32,7 @@
         },
         {
           "type_text": "Email",
-          "sender_photo_index": 0,
+          "sender_photo_index": 7,
           "message_text": "gameplay.shift1.case3.message",
           "link_validation_text": "gameplay.shift1.case3.link_validation",
           "link_validation_result": 0,
@@ -44,7 +44,7 @@
         },
         {
           "type_text": "SMS",
-          "sender_photo_index": 0,
+          "sender_photo_index": 14,
           "message_text": "gameplay.shift1.case4.message",
           "link_validation_text": "gameplay.shift1.case4.link_validation",
           "link_validation_result": 1,
@@ -56,7 +56,7 @@
         },
         {
           "type_text": "SMS",
-          "sender_photo_index": 0,
+          "sender_photo_index": 2,
           "message_text": "gameplay.shift1.case5.message",
           "link_validation_text": "gameplay.shift1.case5.link_validation",
           "link_validation_result": 0,
@@ -68,7 +68,7 @@
         },
         {
           "type_text": "Email",
-          "sender_photo_index": 0,
+          "sender_photo_index": 9,
           "message_text": "gameplay.shift1.case6.message",
           "link_validation_text": "gameplay.shift1.case6.link_validation",
           "link_validation_result": 0,
@@ -80,7 +80,7 @@
         },
         {
           "type_text": "SMS",
-          "sender_photo_index": 0,
+          "sender_photo_index": 5,
           "message_text": "gameplay.shift1.case7.message",
           "link_validation_text": "gameplay.shift1.case7.link_validation",
           "link_validation_result": 1,
@@ -97,7 +97,7 @@
       "cases": [
         {
           "type_text": "SMS",
-          "sender_photo_index": 0,
+          "sender_photo_index": 12,
           "message_text": "gameplay.shift2.case1.message",
           "link_validation_text": "gameplay.shift2.case1.link_validation",
           "link_validation_result": 1,
@@ -109,7 +109,7 @@
         },
         {
           "type_text": "Email",
-          "sender_photo_index": 0,
+          "sender_photo_index": 8,
           "message_text": "gameplay.shift2.case2.message",
           "link_validation_text": "gameplay.shift2.case2.link_validation",
           "link_validation_result": 1,
@@ -121,7 +121,7 @@
         },
         {
           "type_text": "SMS",
-          "sender_photo_index": 0,
+          "sender_photo_index": 15,
           "message_text": "gameplay.shift2.case3.message",
           "link_validation_text": "gameplay.shift2.case3.link_validation",
           "link_validation_result": 1,
@@ -133,7 +133,7 @@
         },
         {
           "type_text": "SMS",
-          "sender_photo_index": 0,
+          "sender_photo_index": 4,
           "message_text": "gameplay.shift2.case4.message",
           "link_validation_text": "gameplay.shift2.case4.link_validation",
           "link_validation_result": 1,
@@ -145,7 +145,7 @@
         },
         {
           "type_text": "Email",
-          "sender_photo_index": 0,
+          "sender_photo_index": 10,
           "message_text": "gameplay.shift2.case5.message",
           "link_validation_text": "gameplay.shift2.case5.link_validation",
           "link_validation_result": 0,
@@ -157,7 +157,7 @@
         },
         {
           "type_text": "SMS",
-          "sender_photo_index": 0,
+          "sender_photo_index": 1,
           "message_text": "gameplay.shift2.case6.message",
           "link_validation_text": "gameplay.shift2.case6.link_validation",
           "link_validation_result": 0,
@@ -169,7 +169,7 @@
         },
         {
           "type_text": "Email",
-          "sender_photo_index": 0,
+          "sender_photo_index": 13,
           "message_text": "gameplay.shift2.case7.message",
           "link_validation_text": "gameplay.shift2.case7.link_validation",
           "link_validation_result": 1,
@@ -186,7 +186,7 @@
       "cases": [
         {
           "type_text": "SMS",
-          "sender_photo_index": 0,
+          "sender_photo_index": 6,
           "message_text": "gameplay.shift3.case1.message",
           "link_validation_text": "gameplay.shift3.case1.link_validation",
           "link_validation_result": 1,
@@ -198,7 +198,7 @@
         },
         {
           "type_text": "Email",
-          "sender_photo_index": 0,
+          "sender_photo_index": 2,
           "message_text": "gameplay.shift3.case2.message",
           "link_validation_text": "gameplay.shift3.case2.link_validation",
           "link_validation_result": 1,
@@ -210,7 +210,7 @@
         },
         {
           "type_text": "SMS",
-          "sender_photo_index": 0,
+          "sender_photo_index": 11,
           "message_text": "gameplay.shift3.case3.message",
           "link_validation_text": "gameplay.shift3.case3.link_validation",
           "link_validation_result": 1,
@@ -222,7 +222,7 @@
         },
         {
           "type_text": "Email",
-          "sender_photo_index": 0,
+          "sender_photo_index": 7,
           "message_text": "gameplay.shift3.case4.message",
           "link_validation_text": "gameplay.shift3.case4.link_validation",
           "link_validation_result": 0,
@@ -234,7 +234,7 @@
         },
         {
           "type_text": "SMS",
-          "sender_photo_index": 0,
+          "sender_photo_index": 3,
           "message_text": "gameplay.shift3.case5.message",
           "link_validation_text": "gameplay.shift3.case5.link_validation",
           "link_validation_result": 1,
@@ -246,7 +246,7 @@
         },
         {
           "type_text": "Email",
-          "sender_photo_index": 0,
+          "sender_photo_index": 14,
           "message_text": "gameplay.shift3.case6.message",
           "link_validation_text": "gameplay.shift3.case6.link_validation",
           "link_validation_result": 1,
@@ -258,7 +258,7 @@
         },
         {
           "type_text": "SMS",
-          "sender_photo_index": 0,
+          "sender_photo_index": 9,
           "message_text": "gameplay.shift3.case7.message",
           "link_validation_text": "gameplay.shift3.case7.link_validation",
           "link_validation_result": 1,
