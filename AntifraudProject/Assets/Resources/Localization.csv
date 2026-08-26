@@ -141,12 +141,13 @@ gameplay.shift3.case7.sender_validation,OK: Sender matches official agency recor
 gameplay.shift3.case7.db_validation,OK: Case exists and no payment is requested,"ОК: дело существует, платёж не запрашивается"
 gameplay.shift3.case7.result,"Legitimate government notice. Link, sender, and case database all match.","Легитимное государственное уведомление. Ссылка, отправитель и база дел совпадают."
 popups.howtoplay.title,TUTORIAL,ОБУЧЕНИЕ
-popups.howtoplay.card1,Open a *case* from the list on the left,Открой *кейс* из списка слева
-popups.howtoplay.card2,Use the tools on the right to verify the data,Используй инструменты справа для проверки данных
-popups.howtoplay.card3,Make your verdict: Accept or Block,Вынеси вердикт: Подтвердить или Заблокировать
+popups.howtoplay.card1,On the left is the list of *tasks* you need to complete during your shift,Слева - список *задач* которые тебе нужно решить за смену
+popups.howtoplay.card2,Use the *tools* on the right to verify the data,Используй *инструменты* справа для проверки данных
+popups.howtoplay.card3,"After that, click the *Check* button to find out the truth",После добавления кликай на кнопку *проверки* чтобы узнать правду
+popups.howtoplay.card4,Make your verdict: Approve or Block,Вынеси вердикт: Подтвердить или Заблокировать
 popups.howtoplay.norrator_message1,Hello! I'm your mentor. Today you'll start your first shift in the Antifraud department.,Привет! Я твой наставник. Сегодня ты начнешь свою первую смену в отделе Антифрода.
 popups.howtoplay.norrator_message2,Your *task* is to check incoming messages and transactions for fraud.,Твоя задача - проверять входящие сообщения и транзакции на предмет мошенничества.
-popups.howtoplay.norrator_message3,Use the tools on the right to find inconsistencies. Good luck!,"Используй инструменты справа, чтобы найти нестыковки. Удачи!"
+popups.howtoplay.norrator_message3,Click the *highlighted* elements in the message to add them to the verification window,"Кликай на *подсвеченные* элементы в сообщении чтобы добавить их в окно для проверки"
 popups.howtoplay.next_button,Next,Далее
 popups.howtoplay.play_button,Play,Играть
 popups.case_result.next_button,Next case,Следующий кейс
