@@ -30,6 +30,9 @@ namespace Common.Components
             var maskableGraphic = GetComponent<MaskableGraphic>();
             maskableGraphic.maskable = false;
             maskableGraphic.maskable = true;
+            var mask = GetComponent<Mask>();
+            if (mask != null)
+                mask.showMaskGraphic = false;
         }
     }
 }

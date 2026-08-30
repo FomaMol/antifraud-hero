@@ -40,7 +40,13 @@ namespace Services.MainMenu
 
         public void OpenHowToPlayPopup()
         {
-            _popupService.OpenPopup<IHowToPlayPopupPresenter>(new HowToPlayPopupPresenter()).Forget();
+            _popupService.OpenPopup<IHowToPlayPopupPresenter>(new HowToPlayPopupPresenter(), withBackGround: false).Forget();
+        }
+
+        public void ContinueGameWithHowToPlay()
+        {
+            _scenesService.ShowHowToPlayOnGameplayLaunch = true;
+            _scenesService.LaunchGameplay();
         }
     }
 }

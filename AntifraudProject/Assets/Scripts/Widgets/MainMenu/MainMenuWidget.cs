@@ -54,7 +54,7 @@ namespace Widgets.MainMenu
 
         private void OnHowToPlayButtonClick()
         {
-            _mainMenuService.OpenHowToPlayPopup();
+            _mainMenuService.ContinueGameWithHowToPlay();
         }
 
         private void OnChangeLanguageButtonClick()

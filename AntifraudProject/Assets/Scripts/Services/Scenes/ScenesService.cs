@@ -4,6 +4,8 @@ namespace Services.Scenes
 {
     public class ScenesService
     {
+        public bool ShowHowToPlayOnGameplayLaunch { get; set; }
+
         public void LaunchGameplay()
         {
             SceneManager.LoadScene("Gameplay");
