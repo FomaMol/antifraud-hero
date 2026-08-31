@@ -20,6 +20,7 @@ namespace Popups
         [SerializeField] private Button _playButton;
         [SerializeField] private TextMeshProLocalization _narratorSpeechText;
         [SerializeField] private TextMeshProLocalization _tutorialText;
+        [SerializeField] private GameObject[] _stepBackgrounds;
 
         private readonly string[] NarratorSpeechTextKeys = {
             "popups.howtoplay.norrator_message1",
@@ -67,6 +68,9 @@ namespace Popups
 
         private void SetStep(int index)
         {
+            foreach (var stepBackground in _stepBackgrounds)
+                stepBackground.SetActive(false);
+            _stepBackgrounds[index].SetActive(true);
             _narratorSpeechText.SetText(NarratorSpeechTextKeys[index]);
             _tutorialText.SetText(TutorialTextKeys[index]);
             _nextStepButton.gameObject.SetActive(index != 2);

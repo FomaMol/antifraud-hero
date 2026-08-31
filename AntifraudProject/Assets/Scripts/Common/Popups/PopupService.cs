@@ -76,7 +76,7 @@ namespace GameLogic.UI.Popups
 
             if (queued && HasActivePopups)
             {
-                _popupOpenQueue.Enqueue(() => OpenPopup(popupData, false));
+                _popupOpenQueue.Enqueue(() => OpenPopup(popupData, queued: false, withBackGround));
                 return;
             }
             

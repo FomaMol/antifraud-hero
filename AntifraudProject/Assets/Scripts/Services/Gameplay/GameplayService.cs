@@ -59,9 +59,14 @@ namespace Services
             var json = Resources.Load<TextAsset>("GameplayConfig").text;
             _gameplayConfig = JsonConvert.DeserializeObject<GameplayConfig>(json);
 
+            var shouldShowHowToPlay = !_persistingService.WasGameplayPlayed || _scenesService.ShowHowToPlayOnGameplayLaunch;
+            _scenesService.ShowHowToPlayOnGameplayLaunch = false;
+
+            if (shouldShowHowToPlay)
+                _popupService.OpenPopup<IHowToPlayPopupPresenter>(new HowToPlayPopupPresenter(), queued: true, withBackGround: false).Forget();
+
             if (!_persistingService.WasGameplayPlayed)
             {
-                _popupService.OpenPopup<IHowToPlayPopupPresenter>(new HowToPlayPopupPresenter(), queued: true).Forget();
                 ForceProgressTo(0, 0);
             }
             else
@@ -121,7 +126,7 @@ namespace Services
             if (presenter == null)
                 return;
 
-            _popupService.OpenPopup<INewToolPopupPresenter>(presenter, queued: true).Forget();
+            _popupService.OpenPopup<INewToolPopupPresenter>(presenter, queued: true, withBackGround: false).Forget();
         }
 
         public async void MakeChoice(bool isValid)
@@ -160,7 +165,7 @@ namespace Services
                 ? new Success_ShiftResultsPopupPresenter(checkedAmount, errorsAmount, winrate, OnShiftResultClick)
                 : (IShiftResultsPopupPresenter)new Fail_ShiftResultsPopupPresenter(checkedAmount, errorsAmount, winrate, OnShiftResultClick);
 
-            _popupService.OpenPopup<IShiftResultsPopupPresenter>(presenter, queued: true).Forget();
+            _popupService.OpenPopup<IShiftResultsPopupPresenter>(presenter, queued: true, withBackGround: false).Forget();
 
             void OnShiftResultClick(IShiftResultsPopupPresenter.ClickType clickType)
             {
